@@ -126,7 +126,6 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
 ## Treble
 BOARD_VNDK_VERSION := current
-PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 ## Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
