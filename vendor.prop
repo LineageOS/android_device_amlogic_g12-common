@@ -13,6 +13,9 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.core.gap.le.conn.min.limit=6
 persist.vendor.bluetooth.prefferedrole=master
 
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 ## Graphics
 debug.renderengine.backend=skiaglthreaded
 ro.hardware.vulkan=amlogic
