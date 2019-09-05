@@ -206,6 +206,10 @@ TARGET_AMLOGIC_SOC ?= g12a
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+## Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 ## Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor

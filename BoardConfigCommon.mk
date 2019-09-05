@@ -122,9 +122,6 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
-## Soong Namespace
-PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
-
 ## Treble
 BOARD_VNDK_VERSION := current
 
