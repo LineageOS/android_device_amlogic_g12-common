@@ -80,6 +80,9 @@ function blob_fixup() {
         vendor/etc/init/tee-supplicant.rc)
              sed -i s#/vendor/lib/#/vendor/lib/modules/#g "${2}"
              ;;
+        vendor/etc/wifi/wpa_supplicant_overlay.conf)
+             echo "driver_param=use_p2p_group_interface=1">>"${2}"
+             ;;
      esac
  }
 
