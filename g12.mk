@@ -19,11 +19,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio@7.0.vendor \
     android.hardware.audio@7.0-util.vendor \
     android.hardware.audio.common@7.0-util \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.effect@7.0-util.vendor \
     av-types-aidl-cpp.vendor \
     libaudiofoundation.vendor
