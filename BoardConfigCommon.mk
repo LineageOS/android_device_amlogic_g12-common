@@ -124,9 +124,6 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 ## SELinux
 include device/amlogic/sepolicy/sepolicy.mk
 
-## Treble
-BOARD_VNDK_VERSION := current
-
 ## Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
