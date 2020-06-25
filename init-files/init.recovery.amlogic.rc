@@ -6,6 +6,8 @@ on init
     chmod 0777 /sbin/remotecfg
 
 on fs
+    wait /dev/block/platform/${ro.boot.boot_devices}
+    symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
 
 on post-fs-data
     chown system system /sys/class/android_usb/android0/f_mass_storage/lun/file
