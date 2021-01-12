@@ -47,6 +47,7 @@ BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.dtbo_idx
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
