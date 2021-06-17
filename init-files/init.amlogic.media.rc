@@ -1,0 +1,42 @@
+on boot
+    chmod 666 /sys/class/vdec/poweron_clock_level
+    chmod 666 /sys/class/codec_mm/tvp_enable
+    chown mediacodec mediadrm /sys/class/codec_mm/tvp_enable
+    chown mediacodec system /sys/class/codec_mm/config
+    chown mediacodec system /sys/class/codec_mm/fastplay_enable
+    chown media system /sys/module/amvdec_mpeg12/parameters/dec_control
+    chown media system /sys/module/amvideo/parameters/smooth_sync_enable
+
+    write /sys/module/stream_input/parameters/def_vstreambuf_sizeM 10
+    write /sys/module/stream_input/parameters/def_4k_vstreambuf_sizeM 15
+    write /sys/devices/platform/ffe40000.bifrost/dvfs_period 50
+
+on fs
+    insmod /vendor/lib/modules/media_clock.ko
+    write /sys/module/firmware_class/parameters/path "/vendor/lib/firmware/"
+    insmod /vendor/lib/modules/firmware.ko
+    insmod /vendor/lib/modules/video_framerate_adapter.ko
+    insmod /vendor/lib/modules/decoder_common.ko
+    insmod /vendor/lib/modules/stream_input.ko
+    insmod /vendor/lib/modules/amvdec_avs.ko
+    insmod /vendor/lib/modules/amvdec_h264.ko
+    insmod /vendor/lib/modules/amvdec_mh264.ko
+    insmod /vendor/lib/modules/amvdec_h264mvc.ko
+    insmod /vendor/lib/modules/amvdec_h265.ko
+    insmod /vendor/lib/modules/amvdec_mjpeg.ko
+    insmod /vendor/lib/modules/amvdec_mmjpeg.ko
+    insmod /vendor/lib/modules/amvdec_mpeg12.ko
+    insmod /vendor/lib/modules/amvdec_mmpeg12.ko
+    insmod /vendor/lib/modules/amvdec_mpeg4.ko
+    insmod /vendor/lib/modules/amvdec_mmpeg4.ko
+    insmod /vendor/lib/modules/amvdec_real.ko
+    insmod /vendor/lib/modules/amvdec_vc1.ko
+    insmod /vendor/lib/modules/amvdec_vp9.ko
+    insmod /vendor/lib/modules/amvdec_avs2.ko
+    insmod /vendor/lib/modules/encoder.ko
+    insmod /vendor/lib/modules/vpu.ko
+    insmod /vendor/lib/modules/amvdec_ports.ko
+    insmod /vendor/lib/modules/amlogic_fbc_lib.ko
+    insmod /vendor/lib/modules/amvdec_mavs.ko
+    insmod /vendor/lib/modules/amvdec_av1.ko
+

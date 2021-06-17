@@ -1,0 +1,102 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+## Audio
+ro.config.media_vol_default=20
+ro.config.media_vol_steps=25
+
+## Bluetooth
+atv.setup.bt_remote_pairing=true
+config.disable_bluetooth=false
+persist.bluetooth.bluetooth_audio_hal.disabled=false
+ro.vendor.autoconnectbt.btclass=50c
+ro.vendor.autoconnectbt.isneed=false
+ro.vendor.autoconnectbt.macprefix=00:CD:FF
+ro.vendor.autoconnectbt.nameprefix=Amlogic_RC
+ro.vendor.autoconnectbt.rssilimit=70
+
+## DRM
+drm.service.enabled=1
+vendor.drm.service.enable=true
+
+## FRP
+ro.frp.pst=/dev/block/by-name/frp
+
+## HDMI
+mbx.hdmiin.switchfull=false
+mbx.hdmiin.videolayer=false
+persist.sys.hdmi.keep_awake=false
+persist.vendor.sys.cec.power_assist_standby=false
+ro.hdmi.device_type=4
+ro.sys.hdmiin.enable=true
+ro.vendor.hdmi.auto_otp=false
+ro.vendor.platform.has.mbxuimode=true
+ro.vendor.platform.has.realoutputmode=true
+ro.vendor.platform.hdmi.device_type=4
+ro.vendor.platform.need.display.hdmicec=true
+
+## LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
+
+# Graphics
+ro.hardware.vulkan=amlogic
+ro.opengles.version=196610
+ro.surface_flinger.max_graphics_height=1080
+ro.surface_flinger.max_graphics_width=1920
+
+## Dalvik
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=384m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+
+## Media
+libplayer.livets.softdemux=1
+libplayer.netts.recalcpts=1
+persist.sys.media.avsync=true
+persist.vendor.media.bootvideo=0050
+ro.media.camera_preview.maxsize=1920x1080
+ro.media.camera_preview.limitedrate=1920x1080x30,1280x720x30,640x480x30,320x240x28
+ro.media.camera_preview.usemjpeg=1
+ro.media.maxmem=629145600
+ro.vendor.media.support.ffmpeg.adec=false
+ro.vendor.platform.disable.audiorawout=false
+ro.vendor.platform.support.dolby=true
+ro.vendor.platform.support.dolbyvision=false
+ro.vendor.platform.support.dts=true
+ro.vendor.sdr2hdr.enable=true
+vendor.afbcd.enable=1
+vendor.media.libplayer.curlenable=true
+vendor.media.libplayer.seek.fwdsearch=1
+vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
+vendor.media.support.dolbyvision=false
+
+## OMX
+ro.vendor.media.support.omx2=true
+vendor.media.omx2.in_buffer=5
+vendor.ionvideo.enable=1
+vendor.media.omx.use.360omx2=false
+vendor.media.omx.out_buffer2_osd=8
+vendor.media.omx.display_mode=3
+vendor.media.sf.omxvideo-optmize=1
+
+## OEM Lock
+ro.oem_unlock_supported=1
+
+## Platform
+ro.vendor.platform.is.tv=0
+
+## USB
+vendor.usb.controller=ff400000.dwc2_a
+
+## Wi-Fi
+ro.carrier=wifi-only
+wifi.direct.interface=p2p-dev-wlan0
+wifi.interface=wlan0

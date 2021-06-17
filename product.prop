@@ -1,0 +1,27 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+## Audio
+ro.af.client_heap_size_kbyte=1536
+ro.config.media_vol_default=20
+ro.config.media_vol_steps=25
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+
+## Battery (Fake)
+ro.boot.fake_battery=42
+
+## Camera
+camera.disable_zsl_mode=1
+rw.camera.usb.faceback=true
+
+## Graphics
+debug.sf.disable_backpressure=1
+debug.sf.latch_unsignaled=1
+ro.sf.disable_triple_buffer=0
+
+## Identifiers
+ro.oem.key1=ATV00100020
