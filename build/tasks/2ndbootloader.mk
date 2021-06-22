@@ -50,6 +50,12 @@ else
 endif
 
 $(BOARD_PREBUILT_DTBOIMAGE): $(INSTALLED_KERNEL_TARGET) $(MKDTBOIMG)
+ifeq ($(words $(TARGET_DTB_NAME)),1)
 	$(MKDTBOIMG) create $@ $(DTBDIR)/$(TARGET_DTBO_NAME).dtb
+else
+	$(MKDTBOIMG) create $@ $(foreach dtbo, $(TARGET_DTB_NAME), \
+		$(DTBDIR)/$(strip $(dtbo)).dtb \
+	)
+endif
 
 endif
