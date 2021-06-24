@@ -23,7 +23,7 @@ DTBTMP := $(PRODUCT_OUT)/tmp_dt
 DTBDIR := $(PRODUCT_OUT)/obj/KERNEL_OBJ/arch/arm64/boot/dts/amlogic
 DTCDIR := $(PRODUCT_OUT)/obj/KERNEL_OBJ/scripts/dtc/
 
-TARGET_DTBO_NAME ?= amlogicandroid_p_overlay_dt
+TARGET_DTBO_NAME ?= android_p_overlay_dt
 
 define aml-compress-dtb
 	if [ -n "$(shell find $(1) -size +200k)" ]; then \
@@ -50,12 +50,11 @@ else
 endif
 
 $(BOARD_PREBUILT_DTBOIMAGE): $(INSTALLED_KERNEL_TARGET) $(MKDTBOIMG)
-ifeq ($(words $(TARGET_DTB_NAME)),1)
-	$(MKDTBOIMG) create $@ $(DTBDIR)/$(TARGET_DTBO_NAME).dtb
-else
-	$(MKDTBOIMG) create $@ $(foreach dtbo, $(TARGET_DTB_NAME), \
+	$(MKDTBOIMG) create $@ $(foreach dtbo, $(TARGET_DTBO_NAME), \
 		$(DTBDIR)/$(strip $(dtbo)).dtb \
 	)
-endif
+
+.PHONY: dtbotest
+dtbotest: $(BOARD_PREBUILT_DTBOIMAGE)
 
 endif
