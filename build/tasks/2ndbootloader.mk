@@ -22,6 +22,7 @@ DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolAmlogic$(HOST_EXECUTABLE_SUFFIX)
 DTBTMP := $(PRODUCT_OUT)/tmp_dt
 DTBDIR := $(PRODUCT_OUT)/obj/KERNEL_OBJ/arch/arm64/boot/dts/amlogic
 DTCDIR := $(PRODUCT_OUT)/obj/KERNEL_OBJ/scripts/dtc/
+TARGET_FLASH_DTB_PARTITION ?= true
 
 TARGET_DTBO_NAME ?= android_p_overlay_dt
 
@@ -35,19 +36,20 @@ endef
 
 $(INSTALLED_2NDBOOTLOADER_TARGET): $(INSTALLED_KERNEL_TARGET) $(DTBTOOL) | $(ACP) $(MINIGZIP)
 ifeq ($(words $(TARGET_DTB_NAME)),1)
-	$(hide) $(ACP) $(DTBDIR)/$(TARGET_DTB_NAME).dtb $(DTBTARGET);
-	$(hide) $(call aml-compress-dtb, $(DTBTARGET))
-	$(hide) $(ACP) $(DTBTARGET) $@;
+	$(hide) $(ACP) $(DTBDIR)/$(TARGET_DTB_NAME).dtb $(DTBTARGET)
 else
-	$(hide) mkdir -p $(DTBTMP);
+	$(hide) mkdir -p $(DTBTMP)
 	$(foreach aDts, $(TARGET_DTB_NAME), \
 		$(ACP) $(DTBDIR)/$(strip $(aDts)).dtb $(DTBTMP)/$(strip $(aDts)).dtb; \
 	)
 	$(hide) $(DTBTOOL) -o $(DTBTARGET) -p $(DTCDIR) $(DTBTMP)
-	$(hide) $(call aml-compress-dtb, $(DTBTARGET))
-	$(hide) $(ACP) $(DTBTARGET) $@;
-	$(hide) rm -rf $(DTBTMP);
+	$(hide) rm -rf $(DTBTMP)
 endif
+	$(hide) $(call aml-compress-dtb, $(DTBTARGET))
+ifeq ($(TARGET_FLASH_DTB_PARTITION),true)
+	$(hide) $(call add-radio-file,$(DTBTARGET))
+endif
+	$(hide) $(ACP) $(DTBTARGET) $@
 
 $(BOARD_PREBUILT_DTBOIMAGE): $(INSTALLED_KERNEL_TARGET) $(MKDTBOIMG)
 	$(MKDTBOIMG) create $@ $(foreach dtbo, $(TARGET_DTBO_NAME), \
