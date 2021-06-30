@@ -22,9 +22,6 @@ ro.vendor.autoconnectbt.rssilimit=70
 drm.service.enabled=1
 vendor.drm.service.enable=true
 
-## FRP
-ro.frp.pst=/dev/block/by-name/frp
-
 ## HDMI
 mbx.hdmiin.switchfull=false
 mbx.hdmiin.videolayer=false
