@@ -221,11 +221,6 @@ vendor/lib/soundfx/libbalance.so
 vendor/lib/soundfx/libhpeqwrapper.so
 vendor/lib/soundfx/libsrswrapper.so
 vendor/lib/soundfx/libtreblebasswrapper.so
-vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b0002a5d5c51b.ta
-vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta
-vendor/lib/teetz/8efb1e1c-37e5-4326-a5d68c33726c7d57.ta
-vendor/lib/teetz/9a04f079-9840-4286-ab92e65be0885f95.ta
-vendor/lib/teetz/e043cde0-61d0-11e5-9c260002a5d5c51b.ta
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 vendor/lib/vendor.amlogic.hardware.droidvold@1.0.so
 vendor/lib/vendor.amlogic.hardware.hdmicec@1.0.so
