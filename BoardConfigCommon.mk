@@ -38,6 +38,9 @@ TARGET_SCREEN_DENSITY := 320
 
 ## HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+ifneq ($(TARGET_HAS_TEE),false)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-tee.xml
+endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 ## Kernel

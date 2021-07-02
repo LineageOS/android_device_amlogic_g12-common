@@ -30,6 +30,14 @@ write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+# The BSP blobs - we put a conditional in case the BSP
+# is actually being built
+printf '\n%s\n' 'ifneq ($(TARGET_HAS_TEE),false)' >> "$PRODUCTMK"
+
+write_makefiles "${MY_DIR}/proprietary-files-tee.txt" true
+
+printf '%s\n' 'endif' >> "$PRODUCTMK"
+
 # Finish
 write_footers
 

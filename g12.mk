@@ -129,6 +129,11 @@ PRODUCT_PACKAGES += \
     libpuresoftkeymasterdevice.vendor \
     libsoft_attestation_cert.vendor
 
+ifeq ($(TARGET_HAS_TEE),false)
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1-service
+endif
+
 ## Logo
 PRODUCT_HOST_PACKAGES += \
     res_packer
