@@ -33,4 +33,10 @@ def OTA_InstallEnd(info):
   if 'RADIO/dtb.img' in info.input_zip.namelist():
     PrintInfo(info, "/dev/dtb")
     AddImage(info, "RADIO/", "dtb.img", "/dev/dtb")
+  if 'RADIO/logo.img' in info.input_zip.namelist():
+    PrintInfo(info, "/dev/block/by-name/logo")
+    AddImage(info, "RADIO/", "logo.img", "/dev/block/by-name/logo")
+  if 'RADIO/bootloader.img' in info.input_zip.namelist():
+    PrintInfo(info, "/dev/block/by-name/bootloader")
+    AddImage(info, "RADIO/", "bootloader.img", "/dev/block/by-name/bootloader")
   return
