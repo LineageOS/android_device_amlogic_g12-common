@@ -87,6 +87,7 @@ vendor.media.omx.use.360omx2=false
 vendor.media.omx.out_buffer2_osd=8
 vendor.media.omx.display_mode=3
 vendor.media.sf.omxvideo-optmize=1
+debug.stagefright.ccodec=0
 
 ## OEM Lock
 ro.oem_unlock_supported=1
