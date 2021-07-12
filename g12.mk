@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     libpuresoftkeymasterdevice.vendor \
     libsoft_attestation_cert.vendor
 
+## Logo
+PRODUCT_HOST_PACKAGES += \
+    res_packer
+
 ## Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
