@@ -143,6 +143,13 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
+## NRDP (Netflix)
+PRODUCT_COPY_FILES +=  \
+    $(COMMON_PATH)/nrdp/nrdp.xml:/vendor/etc/permissions/nrdp.xml \
+    $(COMMON_PATH)/nrdp/nrdp_audio_platform_capabilities.json:/vendor/etc/permissions/nrdp_audio_platform_capabilities.json \
+    $(COMMON_PATH)/nrdp/nrdp_audio_platform_capabilities_ms12.json:/vendor/etc/permissions/nrdp_audio_platform_capabilities_ms12.json \
+    $(COMMON_PATH)/nrdp/nrdp_platform_capabilities.json:/vendor/etc/permissions/nrdp_platform_capabilities.json
+
 ## Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay

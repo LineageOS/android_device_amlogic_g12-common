@@ -76,6 +76,9 @@ vendor.media.libplayer.seek.fwdsearch=1
 vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
 vendor.media.support.dolbyvision=false
 
+## NRDP
+ro.vendor.nrdp.validation=ninja_7
+
 ## OMX
 ro.vendor.media.support.omx2=true
 vendor.media.omx2.in_buffer=5
