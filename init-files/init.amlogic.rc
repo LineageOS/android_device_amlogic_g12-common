@@ -13,15 +13,16 @@ on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     start console
-    #30 means reserve 3% memory using for high water mark, 1GB DDR x 3% = 30MB
+    # 30 means reserve 3% memory using for high water mark, 1GB DDR x 3% = 30MB
     write /proc/sys/vm/watermark_scale_factor 30
-    #12288KB
+    # 12288 KB
     write /proc/sys/vm/min_free_kbytes 12288
 
-    #init the unifykeys
+    # Init the unifykeys
     write /sys/class/unifykeys/attach 1
     chmod 666 /dev/video_composer.0
     chmod 666 /dev/video_composer.1
+
 on boot
     chown system graphics /sys/module/fb/parameters/osd_logo_index
     chmod 0660 /sys/module/fb/parameters/osd_logo_index
@@ -35,24 +36,25 @@ on boot
     chown media system /sys/devices/virtual/switch/hdmi/state
     chmod 0660 /sys/devices/virtual/switch/hdmi/state
     chmod 666 /dev/v4lvideo
-    # thermal
+
+    # Thermal
     chown system system /sys/class/thermal/thermal_zone0/mode
     chown system system /sys/class/thermal/thermal_zone1/mode
     chmod 664 /sys/class/thermal/thermal_zone0/mode
     chmod 664 /sys/class/thermal/thermal_zone1/mode
 
-    #power
+    # Power
     chmod 664 /sys/power/early_suspend_trigger
     chown root system /sys/power/early_suspend_trigger
 
-    #vfm map
+    # vfm map
     chown media  system /sys/class/vfm/map
     chmod 666 /sys/class/vfm/map
     write /sys/class/vfm/map "rm default"
     write /sys/class/vfm/map "add default decoder ppmgr deinterlace amvideo"
 
-    #0: normal user and root user can read
-    #1: only root user can read
+    # 0: normal user and root user can read
+    # 1: only root user can read
     write /proc/sys/kernel/dmesg_restrict 0
 
 

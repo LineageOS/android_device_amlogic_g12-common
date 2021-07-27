@@ -39,4 +39,3 @@ on fs
     insmod /vendor/lib/modules/amlogic_fbc_lib.ko
     insmod /vendor/lib/modules/amvdec_mavs.ko
     insmod /vendor/lib/modules/amvdec_av1.ko
-
