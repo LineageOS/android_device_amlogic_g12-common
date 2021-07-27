@@ -1,9 +1,6 @@
 import /vendor/etc/init/hw/init.amlogic.usb.rc
 import /vendor/etc/init/hw/init.amlogic.tb_detect.rc
 
-on early-init
-    loglevel 3
-
 on post-fs-data
     insmod /vendor/lib/modules/mali.ko
     insmod /vendor/lib/modules/dovi.ko
