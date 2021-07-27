@@ -18,8 +18,8 @@ vendor                /vendor             ext4      ro,barrier=1,discard        
 /devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sd*  auto             auto      defaults                       voldmanaged=usb:auto,encryptable=userdata
 /devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sr*  auto             auto      defaults                       voldmanaged=sr0:auto,encryptable=userdata
 /dev/block/loop     auto                loop      defaults                                  voldmanaged=loop:auto
-/dev/block/param    /mnt/vendor/param                ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota,formattable
+/dev/block/param    /mnt/vendor/param                ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota
 # Add for zram. zramsize can be in numeric (byte) , in percent
 /dev/block/zram0     none             swap      defaults                             wait,zramsize=268435456
-/dev/block/tee       /mnt/vendor/tee                 ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
-/dev/block/factory   /mnt/vendor/factory             ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
+/dev/block/tee       /mnt/vendor/tee                 ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check
+/dev/block/factory   /mnt/vendor/factory             ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check
