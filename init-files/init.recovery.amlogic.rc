@@ -1,10 +1,3 @@
-on early-init
-    insmod /boot/dwc3.ko
-
-on init
-    chmod 0777 /sbin/systemcontrol_static
-    chmod 0777 /sbin/remotecfg
-
 on fs
     wait /dev/block/platform/${ro.boot.boot_devices}
     symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
@@ -44,22 +37,6 @@ on boot
 service console /system/bin/sh
     seclabel u:r:shell:s0
     console
-
-service remotecfg3 /sbin/remotecfg -c /sbin/remote.cfg -t /sbin/remote.tab3 -d
-    oneshot
-    seclabel u:r:recovery:s0
-
-service remotecfg1 /sbin/remotecfg -c /sbin/remote.cfg -t /sbin/remote.tab1 -d
-    oneshot
-    seclabel u:r:recovery:s0
-
-service remotecfg2 /sbin/remotecfg -c /sbin/remote.cfg -t /sbin/remote.tab2 -d
-    oneshot
-    seclabel u:r:recovery:s0
-
-service systemcontrol /sbin/systemcontrol_static /sbin/mesondisplay.cfg
-    oneshot
-    seclabel u:r:recovery:s0
 
 on property:sys.usb.config=none && property:sys.usb.configfs=1
     setprop sys.usb.ffs.ready 0

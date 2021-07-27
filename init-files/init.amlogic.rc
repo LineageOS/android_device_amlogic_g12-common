@@ -3,7 +3,6 @@ import /vendor/etc/init/hw/init.amlogic.board.rc
 import /vendor/etc/init/hw/init.amlogic.wifi.rc
 import /vendor/etc/init/hw/init.amlogic.media.rc
 import /vendor/etc/init/hw/init.amlogic.wifi_buildin.rc
-import /vendor/etc/init/cppreopts_amlogic.rc
 
 on init
     # Support legacy paths
@@ -68,12 +67,6 @@ service fuse_loop /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/loop /storage
     class late_start
     disabled
 
-# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-#service watchdogd /sbin/watchdogd 10 20
-#    class core
-#    disabled
-#    seclabel u:r:watchdogd:s0
-
 service remotecfg /vendor/bin/remotecfg /vendor/etc/remote.conf
     class main
     oneshot
@@ -84,21 +77,6 @@ service hdcp_tx22 /vendor/bin/hdcp_tx22 \
     class main
     disabled
     oneshot
-
-#service hdcp_rx22 /vendor/bin/hdcp_rx22 \
-#    -f /mnt/vendor/param/firmware.le
-#    class main
-#    disabled
-#    oneshot
-#    seclabel u:r:hdcp_rx22:s0
-
-service factoryreset /vendor/bin/factoryreset.sh
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:install_recovery:s0
 
 service bugreport /system/bin/dumpstate -d -p -B -z \
     -o /data/user_de/0/com.android.shell/files/bugreports/bugreport

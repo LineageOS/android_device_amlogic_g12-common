@@ -1,11 +1,7 @@
 import /vendor/etc/init/hw/init.amlogic.usb.rc
-import /vendor/etc/init/hw/init.amlogic.tb_detect.rc
 
 on post-fs-data
     insmod /vendor/lib/modules/mali.ko
-    insmod /vendor/lib/modules/dovi.ko
-    insmod /vendor/lib/sl_hdr.ko
-    insmod /vendor/lib/modules/atbm8881_fe.ko
     insmod /vendor/lib/modules/aml_hardware_dmx.ko
 
 on boot
