@@ -14,7 +14,7 @@
   {
     "repository": "android_hardware_amlogic_kernel-modules_optee",
     "target_path": "hardware/amlogic/kernel-modules/optee"
-  }
+  },
   {
     "repository": "android_hardware_amlogic_tools_dtbtool",
     "target_path": "hardware/amlogic/tools/dtbtool"
