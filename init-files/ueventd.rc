@@ -1,9 +1,3 @@
-## Firmware directories
-#
-
-# Additional firmware locations
-firmware_directories /vendor/lib/firmware
-
 ## /dev/ devices
 #
 

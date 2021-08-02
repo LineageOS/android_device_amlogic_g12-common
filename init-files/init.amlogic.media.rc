@@ -13,6 +13,7 @@ on boot
 
 on fs
     insmod /vendor/lib/modules/media_clock.ko
+    write /sys/module/firmware_class/parameters/path "/vendor/lib/firmware/"
     insmod /vendor/lib/modules/firmware.ko
     insmod /vendor/lib/modules/video_framerate_adapter.ko
     insmod /vendor/lib/modules/decoder_common.ko
