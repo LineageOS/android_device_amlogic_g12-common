@@ -22,6 +22,11 @@ def AddImage(info, folder, basename, dest):
   common.ZipWriteStr(info.output_zip, name, data)
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
+def FlashDtbImage(info):
+  info.script.AppendExtra('package_extract_file("RADIO/dtb.img", "/tmp/dtb.img");');
+  info.script.AppendExtra('run_program("/system/bin/dd", "if=/tmp/dtb.img", "of=/dev/dtb", "bs=1k", "count=256");');
+
+
 def PrintInfo(info, dest):
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
 
@@ -32,7 +37,7 @@ def OTA_InstallEnd(info):
   AddImage(info, "IMAGES/", "vbmeta.img", "/dev/block/by-name/vbmeta")
   if 'RADIO/dtb.img' in info.input_zip.namelist():
     PrintInfo(info, "/dev/dtb")
-    AddImage(info, "RADIO/", "dtb.img", "/dev/dtb")
+    FlashDtbImage(info)
   if 'RADIO/logo.img' in info.input_zip.namelist():
     PrintInfo(info, "/dev/block/by-name/logo")
     AddImage(info, "RADIO/", "logo.img", "/dev/block/by-name/logo")
