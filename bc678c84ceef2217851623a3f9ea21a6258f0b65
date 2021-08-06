@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c121011_70fad5f7",
+        "filename": "manifest-oss-grahics.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-08-06T08:33:47Z",
+      "side": 1,
+      "message": "You don\u0027t need to set target level because it\u0027s already in the main manifest.",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 54
+      },
+      "revId": "bc678c84ceef2217851623a3f9ea21a6258f0b65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "88d0d30e_7d094962",
+        "filename": "manifest-oss-grahics.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-08-06T08:33:47Z",
+      "side": 1,
+      "message": "Trailing spaces.",
+      "range": {
+        "startLine": 1,
+        "startChar": 55,
+        "endLine": 1,
+        "endChar": 59
+      },
+      "revId": "bc678c84ceef2217851623a3f9ea21a6258f0b65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1e6e1282_d7ee2211",
+        "filename": "manifest-prebuilt-graphics.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-08-06T08:33:47Z",
+      "side": 1,
+      "message": "Trailing spaces.",
+      "range": {
+        "startLine": 1,
+        "startChar": 55,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "bc678c84ceef2217851623a3f9ea21a6258f0b65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
