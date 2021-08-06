@@ -76,10 +76,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
-## fastbootd
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.fastbootd.available=true
-PRODUCT_PACKAGES += fastbootd
-
 ## File-system permissions
 PRODUCT_PACKAGES += \
     fs_config_dirs \
@@ -105,7 +101,6 @@ PRODUCT_PACKAGES += \
 
 # Init-Files
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
     $(COMMON_PATH)/init-files/init.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.rc \
     $(COMMON_PATH)/init-files/init.amlogic.board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.board.rc \
     $(COMMON_PATH)/init-files/init.amlogic.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.media.rc \
