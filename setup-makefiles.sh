@@ -38,6 +38,22 @@ write_makefiles "${MY_DIR}/proprietary-files-tee.txt" true
 
 printf '%s\n' 'endif' >> "$PRODUCTMK"
 
+# The BSP blobs - we put a conditional in case the BSP
+# is actually being built
+printf '\n%s\n' 'ifneq ($(TARGET_USE_OSS_GRAPHIC),true)' >> "$PRODUCTMK"
+
+write_makefiles "${MY_DIR}/proprietary-files-graphics.txt" true
+
+printf '%s\n' 'endif' >> "$PRODUCTMK"
+
+# The BSP blobs - we put a conditional in case the BSP
+# is actually being built
+printf '\n%s\n' 'ifneq ($(TARGET_USE_OSS_INTERFACES),true)' >> "$PRODUCTMK"
+
+write_makefiles "${MY_DIR}/proprietary-files-interfaces.txt" true
+
+printf '%s\n' 'endif' >> "$PRODUCTMK"
+
 # Finish
 write_footers
 

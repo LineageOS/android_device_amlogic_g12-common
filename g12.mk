@@ -89,10 +89,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service.software
 
+ifeq ($(TARGET_USE_OSS_GRAPHIC),true)
+# Gralloc
+PRODUCT_PACKAGES += \
+    gralloc.amlogic \
+    libamgralloc_ext \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service
+endif
+
 ## Hardware Compsoer
 PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libhwc2onfbadapter
+
+ifeq ($(TARGET_USE_OSS_GRAPHIC),true)
+# hwcomposer
+TARGET_USES_HWC2:= true
+PRODUCT_PACKAGES += \
+    hwcomposer.amlogic \
+    android.hardware.graphics.composer@2.1-service
+endif
 
 ## HDMI CEC
 PRODUCT_PACKAGES += \
@@ -112,6 +130,22 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init-files/init.amlogic.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.usb.rc \
     $(COMMON_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc \
     $(COMMON_PATH)/init-files/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+
+ifeq ($(TARGET_USE_OSS_INTERFACES),true)
+# interfaces
+PRODUCT_PACKAGES += \
+    vendor.amlogic.hardware.hdmicec@1.0 \
+    vendor.amlogic.hardware.hdmicec@1.0.vendor \
+    vendor.amlogic.hardware.remotecontrol@1.0 \
+    vendor.amlogic.hardware.remotecontrol@1.0.vendor \
+    vendor.amlogic.hardware.systemcontrol@1.0 \
+    vendor.amlogic.hardware.systemcontrol@1.1 \
+    vendor.amlogic.hardware.systemcontrol@1.0.venor \
+    vendor.amlogic.hardware.systemcontrol@1.1.vendor \
+    vendor.amlogic.hardware.droidvold@1.0.vendor \
+    vendor.amlogic.hardware.tvserver@1.0.vendor \
+    vendor.amlogic.display.meson_display_ipc@1.0.vendor
+endif
 
 ## Kernel Modules
 PRODUCT_PACKAGES += \
@@ -196,6 +230,12 @@ PRODUCT_PACKAGES += \
 
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
+
+ifeq ($(TARGET_USE_OSS_GRAPHIC),true)
+# Systemcontrol
+PRODUCT_PACKAGES += \
+    systemcontrol
+endif
 
 ## Trust HAL
 PRODUCT_PACKAGES += \

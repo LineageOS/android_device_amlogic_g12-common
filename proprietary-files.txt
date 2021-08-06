@@ -14,7 +14,6 @@ product/etc/permissions/split-permissions-google.xml:product/etc/permissions/spl
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
 product/etc/sysconfig/google_atv.xml
-product/lib/libsystemcontrolservice.so
 product/media/audio/alarms/Alarm_Beep_02.ogg
 product/media/audio/ui/Effect_Tick.ogg
 product/media/audio/ui/KeypressDelete.ogg
@@ -33,10 +32,6 @@ system/lib/libmediahal_videodec.system.so
 
 system_ext/etc/permissions/privapp-permissions-deadpool.xml
 system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
-system_ext/lib/vendor.amlogic.hardware.hdmicec@1.0.so
-system_ext/lib/vendor.amlogic.hardware.remotecontrol@1.0.so
-system_ext/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
-system_ext/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
 -system_ext/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
 
 vendor/bin/ddrtest.sh
@@ -45,7 +40,7 @@ vendor/bin/hdcp_tx22
 vendor/bin/hdmicecd
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/bin/hw/android.hardware.dumpstate@1.0-service.droidlogic
-vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic
+
 vendor/bin/hw/android.hardware.health@2.0-service.droidlogic
 vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
 vendor/bin/hw/android.hardware.thermal@2.0-service.droidlogic
@@ -76,8 +71,8 @@ vendor/etc/drm/playready/zgpriv.dat
 vendor/etc/drm/playready/zgpriv_protected.dat
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/android.hardware.dumpstate@1.0-service.droidlogic.rc
-vendor/etc/init/android.hardware.graphics.allocator@3.0-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc
+
+
 vendor/etc/init/android.hardware.health@2.0-service.droidlogic.rc
 vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
 vendor/etc/init/android.hardware.thermal@2.0-service.droidlogic.rc
@@ -88,7 +83,6 @@ vendor/etc/init/fs.rc
 vendor/etc/init/hdmicecd.rc
 vendor/etc/init/irblaster1.rc
 vendor/etc/init/sysfs_permissions.rc
-vendor/etc/init/systemcontrol.rc
 vendor/etc/mesondisplay.cfg
 vendor/etc/permissions/android.software.cant_save_state.xml
 vendor/etc/permissions/droidlogic.software.core.xml
@@ -105,7 +99,6 @@ vendor/etc/thermal_info_config.json
 vendor/etc/tvconfig/pq/pq.db
 vendor/etc/tvconfig/pq/pq_default.ini
 -vendor/etc/vintf/manifest/android.hardware.dumpstate@1.0-service.droidlogic.xml
--vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
 -vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
 -vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.droidlogic.xml
 -vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.1-service.droidlogic.xml
@@ -142,18 +135,14 @@ vendor/etc/wifi/buildin/nvram_ap6398s.txt
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant_overlay.conf
 -vendor/framework/droidlogic.jar
-vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so
-vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so
+
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/firmware/video/h264_enc.bin
 vendor/lib/firmware/video/video_ucode.bin
-vendor/lib/hw/android.hardware.graphics.allocator@3.0-impl-arm.so
-vendor/bin/hw/android.hardware.graphics.allocator@3.0-service
-vendor/lib/hw/android.hardware.graphics.mapper@3.0-impl-arm.so
 vendor/lib/hw/audio.primary.amlogic.so
 vendor/lib/hw/camera.amlogic.so
 vendor/lib/hw/hdmi_cec.amlogic.so
-vendor/lib/hw/hwcomposer.amlogic.so
+
 vendor/lib/hw/memtrack.amlogic.so
 vendor/lib/hw/power.amlogic.so
 vendor/lib/hw/vulkan.amlogic.so
@@ -167,14 +156,12 @@ vendor/lib/libam_adp.so
 vendor/lib/libamadec.so
 vendor/lib/libamaudioutils.so
 vendor/lib/libamavutils.so
-vendor/lib/libamgralloc_ext.so
-vendor/lib/libamgralloc_ext_vendor@2.so
+
 vendor/lib/libamlaudiorc.so
 vendor/lib/libdatachunkqueue_alt.so
 vendor/lib/libdisplaysetting.so
 vendor/lib/libdroidaudiospdif.so
 vendor/lib/libfaad.so
-vendor/lib/libfbc.so
 vendor/lib/libfpscalculator_alt.so
 vendor/lib/libge2d.so
 vendor/lib/libhdmicec.so
@@ -197,12 +184,12 @@ vendor/lib/libomx_framework_alt.so
 vendor/lib/libomx_timed_task_queue_alt.so
 vendor/lib/libomx_worker_peer_alt.so
 vendor/lib/libplayready.so
-vendor/lib/libpqcontrol.so
+
 vendor/lib/libremotecontrol_jni.so
 vendor/lib/libremotecontrolserver.so
 vendor/lib/libsecmem.so
 vendor/lib/libstagefrighthw.so
-vendor/lib/libsystemcontrolservice.so
+
 vendor/lib/libthreadworker_alt.so
 vendor/lib/libtvbinder.so
 vendor/lib/libvideotunnel.so
@@ -213,13 +200,6 @@ vendor/lib/soundfx/libbalance.so
 vendor/lib/soundfx/libhpeqwrapper.so
 vendor/lib/soundfx/libsrswrapper.so
 vendor/lib/soundfx/libtreblebasswrapper.so
-vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
-vendor/lib/vendor.amlogic.hardware.droidvold@1.0.so
-vendor/lib/vendor.amlogic.hardware.hdmicec@1.0.so
-vendor/lib/vendor.amlogic.hardware.remotecontrol@1.0.so
-vendor/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
-vendor/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
-vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so
 -vendor/priv-app/droidlogic-res/droidlogic-res.apk
 vendor/priv-app/droidlogic-res/lib/arm/libjniuevent.so
 vendor/priv-app/droidlogic-res/lib/arm/libremotecontrol_jni.so

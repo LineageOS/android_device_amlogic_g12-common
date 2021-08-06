@@ -1,0 +1,12 @@
+# interfaces
+system_ext/lib/vendor.amlogic.hardware.hdmicec@1.0.so
+system_ext/lib/vendor.amlogic.hardware.remotecontrol@1.0.so
+system_ext/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
+system_ext/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
+vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
+vendor/lib/vendor.amlogic.hardware.droidvold@1.0.so
+vendor/lib/vendor.amlogic.hardware.hdmicec@1.0.so
+vendor/lib/vendor.amlogic.hardware.remotecontrol@1.0.so
+vendor/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
+vendor/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
+vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so

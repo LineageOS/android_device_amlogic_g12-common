@@ -5,6 +5,7 @@
 #
 
 include vendor/amlogic/g12-common/BoardConfigVendor.mk
+BOARD_AML_VENDOR_PATH := vendor/amlogic/common
 
 COMMON_PATH := device/amlogic/g12-common
 
@@ -40,6 +41,11 @@ TARGET_SCREEN_DENSITY := 320
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 ifneq ($(TARGET_HAS_TEE),false)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-tee.xml
+endif
+ifeq ($(TARGET_USE_OSS_GRAPHIC),true)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-oss-grahics.xml
+else
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-prebuilt-graphics.xml
 endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 

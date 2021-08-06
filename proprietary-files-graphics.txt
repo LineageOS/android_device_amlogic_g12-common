@@ -1,0 +1,20 @@
+# graphics
+-vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
+vendor/bin/hw/android.hardware.graphics.allocator@3.0-service
+vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic
+vendor/etc/init/android.hardware.graphics.allocator@3.0-service.rc
+vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc
+vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so
+vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so
+vendor/lib/hw/android.hardware.graphics.allocator@3.0-impl-arm.so
+vendor/lib/hw/android.hardware.graphics.mapper@3.0-impl-arm.so
+vendor/lib/hw/hwcomposer.amlogic.so
+vendor/lib/libamgralloc_ext.so
+vendor/lib/libamgralloc_ext_vendor@2.so
+
+# systemcontrol
+vendor/bin/systemcontrol
+vendor/etc/init/systemcontrol.rc
+vendor/lib/libfbc.so
+vendor/lib/libpqcontrol.so
+vendor/lib/libsystemcontrolservice.so
