@@ -94,9 +94,6 @@ ro.oem_unlock_supported=1
 ## Platform
 ro.vendor.platform.is.tv=0
 
-## USB
-vendor.usb.controller=ff400000.dwc2_a
-
 ## Wi-Fi
 ro.carrier=wifi-only
 wifi.direct.interface=p2p-dev-wlan0
