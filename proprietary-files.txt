@@ -223,7 +223,6 @@ vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so
 -vendor/priv-app/droidlogic-res/droidlogic-res.apk
 vendor/priv-app/droidlogic-res/lib/arm/libjniuevent.so
 vendor/priv-app/droidlogic-res/lib/arm/libremotecontrol_jni.so
-vendor/usr/keylayout/Vendor_0001_Product_0001.kl
 vendor/usr/keylayout/Vendor_000d_Product_3838.kl
 vendor/usr/keylayout/Vendor_000d_Product_3839.kl
 vendor/usr/keylayout/Vendor_005d_Product_0001.kl
