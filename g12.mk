@@ -113,6 +113,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc \
     $(COMMON_PATH)/init-files/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
+## Keyhandler
+PRODUCT_PACKAGES += \
+    KeyHandler
+
 ## Kernel Modules
 PRODUCT_PACKAGES += \
     mali \
