@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     media \
     optee-module
 
+## Keyhandler
+PRODUCT_PACKAGES += \
+    KeyHandler
+
 ## Keymaster
 PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
