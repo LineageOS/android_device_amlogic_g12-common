@@ -22,6 +22,30 @@
       "revId": "10de67dd9fb7d88bdf492cbf4ed763c399fff3e1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf734a46_e9707e9a",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2021-09-02T19:44:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "112d3b8a_c24b5ac3",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 9
+      },
+      "revId": "10de67dd9fb7d88bdf492cbf4ed763c399fff3e1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
