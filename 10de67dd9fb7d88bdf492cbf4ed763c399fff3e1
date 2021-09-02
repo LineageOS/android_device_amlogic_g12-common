@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "112d3b8a_c24b5ac3",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-09-02T12:59:31Z",
+      "side": 1,
+      "message": "all this code could be moved in static {} outside of ctor.\nAt least move KEYMAP init outside, private static Map\u003cInteger, String\u003e KEYMAP \u003d new HashMap\u003c\u003e();",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 9
+      },
+      "revId": "10de67dd9fb7d88bdf492cbf4ed763c399fff3e1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
