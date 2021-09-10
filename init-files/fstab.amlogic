@@ -7,7 +7,7 @@ vendor                /vendor             ext4      ro,barrier=1,discard        
 
 ## Block devices
 /dev/block/boot       /boot               emmc      defaults                                                         defaults
-/dev/block/dtbo       /dbto               emmc      defaults                                                         defaults
+/dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
 /dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
 /dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts,quota,formattable,reservedsize=32M
 /dev/block/metadata   /metadata           ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,first_stage_mount
