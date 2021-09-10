@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ff146bb_dee58863",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-09-10T20:17:33Z",
+      "side": 1,
+      "message": "when I use \"KeyEvent Viewer\" from the Play Store, I see:\n\nyoutube: 240\nnetflix: 240\ndisney plus: 230\nhbo: 229\n\nwhere did you get these values?\n\nalso, not sure why yt/netflix have same code - weird.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 55
+      },
+      "revId": "fc543d7574dd3e74a7f28b8da355b1c9a592b8d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
