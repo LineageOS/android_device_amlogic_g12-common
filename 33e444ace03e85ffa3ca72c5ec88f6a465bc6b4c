@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8ac3a38_0ca45d98",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-09-10T22:18:02Z",
+      "side": 1,
+      "message": "placeholder - both report 240 so not sure what to do here?",
+      "range": {
+        "startLine": 42,
+        "startChar": 52,
+        "endLine": 42,
+        "endChar": 55
+      },
+      "revId": "33e444ace03e85ffa3ca72c5ec88f6a465bc6b4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
