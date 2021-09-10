@@ -46,15 +46,16 @@ else
 	$(hide) rm -rf $(DTBTMP)
 endif
 	$(hide) $(call aml-compress-dtb, $(DTBTARGET))
-ifeq ($(TARGET_FLASH_DTB_PARTITION),true)
-	$(hide) $(call add-radio-file,$(DTBTARGET))
-endif
 	$(hide) $(ACP) $(DTBTARGET) $@
 
 $(BOARD_PREBUILT_DTBOIMAGE): $(INSTALLED_KERNEL_TARGET) $(MKDTBOIMG)
 	$(MKDTBOIMG) create $@ $(foreach dtbo, $(TARGET_DTBO_NAME), \
 		$(DTBDIR)/$(strip $(dtbo)).dtb \
 	)
+
+ifeq ($(TARGET_FLASH_DTB_PARTITION),true)
+INSTALLED_RADIOIMAGE_TARGET += $(DTBTARGET)
+endif
 
 .PHONY: dtbotest
 dtbotest: $(BOARD_PREBUILT_DTBOIMAGE)
