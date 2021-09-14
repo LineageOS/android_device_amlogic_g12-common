@@ -117,7 +117,6 @@ vendor/etc/wifi/buildin/config_bcm43438a1.txt
 vendor/etc/wifi/buildin/config_bcm43455c0_ag.txt
 vendor/etc/wifi/buildin/config_bcm43456c5_ag.txt
 vendor/etc/wifi/buildin/config_bcm4356a2_ag.txt
-vendor/etc/wifi/buildin/config_bcm4359c0_ag.txt
 vendor/etc/wifi/buildin/fw_bcm4339a0_ag.bin
 vendor/etc/wifi/buildin/fw_bcm43436b0.bin
 vendor/etc/wifi/buildin/fw_bcm43438a0.bin
