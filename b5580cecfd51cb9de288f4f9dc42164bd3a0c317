@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2862198d_31d07453",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-09-14T03:04:32Z",
+      "side": 1,
+      "message": "doesn\u0027t launch, think we\u0027ll need to specify an activity",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 80
+      },
+      "revId": "b5580cecfd51cb9de288f4f9dc42164bd3a0c317",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
