@@ -69,6 +69,30 @@
       "revId": "fc543d7574dd3e74a7f28b8da355b1c9a592b8d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d9867d1f_a04455a7",
+        "filename": "KeyHandler/src/org/lineageos/settings/device/KeyHandler.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2021-09-14T14:19:05Z",
+      "side": 1,
+      "message": "Seems like not possible (directly) as this is not UI thread.",
+      "parentUuid": "5655b17f_8cc6ab45",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 44
+      },
+      "revId": "fc543d7574dd3e74a7f28b8da355b1c9a592b8d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
