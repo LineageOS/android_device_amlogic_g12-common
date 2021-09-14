@@ -63,7 +63,6 @@ vendor/etc/bluetooth/BCM4345C0.hcd
 vendor/etc/bluetooth/BCM4345C5.hcd
 vendor/etc/bluetooth/BCM4350.hcd
 vendor/etc/bluetooth/BCM4354.hcd
-vendor/etc/bluetooth/BCM4359C0.hcd
 vendor/etc/bluetooth/BCM4362A1.hcd
 vendor/etc/bluetooth/auto_pairing.conf
 vendor/etc/bluetooth/bcm43241b4.hcd
@@ -128,7 +127,6 @@ vendor/etc/wifi/buildin/fw_bcm4356a2_ag.bin
 vendor/etc/wifi/buildin/fw_bcm4356a2_ag_apsta.bin
 vendor/etc/wifi/buildin/fw_bcm4356a2_ag_p2p.bin
 vendor/etc/wifi/buildin/fw_bcm4358u_ag.bin
-vendor/etc/wifi/buildin/fw_bcm4359c0_ag.bin
 vendor/etc/wifi/buildin/fw_bcm43751a1_ag.bin
 vendor/etc/wifi/buildin/nvram_ap6212.txt
 vendor/etc/wifi/buildin/nvram_ap6236.txt
@@ -138,7 +136,6 @@ vendor/etc/wifi/buildin/nvram_ap6271s.txt
 vendor/etc/wifi/buildin/nvram_ap62x8.txt
 vendor/etc/wifi/buildin/nvram_ap6335.txt
 vendor/etc/wifi/buildin/nvram_ap6356.txt
-vendor/etc/wifi/buildin/nvram_ap6398s.txt
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant_overlay.conf
 -vendor/framework/droidlogic.jar
@@ -233,3 +230,9 @@ vendor/usr/keylayout/Vendor_1915_Product_0001.kl
 vendor/usr/keylayout/Vendor_7045_Product_1820.kl
 vendor/usr/keylayout/Vendor_7545_Product_0021.kl
 vendor/usr/keylayout/Vendor_7545_Product_0180.kl
+
+# From sabrina_prod_stable-user-10-QTS1.210311.008-7350836-release-keys
+vendor/etc/bluetooth/BCM4359C0.hcd|a1ab486d6678b54a8fdfb8013809c642d8df2e84
+vendor/etc/wifi/buildin/config.txt:vendor/etc/wifi/buildin/config_bcm4359c0_ag.txt|892643c2a2fe93cf896d9f6b835242390f9bdf11
+vendor/etc/wifi/buildin/fw_bcm4359c0_ag.bin|ea9e0d592c782a4f38af2c9a4fb3a066159289aa
+vendor/etc/wifi/buildin/nvram_ap6398s.txt|a4183861800e2daad5eb10f2d03bb9e47343baf8
