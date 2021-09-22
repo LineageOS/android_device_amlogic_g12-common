@@ -199,6 +199,11 @@ PRODUCT_PACKAGES += \
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+## Soong Namespaces
+PRODUCT_SOONG_NAMESPACES +=
+    $(COMMON_PATH) \
+    device/lineage/atv
+
 ## Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
