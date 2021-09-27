@@ -1,0 +1,3 @@
+allow system_app { systemcontrol_hwservice hdmicecd_hwservice }:hwservice_manager find;
+
+binder_call(system_app, system_control)
