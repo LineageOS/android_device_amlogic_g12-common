@@ -1,0 +1,1 @@
+[   20.869401] type=1400 audit(1635652548.148:12): avc: denied { create } for comm="bluetooth@1.0-s" scontext=u:r:hal_bluetooth_default:s0 tcontext=u:r:hal_bluetooth_default:s0 tclass=udp_socket permissive=0
