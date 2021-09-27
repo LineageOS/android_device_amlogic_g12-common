@@ -1,0 +1,14 @@
+allow hal_audio_default device:dir { read open };
+allow hal_audio_default hidraw_audio_device:dir r_file_perms;
+allow hal_audio_default hidraw_audio_device:chr_file rw_file_perms;
+allow hal_audio_default sysfs_amhdmitx:dir search;
+allow hal_audio_default sysfs_amhdmitx:file r_file_perms;
+allow hal_audio_default sysfs_hidraw:file r_file_perms;
+allow hal_audio_default sysfs_xbmc:file r_file_perms;
+
+allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# /vendor/lib/libnano.so, which is linked by /vendor/lib/hw/audio.primary.amlogic.so tries
+# to search /data/misc/audioserver/, but it doesn't exist, so this denial doesn't matter:
+# avc: denied { search } for name="audioserver" dev="mmcblk0p18" ino=169712 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:audioserver_data_file:s0 tclass=dir permissive=0
+dontaudit hal_audio_default audioserver_data_file:dir search;
