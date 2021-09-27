@@ -1,0 +1,2 @@
+allow vold param_tv_file:dir r_dir_perms;
+allow vold mnt_vendor_file:dir r_dir_perms;
