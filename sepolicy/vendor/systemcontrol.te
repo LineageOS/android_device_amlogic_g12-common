@@ -1,0 +1,1 @@
+allow system_control_exec sysfs_cec:file { rw_file_perms };

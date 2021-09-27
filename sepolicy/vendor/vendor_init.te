@@ -1,0 +1,11 @@
+allow vendor_init self:capability sys_module;
+allow vendor_init vendor_kernel_modules:file { r_file_perms };
+allow vendor_init vendor_kernel_modules:system { module_load };
+
+# Allow vendor_init to load kernel modules
+allow vendor_init self:capability { sys_module };
+allow vendor_init vendor_file:system { module_load };
+
+# tee
+get_prop(vendor_init, tee_prop)
+set_prop(vendor_init, tee_prop)

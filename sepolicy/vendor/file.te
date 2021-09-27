@@ -1,0 +1,12 @@
+# sysfs
+type sysfs_cec, fs_type, sysfs_type;
+type sysfs_mpgpu, fs_type, sysfs_type;
+type sysfs_hidraw, fs_type, sysfs_type;
+
+type system_control_exec, file_type;
+
+# Kernel modules
+type vendor_kernel_modules, vendor_file_type, file_type;
+
+type hidraw_device, dev_type;
+type cec_device, dev_type;
