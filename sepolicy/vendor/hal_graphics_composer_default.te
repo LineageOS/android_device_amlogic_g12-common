@@ -1,0 +1,10 @@
+allow hal_graphics_composer_default sysfs_amhdmitx:dir search;
+allow hal_graphics_composer_default sysfs_amhdmitx:file r_file_perms;
+allow hal_graphics_composer_default display_device:chr_file rw_file_perms;
+allow hal_graphics_composer_default graphics_device:file rw_file_perms;
+
+allow hal_graphics_composer_default hal_graphics_composer_default:netlink_kobject_uevent_socket read;
+
+allow hal_graphics_composer_default kernel:process setsched;
+
+vndbinder_use(hal_graphics_composer_default)

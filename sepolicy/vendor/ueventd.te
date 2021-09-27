@@ -1,0 +1,3 @@
+allow ueventd graphics_device:file {associate relabelto};
+
+allow ueventd tmpfs:filesystem associate;

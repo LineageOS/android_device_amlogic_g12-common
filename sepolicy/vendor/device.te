@@ -1,0 +1,9 @@
+type amvecm_device, dev_type;
+type cec_device, dev_type;
+type display_device, dev_type;
+type dtbo_block_device, dev_type;
+type env_device, dev_type;
+type param_block_device, dev_type;
+type sda_block_device, dev_type;
+type tee_block_device, dev_type;
+type vbmeta_block_device, dev_type;
