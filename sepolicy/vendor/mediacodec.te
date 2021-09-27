@@ -1,0 +1,5 @@
+allow mediacodec display_device:file r_file_perms;
+allow mediacodec media_device:chr_file rw_file_perms;
+allow mediacodec media_device:file rw_file_perms;
+
+#permissive mediacodec;
