@@ -1,0 +1,1 @@
+allow hal_bluetooth_default hci_attach_dev:file rw_file_perms;
