@@ -1,0 +1,1 @@
+allow mediashell_app proc_net:file r_file_perms;

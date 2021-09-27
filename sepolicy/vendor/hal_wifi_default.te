@@ -1,0 +1,7 @@
+allow hal_wifi_default sysfs_wifi:file rw_file_perms;
+
+set_prop(hal_wifi_default, vendor_wifi_prop);
+
+# Only sabrina wants this, and Wi-Fi works regardless, some
+# legacy non-/data/vendor read it seems.
+dontaudit hal_wifi_default wifi_data_file:dir search;
