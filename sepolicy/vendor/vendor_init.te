@@ -1,0 +1,14 @@
+allow vendor_init display_device:file setattr;
+allow vendor_init graphics_device:file setattr;
+allow vendor_init proc_vm_writable:file rw_file_perms;
+allow vendor_init sysfs_graphics_device:file setattr;
+allow vendor_init wifi_data_file:dir search;
+allow vendor_init wifi_data_file:file r_file_perms;
+
+allow vendor_init self:capability sys_module;
+allow vendor_init vendor_file:system module_load;
+
+get_prop(vendor_init, tee_prop)
+set_prop(vendor_init, tee_prop)
+set_prop(vendor_init, vendor_boot_prop) 
+set_prop(vendor_init, vendor_vold_prop)
