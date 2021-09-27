@@ -1,0 +1,5 @@
+# props
+
+init.svc.tee_supplicant    u:object_r:tee_prop:s0
+
+ro.crypto.fuse_sdcard      u:object_r:vold_prop:s0

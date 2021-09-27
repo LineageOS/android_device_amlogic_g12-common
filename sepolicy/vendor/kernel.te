@@ -1,0 +1,4 @@
+allow kernel self:capability mknod;
+allow kernel device:dir {rw_file_perms rw_dir_perms write create rmdir };
+
+dontaudit kernel device:dir { write create add_name remove_name rmdir };
