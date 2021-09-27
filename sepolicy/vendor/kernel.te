@@ -1,0 +1,8 @@
+allow kernel device:dir { create_dir_perms };
+allow kernel device:chr_file { create setattr };
+allow kernel sepolicy_file:file r_file_perms;
+allow kernel system_bootstrap_lib_file:dir r_dir_perms;
+allow kernel system_bootstrap_lib_file:file r_file_perms;
+allow kernel self:capability mknod;
+
+dontaudit kernel device:dir { write create add_name remove_name rmdir };
