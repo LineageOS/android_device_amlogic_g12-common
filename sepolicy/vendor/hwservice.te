@@ -1,0 +1,7 @@
+type droidvold_hwservice, hwservice_manager_type;
+type hdmicecd_hwservice, hwservice_manager_type;
+type imageserver_hwservice, hwservice_manager_type;
+type mesaon_display_ipc_hwservice, hwservice_manager_type;
+type remotecontrol_hwservice, hwservice_manager_type;
+type systemcontrol_hwservice, hwservice_manager_type;
+type tvserver_hwservice, hwservice_manager_type;
