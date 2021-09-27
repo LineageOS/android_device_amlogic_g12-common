@@ -1,0 +1,4 @@
+# props
+init.svc.tee_supplicant    u:object_r:tee_prop:s0
+ro.crypto.fuse_sdcard      u:object_r:vendor_vold_prop:s0
+vendor.wlan.driver.version u:object_r:vendor_wifi_prop:s0

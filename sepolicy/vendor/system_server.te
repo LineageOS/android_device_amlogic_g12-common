@@ -1,0 +1,5 @@
+allow system_server sysfs_rtc:file r_file_perms;
+
+allow system_server sysfs_amhdmitx:file r_file_perms;
+
+#allow system_server init:binder { transfer call };
