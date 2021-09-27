@@ -1,0 +1,2 @@
+allow hal_health_default sysfs_healthd:file r_file_perms;
+allow hal_health_default sysfs_power:file rw_file_perms;

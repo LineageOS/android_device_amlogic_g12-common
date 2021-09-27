@@ -1,0 +1,2 @@
+genfscon proc /sys/vm/watermark_scale_factor u:object_r:proc_vm_writable:s0
+genfscon proc /sys/vm/min_free_kbytes        u:object_r:proc_vm_writable:s0
