@@ -1,0 +1,7 @@
+allow hal_audio_default hidraw_audio_device:dir r_file_perms;
+allow hal_audio_default sysfs_hidraw:dir r_file_perms;
+allow hal_audio_default device:dir { read open };
+allow hal_audio_default hal_audio_default:netlink_kobject_uevent_socket {bind create read setopt};
+allow hal_audio_default sysfs_amhdmitx:dir search;
+allow hal_audio_default sysfs_amhdmitx:file r_file_perms;
+allow hal_audio_default sysfs_xbmc:file r_file_perms;
