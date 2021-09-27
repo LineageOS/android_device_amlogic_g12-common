@@ -1,0 +1,13 @@
+init.svc.tee_supplicant           u:object_r:tee_prop:s0
+ro.rfkilldisabled                 u:object_r:vendor_bluetooth_prop:s0
+vendor.allm.support               u:object_r:vendor_boot_prop:s0
+vendor.sys.hwc.booted             u:object_r:vendor_boot_prop:s0
+ro.crypto.fuse_sdcard             u:object_r:vendor_vold_prop:s0
+vendor.display-size               u:object_r:vendor_display_prop:s0
+vendor.system.support.dolbyvision u:object_r:vendor_dolby_prop:s0
+ro.vendor.hdmi.auto_otp           u:object_r:vendor_hdmi_prop:s0
+persist.vendor.sys.cec.logicaladdress u:object_r:vendor_hdmi_prop:s0
+persist.vendor.sys.hdr.state      u:object_r:vendor_hdmi_prop:s0
+persist.vendor.sys.sdr.state      u:object_r:vendor_hdmi_prop:s0
+vendor.contenttype_game.support   u:object_r:vendor_hdmi_prop:s0
+vendor.wlan.driver.version        u:object_r:vendor_wifi_prop:s0
