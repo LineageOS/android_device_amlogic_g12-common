@@ -1,0 +1,7 @@
+allow tee self:capability sys_rawio;
+
+allowxperm tee sda_block_device:blk_file ioctl { 0xb300-0xb301 };
+allow tee sda_block_device:blk_file { read open write ioctl };
+
+allow tee tee_data_file:dir mounton;
+allow tee tee_data_file:file r_file_perms;
