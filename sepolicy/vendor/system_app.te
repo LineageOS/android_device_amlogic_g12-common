@@ -1,0 +1,1 @@
+allow system_app { systemcontrol_hwservice hdmicecd_hwservice }:hwservice_manager { find };

@@ -1,0 +1,11 @@
+allow hal_memtrack_default servicemanager:file r_file_perms;
+allow hal_memtrack_default servicemanager:dir search;
+
+allow hal_memtrack_default hwservicemanager:file r_file_perms;
+allow hal_memtrack_default hwservicemanager:dir search;
+
+allow hal_memtrack_default vndservicemanager:file r_file_perms;
+allow hal_memtrack_default vndservicemanager:dir search;
+
+allow hal_memtrack_default hal_keymaster_default:dir search;
+allow hal_memtrack_default hal_keymaster_default:file r_file_perms;

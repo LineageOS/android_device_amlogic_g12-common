@@ -1,0 +1,3 @@
+allow tee self:capability { sys_rawio };
+
+allow tee sda_block_device:blk_file { read open write ioctl };

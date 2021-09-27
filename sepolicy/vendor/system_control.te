@@ -1,0 +1,11 @@
+type system_control, domain;
+type system_control_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(system_control)
+
+allow system_control { systemcontrol_hwservice  hidl_base_hwservice }:hwservice_manager { add };
+
+allow system_control sysfs_amhdmitx:dir search;
+allow system_control sysfs_amhdmitx:file { read write open getattr };
+
+allow system_control system_control:netlink_kobject_uevent_socket { read };
