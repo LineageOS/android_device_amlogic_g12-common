@@ -1,0 +1,21 @@
+# sysfs
+
+# Kernel modules
+type vendor_kernel_modules, vendor_file_type, file_type;
+
+type hidraw_audio_device, dev_type;
+type sysfs_hidraw, fs_type, sysfs_type;
+
+# Block devices
+type dtbo_block_device, dev_type;
+type param_block_device, dev_type;
+type tee_block_device, dev_type;
+type vbmeta_block_device, dev_type;
+
+type param_tv_file, file_type;
+
+type sysfs_amhdmitx, fs_type, sysfs_type;
+
+# Power
+type sysfs_mpgpu_cmd, fs_type, sysfs_type;
+

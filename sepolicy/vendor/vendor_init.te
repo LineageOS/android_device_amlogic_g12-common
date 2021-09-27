@@ -1,0 +1,10 @@
+# Allow vendor_init to load kernel modules;
+allow vendor_init self:capability { sys_module };
+allow vendor_init vendor_file:system { module_load };
+
+# tee
+get_prop(vendor_init, tee_prop);
+set_prop(vendor_init, tee_prop);
+
+##neverallow
+#set_prop(vendor_init, vold_prop);

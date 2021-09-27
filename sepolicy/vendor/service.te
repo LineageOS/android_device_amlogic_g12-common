@@ -1,0 +1,2 @@
+type hdmi_cec_service,          service_manager_type;
+type system_control_service,    service_manager_type;
