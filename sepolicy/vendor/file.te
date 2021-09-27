@@ -1,0 +1,9 @@
+# sysfs
+type sysfs_hidraw, fs_type, sysfs_type;
+
+# Kernel modules
+type vendor_kernel_modules, vendor_file_type, file_type;
+
+type hidraw_device, dev_type;
+
+type param_block_device, dev_type;

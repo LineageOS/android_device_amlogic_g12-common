@@ -1,0 +1,1 @@
+allow hal_audio_default hidraw_device:dir { r_file_perms };

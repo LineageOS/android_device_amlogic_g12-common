@@ -1,0 +1,6 @@
+type system_control, domain;
+type system_control_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(system_control)
+
+allow system_control { systemcontrol_hwservice  hidl_base_hwservice }:hwservice_manager { add };
