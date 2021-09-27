@@ -1,0 +1,1 @@
+allow tee sysfs_devices_block:blk_file { r_file_perms };
