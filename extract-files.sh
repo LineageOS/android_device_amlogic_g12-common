@@ -77,6 +77,9 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.graphics.allocator@3.0-service)
              "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
              ;;
+        vendor/etc/init/fs.rc)
+             sed -i '/media 0770 media_rw media_rw/d' "${2}"
+             ;;
         vendor/etc/init/tee-supplicant.rc)
              sed -i s#/vendor/lib/#/vendor/lib/modules/#g "${2}"
              ;;
