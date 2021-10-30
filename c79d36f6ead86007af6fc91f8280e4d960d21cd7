@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b4c280b_a630e8c5",
+        "filename": "sepolicy/vendor/audioserver.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-30T08:47:37Z",
+      "side": 1,
+      "message": "get_prop macro",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 65
+      },
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f7f01978_34dab132",
+        "filename": "sepolicy/vendor/hal_audio_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-30T08:47:37Z",
+      "side": 1,
+      "message": "allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl\n\nNOTE: use self",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 98
+      },
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7e0398a1_a8020132",
+        "filename": "sepolicy/vendor/hal_graphics_composer_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-30T08:47:37Z",
+      "side": 1,
+      "message": "same as audio",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 129
+      },
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d12bc83b_93262957",
+        "filename": "sepolicy/vendor/hal_memtrack_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-30T08:47:37Z",
+      "side": 1,
+      "message": "this looks weird?\nwhy would it want to read the other files?",
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9de0f05_8c71456f",
+        "filename": "sepolicy/vendor/kernel.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-30T08:47:37Z",
+      "side": 1,
+      "message": "Waiting for the day google blocks kernels from doing this shit",
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
