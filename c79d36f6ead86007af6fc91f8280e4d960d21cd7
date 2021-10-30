@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "e48451e4_d3dd3d52",
+        "filename": "sepolicy/vendor/graphics_device.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2021-10-30T11:42:32Z",
+      "side": 1,
+      "message": "extra newline?",
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f7f01978_34dab132",
         "filename": "sepolicy/vendor/hal_audio_default.te",
         "patchSetId": 13
