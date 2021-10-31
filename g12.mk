@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
 ## fastbootd
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.fastbootd.available=true
+PRODUCT_SYSTEM_PROPERTY_OVERRIDES += ro.fastbootd.available=true
 PRODUCT_PACKAGES += fastbootd
 
 ## File-system permissions
