@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4393e696_099b6a9f",
+        "filename": "sepolicy/vendor/property_contexts",
+        "patchSetId": 22
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2021-10-31T16:03:49Z",
+      "side": 1,
+      "message": "Duplicate to line 8.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "12a1464a964fbb08a82ce022a75bdc2d37dae9aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
