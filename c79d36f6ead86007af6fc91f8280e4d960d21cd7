@@ -83,6 +83,30 @@
     },
     {
       "key": {
+        "uuid": "c35e8b54_ec34dfd5",
+        "filename": "sepolicy/vendor/hal_audio_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-10-31T03:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7f01978_34dab132",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 98
+      },
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e0398a1_a8020132",
         "filename": "sepolicy/vendor/hal_graphics_composer_default.te",
         "patchSetId": 13
@@ -106,6 +130,30 @@
     },
     {
       "key": {
+        "uuid": "74a1b914_96dc1f22",
+        "filename": "sepolicy/vendor/hal_graphics_composer_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-10-31T03:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e0398a1_a8020132",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 129
+      },
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d12bc83b_93262957",
         "filename": "sepolicy/vendor/hal_memtrack_default.te",
         "patchSetId": 13
@@ -123,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "76388e55_90ae444f",
+        "filename": "sepolicy/vendor/hal_memtrack_default.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-10-31T03:42:37Z",
+      "side": 1,
+      "message": "I honestly have no clue. But it\u0027s fatal if it can\u0027t it seems.",
+      "parentUuid": "d12bc83b_93262957",
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b9de0f05_8c71456f",
         "filename": "sepolicy/vendor/kernel.te",
         "patchSetId": 13
@@ -134,6 +200,24 @@
       "writtenOn": "2021-10-30T08:47:37Z",
       "side": 1,
       "message": "Waiting for the day google blocks kernels from doing this shit",
+      "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "432044f0_a13111e0",
+        "filename": "sepolicy/vendor/kernel.te",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-10-31T03:42:37Z",
+      "side": 1,
+      "message": "\"lol\" until then",
+      "parentUuid": "b9de0f05_8c71456f",
       "revId": "c79d36f6ead86007af6fc91f8280e4d960d21cd7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
