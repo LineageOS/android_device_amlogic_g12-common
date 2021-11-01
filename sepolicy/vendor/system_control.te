@@ -16,8 +16,10 @@ allow system_control param_tv_file:file create_file_perms;
 allow system_control sysfs_amhdmitx:dir search;
 allow system_control sysfs_amhdmitx:file { read write open getattr };
 allow system_control sysfs_audio:file rw_file_perms;
+allow system_control sysfs_graphics_device:dir r_dir_perms;
 allow system_control sysfs_graphics_device:file r_file_perms;
 allow system_control sysfs_hdmi:file r_file_perms;
+allow system_control sysfs_media:dir r_dir_perms;
 allow system_control sysfs_media:file rw_file_perms;
 allow system_control sysfs_power:file r_file_perms;
 allow system_control video_device:chr_file rw_file_perms;
@@ -37,6 +39,7 @@ allow system_control system_control:netlink_kobject_uevent_socket { bind create 
 
 get_prop(system_control, hwservicemanager_prop)
 get_prop(system_control, vendor_bluetooth_prop)
+set_prop(system_control, ctl_stop_prop)
 set_prop(system_control, vendor_boot_prop)
 set_prop(system_control, vendor_display_prop)
 set_prop(system_control, vendor_hdmi_prop)
