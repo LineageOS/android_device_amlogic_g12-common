@@ -1,9 +1,10 @@
 ### All blobs from this list, unless pinned and noted as otherwise,
-##  are from adt3-user 11 RTT1.200909.003.A2 6832896 release-keys.
+##  are from adt3-user 12 STT1.211025.001.Z4 7928920 release-keys.
 
 ## TEE/Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.1-service.amlogic
-vendor/etc/init/android.hardware.keymaster@4.1-service.amlogic.rc
+vendor/bin/hw/android.hardware.security.keymint-service.amlogic
+vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.amlogic.xml
 vendor/lib/libtee_load_video_fw.so
 vendor/lib/libteec.so
 vendor/lib/libsecmem.so

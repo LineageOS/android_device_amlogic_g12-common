@@ -6,8 +6,6 @@
 
 ## Audio
 ro.af.client_heap_size_kbyte=1536
-ro.config.media_vol_default=20
-ro.config.media_vol_steps=25
 ro.config.ringtone=Ring_Synth_04.ogg
 ro.config.notification_sound=pixiedust.ogg
 
@@ -23,23 +21,12 @@ ro.boot.btmacaddr=22:22:ce:d2:ca:13
 camera.disable_zsl_mode=1
 rw.camera.usb.faceback=true
 
-## Graphics
-debug.sf.disable_backpressure=1
-debug.sf.latch_unsignaled=1
-ro.sf.disable_triple_buffer=0
-
 ## HDMI
-mbx.hdmiin.switchfull=false
-mbx.hdmiin.videolayer=false
+ro.hdmi.cec.source.playback_device_action_on_routing_control=wake_up_and_send_active_source
 ro.sys.hdmiin.enable=true
 
 ## Identifiers
 ro.oem.key1=ATV00100020
 
-## Media
-libplayer.livets.softdemux=1
-libplayer.netts.recalcpts=1
-ro.media.camera_preview.maxsize=1920x1080
-ro.media.camera_preview.limitedrate=1920x1080x30,1280x720x30,640x480x30,320x240x28
-ro.media.camera_preview.usemjpeg=1
-ro.media.maxmem=629145600
+## LMK
+ro.lmk.use_new_strategy=true

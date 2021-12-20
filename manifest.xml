@@ -1,4 +1,4 @@
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="4.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -30,16 +30,6 @@
         <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.5</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-        <fqname>@2.5::ICameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -48,6 +38,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>2.5</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
+        <fqname>@2.5::ICameraProvider/legacy/0</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
@@ -85,22 +85,22 @@
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IAllocator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IAllocator/default</fqname>
+        <fqname>@4.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.health</name>
@@ -111,6 +111,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::IHealth/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.light</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::ILight/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -138,16 +148,6 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.power</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPower</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IPower/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.tv.cec</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -156,16 +156,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IHdmiCec/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.amlogic.hardware.hdmicec</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDroidHdmiCEC</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IDroidHdmiCEC/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.amlogic.hardware.systemcontrol</name>

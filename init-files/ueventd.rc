@@ -12,12 +12,13 @@
 /dev/uio0                 0666   system       mediadrm
 /dev/video0               0660   system       camera
 /dev/video1               0660   system       camera
+/dev/video2               0660   system       camera
 /dev/video10              0660   system       mediadrm
 /dev/video11              0660   media        system
-/dev/video13              0660   system       mediadrm
-/dev/video14              0660   system       mediadrm
-/dev/video15              0660   system       mediadrm
-/dev/video16              0660   system       mediadrm
+/dev/video13              0666   system       mediadrm
+/dev/video14              0666   system       mediadrm
+/dev/video15              0666   system       mediadrm
+/dev/video16              0666   system       mediadrm
 /dev/video16              0660   system       mediadrm
 /dev/video17              0660   system       mediadrm
 /dev/video18              0660   system       mediadrm
@@ -43,9 +44,12 @@
 /dev/amsubtitle           0660   media        system
 /dev/jpegenc              0660   media        system
 /dev/videosync            0666   media        system
+/dev/media*               0666   media        system
+/dev/tsync                0666   media        system
 /dev/ac_sbuf0             0660   system       camera
 /dev/ac_isp4uf            0660   system       camera
-
+/dev/secmem               0660   system       mediadrm
+/dev/amresource_mgr       0666   media        system
 
 # Audio data
 /dev/audio_data_debug     0660   mediacodec   audio
@@ -62,7 +66,7 @@
 /dev/ion                  0666   system       graphics
 
 # uvm
-/dev/uvm                  0660   system       graphics
+/dev/uvm                  0666   system       graphics
 
 # Video tunnel
 /dev/videotunnel          0666   system       graphics
@@ -99,7 +103,7 @@
 # For USB Joysticks
 /dev/input/js*            0664   system       system
 
-/dev/wifi_power           0660   system       wifi
+/dev/wifi_power           0660   wifi         bluetooth
 
 /dev/otz_client           0666   drm          drm
 
@@ -110,7 +114,7 @@
 
 /dev/block/by-name/frp    0660   system       system
 
-## /sys/ sysfs
+# /sys/ sysfs
 #
 
 # Bluetooth
@@ -127,6 +131,7 @@
 /sys/class/amhdmitx/amhdmitx0       config                  0664      system      system
 /sys/class/amhdmitx/amhdmitx0       avmute                  0664      system      system
 /sys/class/amhdmitx/amhdmitx0       aud_ch                  0664      system      mediadrm
+/sys/class/amhdmitx/amhdmitx0       frac_rate_policy        0664      system      system
 
 /sys/class/amhdmitx/amhdmitx0       allm_cap                0664      system      system
 /sys/class/amhdmitx/amhdmitx0       allm_mode               0664      system      system
@@ -158,3 +163,5 @@
 # LED
 /sys/devices/platform/gpioleds/leds/yellow_led    trigger      0666  root root
 /sys/devices/platform/gpioleds/leds/sys_led       brightness   0666  root root
+
+parallel_restorecon enabled

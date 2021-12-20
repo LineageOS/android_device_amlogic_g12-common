@@ -16,11 +16,21 @@ ro.vendor.autoconnectbt.macprefix=00:CD:FF
 ro.vendor.autoconnectbt.nameprefix=Amlogic_RC
 ro.vendor.autoconnectbt.rssilimit=70
 
+## Dalvik
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=384m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+
 ## DRM
 drm.service.enabled=1
 vendor.drm.service.enable=true
 
 ## HDMI
+mbx.hdmiin.switchfull=false
+mbx.hdmiin.videolayer=false
 persist.sys.hdmi.keep_awake=false
 persist.vendor.sys.cec.power_assist_standby=false
 ro.hdmi.device_type=4
@@ -36,22 +46,23 @@ ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 
 # Graphics
+debug.renderengine.backend=skiaglthreaded
 ro.hardware.vulkan=amlogic
 ro.opengles.version=196610
 ro.surface_flinger.max_graphics_height=1080
 ro.surface_flinger.max_graphics_width=1920
-
-## Dalvik
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapmaxfree=8m
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapsize=384m
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heaptargetutilization=0.75
+ro.surface_flinger.supports_background_blur=1
+ro.surface_flinger.update_device_product_info_on_hotplug_reconnect=1
 
 ## Media
+libplayer.livets.softdemux=1
+libplayer.netts.recalcpts=1
 persist.sys.media.avsync=true
 persist.vendor.media.bootvideo=0050
+ro.media.camera_preview.maxsize=1920x1080
+ro.media.camera_preview.limitedrate=1920x1080x30,1280x720x30,640x480x30,320x240x28
+ro.media.camera_preview.usemjpeg=1
+ro.media.maxmem=629145600
 ro.vendor.media.support.ffmpeg.adec=false
 ro.vendor.platform.disable.audiorawout=false
 ro.vendor.platform.support.dolby=true
@@ -74,14 +85,17 @@ vendor.ionvideo.enable=1
 vendor.media.omx.use.360omx2=false
 vendor.media.omx.out_buffer2_osd=8
 vendor.media.omx.display_mode=3
+vendor.media.omx2.in_buffer=5
 vendor.media.sf.omxvideo-optmize=1
-debug.stagefright.ccodec=0
 
 ## OEM Lock
 ro.oem_unlock_supported=1
 
 ## Platform
 ro.vendor.platform.is.tv=0
+
+## SOC
+ro.soc.manufacturer=Amlogic
 
 ## USB
 vendor.usb.controller=ff400000.dwc2_a

@@ -148,7 +148,7 @@
                 <route type="mix" sink="HDMI Out"
                        sources="primary output,tunnel pcm,multichannel output,multichannel direct"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,BT SCO Headset Mic"/>
+                       sources="primary output,tunnel pcm,BT SCO Headset Mic"/>
                 <route type="mix" sink="Wired Headset"
                        sources="primary output,BT SCO Headset Mic"/>
                 <route type="mix" sink="Wired Headphones"

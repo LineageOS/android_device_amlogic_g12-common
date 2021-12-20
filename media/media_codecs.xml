@@ -81,7 +81,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="128x128" max="3840x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="blocks-per-second" min="1" max="1944000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
             <Feature name="tunneled-playback" />
@@ -91,7 +91,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="128x128" max="3840x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="blocks-per-second" min="1" max="1944000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
@@ -105,6 +105,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="tunneled-playback" />
             <Limit name="concurrent-instances" max="9" />
         </MediaCodec>
         <MediaCodec name="OMX.amlogic.avc.decoder.awesome2.secure" type="video/avc" >
@@ -114,10 +115,11 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="tunneled-playback" />
             <Feature name="secure-playback" required="true" />
 	    <Limit name="concurrent-instances" max="2" />
         </MediaCodec>
-        <MediaCodec name="OMX.amlogic.mpeg4.decoder.awesome" type="video/mp4v-es" >
+        <MediaCodec name="OMX.amlogic.mpeg4.decoder.awesome2" type="video/mp4v-es" >
             <Limit name="size" min="64x64" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -126,16 +128,7 @@ Only the three quirks included above are recognized at this point:
             <Feature name="adaptive-playback" />
             <Limit name="concurrent-instances" max="9" />
         </MediaCodec>
-        <MediaCodec name="OMX.amlogic.h263.decoder.awesome" type="video/3gpp" >
-            <Limit name="size" min="64x64" max="1920x1088" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="972000" />
-            <Limit name="bitrate" range="1-300000000" />
-            <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="1" />
-        </MediaCodec>
-        <MediaCodec name="OMX.amlogic.mpeg2.decoder.awesome" type="video/mpeg2" >
+        <MediaCodec name="OMX.amlogic.mpeg2.decoder.awesome2" type="video/mpeg2" >
             <Limit name="size" min="64x64" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -148,7 +141,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="64x64" max="3840x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="blocks-per-second" min="1" max="1944000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
             <Feature name="tunneled-playback" />
@@ -158,7 +151,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="64x64" max="3840x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="blocks-per-second" min="1" max="1944000" />
             <Limit name="bitrate" range="1-300000000" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
@@ -190,16 +183,6 @@ Only the three quirks included above are recognized at this point:
 
         <MediaCodec name="OMX.google.mpeg4.decoder" type="video/mp4v-es" />
         <MediaCodec name="OMX.google.h263.decoder" type="video/3gpp" />
-        <MediaCodec name="OMX.google.h264.decoder" type="video/avc">
-	    <!-- profiles and levels:  ProfileBaseline : Level51 -->
-            <Limit name="size" min="2x2" max="2048x2048" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-8160" />
-            <Limit name="blocks-per-second" range="1-489600" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
             <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
             <Limit name="size" min="2x2" max="4096x4096" />
@@ -233,17 +216,6 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="needs-flush-before-disable" />
             <Quirk name="requires-flush-complete-emulation" />
         </MediaCodec>
-        <!-- Disable android C2 avc decoder -->
-        <MediaCodec name="c2.android.avc.decoder" type="video/avc" enabled="false" update="true" />
-        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true" >
-            <Limit name="size" min="96x96" max="1920x1080" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="24" max="2073600" />
-            <Limit name="bitrate" range="1-120000000" />
-            <Limit name="frame-rate" range="1-60" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
     </Decoders>
 
     <Settings>
@@ -260,7 +232,7 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.google.flac.encoder" type="audio/flac" />
 
         <MediaCodec name="OMX.amlogic.video.encoder.hevc" type="video/hevc" >
-            <Limit name="size" min="176x144" max="1920x1088" />
+            <Limit name="size" min="256x144" max="1920x1088" />
             <Limit name="alignment" value="16x16" />
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="244800" />

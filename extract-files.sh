@@ -60,23 +60,6 @@ fi
 
 function blob_fixup() {
      case "${1}" in
-         vendor/lib/libmeson_display_adapter_remote.so)
-             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
-             "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
-             ;;
-         vendor/lib/libmeson_display_service.so)
-             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
-             "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
-             ;;
-        vendor/lib/hw/android.hardware.graphics.mapper@3.0-impl-arm.so)
-             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
-             ;;
-        vendor/lib/hw/android.hardware.graphics.allocator@3.0-impl-arm.so)
-             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
-             ;;
-        vendor/bin/hw/android.hardware.graphics.allocator@3.0-service)
-             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
-             ;;
         vendor/etc/init/fs.rc)
              sed -i '/media 0770 media_rw media_rw/d' "${2}"
              ;;
