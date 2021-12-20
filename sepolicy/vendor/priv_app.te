@@ -1,1 +1,1 @@
-allow priv_app cgroup_bpf:dir search;
+#allow priv_app cgroup_bpf:dir search;

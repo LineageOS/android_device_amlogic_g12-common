@@ -1,8 +1,8 @@
-init.svc.tee_supplicant u:object_r:tee_prop:s0
+#init.svc.tee_supplicant u:object_r:tee_prop:s0
 
 ro.boot.oem.locales     u:object_r:vendor_boot_prop:s0
-ro.crypto.fuse_sdcard   u:object_r:vendor_vold_prop:s0
-ro.rfkilldisabled       u:object_r:vendor_bluetooth_prop:s0
+#ro.crypto.fuse_sdcard   u:object_r:vendor_vold_prop:s0
+#ro.rfkilldisabled       u:object_r:vendor_bluetooth_prop:s0
 
 ro.vendor.hdmi.auto_otp u:object_r:exported3_default_prop:s0
 

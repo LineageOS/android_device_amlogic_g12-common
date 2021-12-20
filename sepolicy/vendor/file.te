@@ -17,5 +17,5 @@ type sysfs_xbmc, fs_type, sysfs_type;
 
 type tee_firmload_exec, exec_type, vendor_file_type, file_type;
 
-type vendor_kernel_modules, vendor_file_type, file_type;
+#type vendor_kernel_modules, vendor_file_type, file_type;
 type vendor_mediadrm_vendor_data_file, file_type, data_file_type;
