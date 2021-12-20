@@ -33,6 +33,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 ## BUILD_BROKEN_*
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 ## Dex Pre-Opt
 WITH_DEXPREOPT_DEBUG_INFO := false
@@ -48,7 +49,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_DTB_OFFSET := 0x00e88000
 BOARD_KERNEL_BASE := 0x01078000
-BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 androidboot.boot_devices=ffe07000.emmc otg_device=1
+BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 androidboot.boot_devices=ffe07000.emmc otg_device=1 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
