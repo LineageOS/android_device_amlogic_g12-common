@@ -8,6 +8,7 @@ COMMON_PATH := device/amlogic/g12-common
 
 ## BUILD_BROKEN_*
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # GPU
 TARGET_AMLOGIC_GPU_ARCH := bifrost
@@ -16,7 +17,7 @@ TARGET_AMLOGIC_GPU_ARCH := bifrost
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 ## Kernel
-BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_devices=ffe07000.emmc use_uvm=1
+BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_devices=ffe07000.emmc use_uvm=1 androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
