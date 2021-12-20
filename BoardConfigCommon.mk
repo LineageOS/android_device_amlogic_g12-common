@@ -8,6 +8,7 @@ COMMON_PATH := device/amlogic/g12-common
 
 ## BUILD_BROKEN_*
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # GPU
 TARGET_AMLOGIC_GPU_ARCH := bifrost
@@ -16,7 +17,24 @@ TARGET_AMLOGIC_GPU_ARCH := bifrost
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 ## Kernel
+<<<<<<< HEAD   (72abed g12: Decommonize libsecmem)
 BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_devices=ffe07000.emmc use_uvm=1
+=======
+BOARD_BOOTIMG_HEADER_VERSION := 2
+BOARD_DTB_OFFSET := 0x00e88000
+BOARD_KERNEL_BASE := 0x01078000
+BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 androidboot.boot_devices=ffe07000.emmc otg_device=1 use_uvm=1 androidboot.selinux=permissive
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_ARCH)/boot/dtbo.img
+BOARD_RAMDISK_OFFSET := 0xfef10000
+BOARD_SECOND_OFFSET := 0xfee10000
+BOARD_TAGS_OFFSET := 0xfdf10100
+TARGET_BOOTLOADER_IS_2ND := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_COMPILE := true
+>>>>>>> CHANGE (7ca572 [DNM] g12: Set SELinux status to Permissive)
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
