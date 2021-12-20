@@ -60,6 +60,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-l
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
+TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
 TARGET_USES_64_BIT_BINDER := true
 
 BOARD_MKBOOTIMG_ARGS = --base $(BOARD_KERNEL_BASE) --pagesize $(BOARD_KERNEL_PAGESIZE) --kernel_offset $(BOARD_KERNEL_OFFSET) --second_offset $(BOARD_SECOND_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --dtb_offset $(BOARD_DTB_OFFSET) --header_version $(BOARD_BOOTIMG_HEADER_VERSION) --dtb $(PRODUCT_OUT)/dtb.img
