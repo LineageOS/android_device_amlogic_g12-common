@@ -38,7 +38,6 @@ allow system_control self:capability net_admin;
 allow system_control system_control:netlink_kobject_uevent_socket { bind create read setopt };
 
 get_prop(system_control, hwservicemanager_prop)
-get_prop(system_control, vendor_bluetooth_prop)
 set_prop(system_control, ctl_stop_prop)
 set_prop(system_control, vendor_boot_prop)
 set_prop(system_control, vendor_display_prop)
