@@ -1,9 +1,9 @@
-type tee_prop, property_type;
+vendor_internal_prop(vendor_tee_prop);
+vendor_internal_prop(vendor_bluetooth_prop);
+vendor_internal_prop(vendor_dolby_prop);
+vendor_internal_prop(vendor_boot_prop);
+vendor_internal_prop(vendor_display_prop);
+vendor_internal_prop(vendor_vold_prop);
+vendor_internal_prop(vendor_wifi_prop);
 
-type vendor_bluetooth_prop, property_type;
-type vendor_dolby_prop, property_type;
-type vendor_boot_prop, property_type;
-type vendor_display_prop, property_type;
-type vendor_hdmi_prop, property_type;
-type vendor_vold_prop, property_type;
-type vendor_wifi_prop, property_type;
+vendor_public_prop(vendor_hdmi_prop);
