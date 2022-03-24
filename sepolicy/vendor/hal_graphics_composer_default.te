@@ -15,6 +15,8 @@ allow hal_graphics_composer_default systemcontrol_hwservice:hwservice_manager fi
 
 allow hal_graphics_composer_default system_control:binder call;
 
+allow hal_graphics_composer_default hal_graphics_allocator_default_tmpfs:file rw_file_perms;
+
 set_prop(hal_graphics_composer_default, vendor_boot_prop)
 
 vndbinder_use(hal_graphics_composer_default)
