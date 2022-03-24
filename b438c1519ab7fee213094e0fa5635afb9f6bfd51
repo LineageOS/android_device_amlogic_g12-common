@@ -22,6 +22,30 @@
       },
       "revId": "b438c1519ab7fee213094e0fa5635afb9f6bfd51",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "496a06ef_efddf7b5",
+        "filename": "sepolicy/vendor/audioserver.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2022-03-24T15:09:48Z",
+      "side": 0,
+      "message": "Seems like ro.vendor.qti.va_aosp.support",
+      "parentUuid": "a5620e66_f7949e9c",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 42
+      },
+      "revId": "b438c1519ab7fee213094e0fa5635afb9f6bfd51",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
