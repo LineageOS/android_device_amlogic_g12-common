@@ -16,6 +16,24 @@
       "message": "Stock doesn\u0027t declare these, do we want them for 12?",
       "revId": "e87f709b834364499caba12745af0d9b1625f627",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e25e6e0b_4b072560",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-03-25T14:39:24Z",
+      "side": 1,
+      "message": "They do. You have the files in blobs list.",
+      "parentUuid": "2a60d76f_d0f525e1",
+      "revId": "e87f709b834364499caba12745af0d9b1625f627",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
