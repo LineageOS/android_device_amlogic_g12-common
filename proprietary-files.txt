@@ -96,11 +96,7 @@ vendor/etc/lowmemorykiller.txt
 vendor/etc/lowmemorykiller_2G.txt
 vendor/etc/lowmemorykiller_512M.txt
 vendor/etc/mesondisplay.cfg
-vendor/etc/permissions/android.hardware.device_unique_attestation.xml
 vendor/etc/permissions/android.software.cant_save_state.xml
-vendor/etc/permissions/android.software.device_id_attestation.xml
-vendor/etc/permissions/android.software.opengles.deqp.level-2021-03-01.xml
-vendor/etc/permissions/android.software.vulkan.deqp.level-2021-03-01.xml
 vendor/etc/permissions/droidlogic.software.core.xml
 vendor/etc/powerhint.json
 vendor/etc/remote.cfg
