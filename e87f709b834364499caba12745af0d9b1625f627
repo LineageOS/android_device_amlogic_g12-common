@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a60d76f_d0f525e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-03-25T14:36:12Z",
+      "side": 1,
+      "message": "Stock doesn\u0027t declare these, do we want them for 12?",
+      "revId": "e87f709b834364499caba12745af0d9b1625f627",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
