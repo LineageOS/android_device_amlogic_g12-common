@@ -22,6 +22,30 @@
       },
       "revId": "e87f709b834364499caba12745af0d9b1625f627",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbe23777_86433aba",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-03-25T14:50:24Z",
+      "side": 0,
+      "message": "yup, not sure how I missed that.",
+      "parentUuid": "8f77a0b9_c219443f",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 72
+      },
+      "revId": "e87f709b834364499caba12745af0d9b1625f627",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
