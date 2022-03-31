@@ -8,9 +8,9 @@ product/etc/permissions/split-permissions-google.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
 product/etc/sysconfig/google_atv.xml
--product/priv-app/DfuService/DfuService.apk
--product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
--product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
+product/priv-app/DfuService/DfuService.apk
+product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
+product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
 system/etc/permissions/privapp-permissions-google.xml
 system_ext/bin/blur_sysprop_notifier
 system_ext/etc/init/blur_sysprop_notifier.rc
@@ -78,9 +78,9 @@ vendor/etc/lowmemorykiller_512M.txt
 vendor/etc/permissions/android.software.cant_save_state.xml
 
 # Composer
--vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
 vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic
 vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc
+vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
 vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so
 vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so
 vendor/lib/hw/hwcomposer.amlogic.so
@@ -90,8 +90,8 @@ vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 
 # Droidlogic
--system_ext/priv-app/droidlogic-res/droidlogic-res.apk
--vendor/framework/droidlogic.jar
+system_ext/priv-app/droidlogic-res/droidlogic-res.apk
+vendor/framework/droidlogic.jar
 system_ext/etc/permissions/droidlogic_permissions.xml
 system_ext/lib/libjniuevent.so
 vendor/etc/permissions/droidlogic.software.core.xml
@@ -104,9 +104,9 @@ vendor/lib/libsecmem.so
 vendor/lib/mediacas/libwvmediacas.so
 
 # Dumpstate
--vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.droidlogic.xml
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
 vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
+vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.droidlogic.xml
 
 # DVB
 vendor/lib/libam_adp.so
@@ -127,9 +127,9 @@ vendor/lib/libamgralloc_ext.so
 vendor/lib/hw/hdmi_cec.amlogic.so
 
 # Health
--vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/bin/hw/android.hardware.health@2.1-service.droidlogic
 vendor/etc/init/android.hardware.health@2.1-service.droidlogic.rc
+vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
 
 # Kernel Modules
@@ -207,10 +207,10 @@ vendor/lib/libstagefrighthw.so
 vendor/lib/libthreadworker_alt.so
 
 # Power
--vendor/etc/vintf/manifest/android.hardware.power-service.xml
 vendor/bin/hw/android.hardware.power.aidl-service.droidlogic
 vendor/etc/init/android.hardware.power-service.libperfmgr.rc
 vendor/etc/powerhint.json
+vendor/etc/vintf/manifest/android.hardware.power-service.xml
 vendor/lib/libdisppower.so
 vendor/lib/libperfmgr.so
 
@@ -250,23 +250,23 @@ vendor/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
 vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so
 
 # Thermal
--vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.droidlogic.xml
 vendor/bin/hw/android.hardware.thermal@2.0-service.droidlogic
 vendor/etc/init/android.hardware.thermal@2.0-service.droidlogic.rc
 vendor/etc/thermal_info_config.json
+vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.droidlogic.xml
 
 # USB
--vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.2-service.droidlogic.xml
 vendor/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic
 vendor/etc/init/android.hardware.usb.gadget@1.2-service.droidlogic.rc
+vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.2-service.droidlogic.xml
 
 # Vulkan
 vendor/lib/hw/vulkan.amlogic.so
 
 # Widevine
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/libwvhidl.so
 
 # Wi-Fi
