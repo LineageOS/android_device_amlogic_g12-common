@@ -61,7 +61,7 @@ vendor/etc/permissions/android.software.cant_save_state.xml
 ## Composer
 vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic
 vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc
--vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
+vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
 vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so
 vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so
 vendor/lib/hw/hwcomposer.amlogic.so
