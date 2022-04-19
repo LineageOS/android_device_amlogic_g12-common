@@ -72,7 +72,6 @@ vendor.afbcd.enable=1
 vendor.media.libplayer.curlenable=true
 vendor.media.libplayer.seek.fwdsearch=1
 vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
-vendor.media.support.dolbyvision=false
 
 ## NRDP
 ro.vendor.nrdp.validation=ninja_7
