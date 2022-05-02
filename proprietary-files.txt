@@ -198,6 +198,7 @@ vendor/lib/libthreadworker_alt.so
 vendor/lib/libvideotunnel.so
 vendor/lib/libwvhidl.so
 vendor/lib/mediacas/libwvmediacas.so
+vendor/lib/modules/aml_fbc_lib.ko
 vendor/lib/soundfx/libavl.so
 vendor/lib/soundfx/libbalance.so
 vendor/lib/soundfx/libdbx.so
