@@ -34,6 +34,24 @@
       "parentUuid": "ebd529b1_dfcd3019",
       "revId": "e85eec3843e3f03c1811f1946fe19180b5edbc81",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b16c0286_dca1a6a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-05-02T17:54:43Z",
+      "side": 1,
+      "message": "The point is: you are ending up leftovers in the tree, such as media_codecs_sw.xml. Also with unused files in vendorimage (media_codecs_google_audio.xml and media_codecs_google_video.xml).",
+      "parentUuid": "a80b3975_56e46861",
+      "revId": "e85eec3843e3f03c1811f1946fe19180b5edbc81",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
