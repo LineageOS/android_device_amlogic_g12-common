@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebd529b1_dfcd3019",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-05-02T16:21:19Z",
+      "side": 1,
+      "message": "Why don\u0027t you simply revert 4619ddf8762c15e9c6c116934cfea2dc6cd90706? ",
+      "revId": "e85eec3843e3f03c1811f1946fe19180b5edbc81",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
