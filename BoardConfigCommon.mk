@@ -48,7 +48,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_DTB_OFFSET := 0x00e88000
 BOARD_KERNEL_BASE := 0x01078000
-BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 androidboot.boot_devices=ffe07000.emmc otg_device=1
+BOARD_KERNEL_CMDLINE := androidboot.dtbo_idx=0 androidboot.boot_devices=ffe07000.emmc otg_device=1 use_uvm=1
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
