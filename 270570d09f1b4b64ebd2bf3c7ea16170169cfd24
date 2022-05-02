@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a728998_00dc648d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2022-05-02T17:39:23Z",
+      "side": 1,
+      "message": "Boots for me on vontar x3 (s905x3) box with no TEE avaliable. userdata encryption also works, at least with fileencryption\u003daes-256-xts option. fileencryption\u003daes-256-xts:aes-256-cts:v1 not tested yet",
+      "revId": "270570d09f1b4b64ebd2bf3c7ea16170169cfd24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
