@@ -57,7 +57,6 @@ vendor/bin/oemcrypto_cas_test
 vendor/bin/remotecfg
 vendor/bin/systemcontrol
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic
-vendor/bin/hw/android.hardware.drm@1.4-service.playready
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
@@ -76,7 +75,6 @@ vendor/etc/drm/playready/bgroupcert.dat
 vendor/etc/drm/playready/zgpriv.dat
 vendor/etc/drm/playready/zgpriv_protected.dat
 vendor/etc/init/android.hardware.bluetooth@1.0-service-droidlogic.rc
-vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
@@ -114,7 +112,6 @@ vendor/etc/thermal_info_config.json
 -vendor/etc/vintf/manifest/android.hardware.power-service.xml
 -vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.droidlogic.xml
 -vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.2-service.droidlogic.xml
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant_overlay.conf
@@ -187,8 +184,6 @@ vendor/lib/libomx_framework_alt.so
 vendor/lib/libomx_timed_task_queue_alt.so
 vendor/lib/libomx_worker_peer_alt.so
 vendor/lib/libperfmgr.so
-vendor/lib/libplayready.so
-vendor/lib/libplayreadymediadrmplugin.so
 vendor/lib/libpqcontrol.so
 vendor/lib/libsecmem.so
 vendor/lib/libsonic_ext.so

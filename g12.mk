@@ -152,6 +152,11 @@ PRODUCT_PACKAGES += \
     libsoft_attestation_cert.vendor \
     libtrusty.vendor
 
+ifeq ($(TARGET_HAS_TEE),false)
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1-service
+endif
+
 ## Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \

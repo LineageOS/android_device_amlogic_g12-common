@@ -12,3 +12,11 @@ vendor/bin/tee-supplicant
 vendor/bin/tee_preload_fw
 vendor/etc/init/tee-supplicant.rc
 vendor/etc/init/tee_preload_fw.rc
+
+## Playready
+# Depends on `libtee.so`
+vendor/bin/hw/android.hardware.drm@1.4-service.playready
+vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
+vendor/lib/libplayready.so
+vendor/lib/libplayreadymediadrmplugin.so
