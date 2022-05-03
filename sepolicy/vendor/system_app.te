@@ -9,4 +9,5 @@ allow system_app hdmicecd:binder {call transfer};
 binder_call(system_app, system_control)
 
 get_prop(system_app, system_prop)
+#get_prop(system_app, vendor_default_prop)
 get_prop(system_app, vendor_hdmi_prop)
