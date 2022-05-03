@@ -22,6 +22,8 @@ allow hal_memtrack_default hal_thermal_default:file r_file_perms;
 allow hal_memtrack_default hal_tv_cec_default:dir search;
 allow hal_memtrack_default hal_tv_cec_default:file r_file_perms;
 
+allow hal_memtrack_default sysfs_mali:file { r_file_perms };
+
 allow hal_memtrack_default system_app:file r_file_perms;
 allow hal_memtrack_default system_app:dir search;
 
@@ -30,6 +32,14 @@ allow hal_memtrack_default hwservicemanager:dir search;
 
 allow hal_memtrack_default servicemanager:file r_file_perms;
 allow hal_memtrack_default servicemanager:dir search;
+
+allow hal_memtrack_default sysfs_graphics_device:file r_file_perms;
+allow hal_memtrack_default sysfs_graphics_device:lnk_file read;
+allow hal_memtrack_default sysfs_graphics_device:dir search;
+
+allow hal_memtrack_default sysfs_mali:lnk_file r_file_perms;
+allow hal_memtrack_default sysfs_mali:lnk_file r_file_perms;
+allow hal_memtrack_default sysfs_mali:dir search;
 
 allow hal_memtrack_default vndservicemanager:file r_file_perms;
 allow hal_memtrack_default vndservicemanager:dir search;
