@@ -13,3 +13,9 @@ allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_n
 # to search /data/misc/audioserver/, but it doesn't exist, so this denial doesn't matter:
 # avc: denied { search } for name="audioserver" dev="mmcblk0p18" ino=169712 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:audioserver_data_file:s0 tclass=dir permissive=0
 dontaudit hal_audio_default audioserver_data_file:dir search;
+
+allow hal_audio_default property_socket:sock_file write;
+
+allow hal_audio_default init:unix_stream_socket connectto;
+
+set_prop(hal_audio_default, persist_audio_prop)
