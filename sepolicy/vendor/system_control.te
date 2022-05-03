@@ -9,7 +9,8 @@ allow system_control cri_data_block_device:blk_file r_file_perms;
 allow system_control display_device:chr_file rw_file_perms;
 allow system_control display_device:file rw_file_perms;
 allow system_control env_block_device:blk_file rw_file_perms;
-allow system_control graphics_device:file r_file_perms;
+allow system_control graphics_device:chr_file rw_file_perms;
+allow system_control graphics_device:file rw_file_perms;
 allow system_control mnt_vendor_file:dir r_dir_perms;
 allow system_control param_tv_file:dir rw_dir_perms;
 allow system_control param_tv_file:file create_file_perms;
@@ -39,6 +40,7 @@ allow system_control system_control:netlink_kobject_uevent_socket { bind create 
 
 get_prop(system_control, hwservicemanager_prop)
 set_prop(system_control, ctl_stop_prop)
+set_prop(system_control, media_prop)
 set_prop(system_control, vendor_boot_prop)
 set_prop(system_control, vendor_display_prop)
 set_prop(system_control, vendor_hdmi_prop)
