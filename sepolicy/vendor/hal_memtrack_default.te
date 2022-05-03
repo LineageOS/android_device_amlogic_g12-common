@@ -31,5 +31,8 @@ allow hal_memtrack_default hwservicemanager:dir search;
 allow hal_memtrack_default servicemanager:file r_file_perms;
 allow hal_memtrack_default servicemanager:dir search;
 
+allow hal_memtrack_default sysfs_graphics_device:file r_file_perms;
+allow hal_memtrack_default sysfs_graphics_device:dir search;
+
 allow hal_memtrack_default vndservicemanager:file r_file_perms;
 allow hal_memtrack_default vndservicemanager:dir search;
