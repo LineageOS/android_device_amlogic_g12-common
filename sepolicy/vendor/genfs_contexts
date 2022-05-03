@@ -2,3 +2,15 @@ genfscon proc /sys/vm/min_free_kbytes        u:object_r:proc_vm_writable:s0
 genfscon proc /sys/vm/watermark_scale_factor u:object_r:proc_vm_writable:s0
 
 genfscon sysfs /devices/platform/bt-dev/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
+
+genfscon sysfs /devices/platform/ffe40000.bifrost/core_mask              u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/ctx_mem_pool_size      u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/dvfs_period            u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/gpu_memory             u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/gpuinfo                u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/lp_mem_pool_size       u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/lp_mem_pool_max_size   u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/mem_pool_size          u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/mem_pool_max_size      u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/power_policy           u:object_r:sysfs_graphics_device:s0
+genfscon sysfs /devices/platform/ffe40000.bifrost/soft_job_timeout       u:object_r:sysfs_graphics_device:s0

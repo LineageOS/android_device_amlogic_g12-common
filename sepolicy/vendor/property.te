@@ -1,7 +1,8 @@
 vendor_internal_prop(vendor_bluetooth_prop);
-vendor_internal_prop(vendor_dolby_prop);
 vendor_internal_prop(vendor_boot_prop);
 vendor_internal_prop(vendor_display_prop);
+vendor_internal_prop(vendor_dolby_prop);
+vendor_internal_prop(vendor_media_prop);
 vendor_internal_prop(vendor_wifi_prop);
 
 vendor_public_prop(vendor_hdmi_prop);
