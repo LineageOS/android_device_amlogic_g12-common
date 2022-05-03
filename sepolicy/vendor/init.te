@@ -3,6 +3,7 @@ allow init {
     vbmeta_block_device
 }:{ lnk_file blk_file} relabelto;
 
+allow init sysfs_bluetooth_writable:file r_file_perms;
 allow init sysfs_devices_block:file setattr;
 allow init sysfs_leds:file r_file_perms;
 
@@ -12,3 +13,5 @@ allow init param_tv_file:dir mounton;
 allow init tee_data_file:dir mounton;
 
 set_prop(init, vendor_hdmi_prop)
+
+allow init hwservicemanager:binder call;

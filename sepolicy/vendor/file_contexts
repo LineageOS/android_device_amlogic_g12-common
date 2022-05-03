@@ -29,21 +29,33 @@
 /sys/devices/platform/ffe07000.emmc/mmc_host/emmc/emmc:0001/block/mmcblk0(/.*)? u:object_r:sysfs_devices_block:s0
 /sys/devices/platform/ffe07000.emmc/mmc_host/emmc/emmc:0001(/.*)?               u:object_r:sysfs_devices_block:s0
 
+# Bluetooth
+/sys/devices/platform/bt-dev/rfkill/rfkill0(/.*)?                   u:object_r:sysfs_bluetooth_writable:s0
+
+/vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-droidlogic u:object_r:hal_bluetooth_default_exec:s0
+
+/vendor/lib/libbt-vendor.so                                         u:object_r:same_process_hal_file:s0
+
 # CEC
 /dev/cec u:object_r:cec_device:s0
 
 # Display
+/dev/amdolby_vision       u:object_r:graphics_device:s0
 /dev/graphics/fb[0-1]     u:object_r:graphics_device:s0
+/dev/uvm                  u:object_r:graphics_device:s0
 /dev/video_composer.[0-1] u:object_r:graphics_device:s0
 
+/sys/class/amdolby_vision/support_info                        u:object_r:sysfs_graphics_device:s0
 /sys/class/display/mode                                       u:object_r:sysfs_graphics_device:s0
 /sys/class/video/device_resolution                            u:object_r:sysfs_graphics_device:s0
 /sys/class/video/frame_height                                 u:object_r:sysfs_graphics_device:s0
 /sys/class/video_poll/frame_height                            u:object_r:sysfs_graphics_device:s0
+/sys/devices/platform/meson-fb/graphics/fb0/free_fb_mem       u:object_r:sysfs_graphics_device:s0
 /sys/devices/platform/meson-fb/graphics/fb0/free_scale_switch u:object_r:sysfs_graphics_device:s0
 /sys/module/amvdec_av1/parameters/frame_height                u:object_r:sysfs_graphics_device:s0
 /sys/module/amvdec_vp9/parameters/frame_height                u:object_r:sysfs_graphics_device:s0
 /sys/module/amvdec_avs2/parameters/frame_height               u:object_r:sysfs_graphics_device:s0
+/sys/module/di/parameters(/.*)?                               u:object_r:sysfs_graphics_device:s0
 /sys/module/fb/parameters/osd_logo_index                      u:object_r:sysfs_graphics_device:s0
 
 # DRM
@@ -52,8 +64,9 @@
 
 /vendor/lib(64)?/libdrm\.so                u:object_r:same_process_hal_file:s0
 
-/vendor/bin/hw/android\.hardware\.drm@1\.4-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
-/vendor/bin/hw/android\.hardware\.drm@1\.4-service\.widevine u:object_r:hal_drm_default_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.4-service\.clearkey  u:object_r:hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.4-service\.playready u:object_r:hal_drm_default_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.4-service\.widevine  u:object_r:hal_drm_default_exec:s0
 
 # Gatekeeper
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service.software u:object_r:hal_gatekeeper_default_exec:s0
@@ -131,6 +144,8 @@
 /vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.droidlogic u:object_r:hal_thermal_default_exec:s0
 
 # USB
+/sys/devices/platform/ff400000.dwc2_a/udc/ff400000.dwc2_a(/.*)?        u:object_r:sysfs_usb:s0
+
 /vendor/bin/hw/android\.hardware\.usb\.gadget@1\.2-service\.droidlogic u:object_r:hal_usb_gadget_default_exec:s0
 
 # Video
