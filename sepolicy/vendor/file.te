@@ -7,11 +7,14 @@ type proc_vm_writable, fs_type, proc_type;
 
 type sysfs_amhdmitx, fs_type, sysfs_type;
 type sysfs_audio, fs_type, sysfs_type;
+type sysfs_di, fs_type, sysfs_type;
 type sysfs_graphics_device, fs_type, sysfs_type;
 type sysfs_hdmi, fs_type, sysfs_type;
 type sysfs_hidraw, fs_type, sysfs_type;
+type sysfs_mali, fs_type, sysfs_type;
 type sysfs_media, fs_type, sysfs_type;
 type sysfs_mpgpu_cmd, fs_type, sysfs_type;
+type sysfs_video, fs_type, sysfs_type;
 type sysfs_wifi, fs_type, sysfs_type;
 type sysfs_xbmc, fs_type, sysfs_type;
 
