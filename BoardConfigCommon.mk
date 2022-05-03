@@ -121,6 +121,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 ## SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 ## Treble
 BOARD_VNDK_VERSION := current

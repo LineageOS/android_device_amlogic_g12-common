@@ -1,4 +1,5 @@
 android.hardware.oemlock::IOemLock                         u:object_r:hal_oemlock_hwservice:s0
+android.hardware.power::IPower                             u:object_r:hal_power_hwservice:s0
 vendor.amlogic.display.meson_display_ipc::IMesonDisplayIPC u:object_r:mesaon_display_ipc_hwservice:s0
 vendor.amlogic.hardware.droidvold::IDroidVold              u:object_r:droidvold_hwservice:s0
 vendor.amlogic.hardware.hdmicec::IDroidHdmiCEC             u:object_r:hdmicecd_hwservice:s0
