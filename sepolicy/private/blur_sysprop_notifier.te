@@ -1,0 +1,2 @@
+type blur_sysprop_notifier, domain;
+type blur_sysprop_notifier_exec, exec_type, system_file_type, file_type;
