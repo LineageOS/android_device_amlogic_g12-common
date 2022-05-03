@@ -25,6 +25,7 @@ allow system_control sysfs_power:file r_file_perms;
 allow system_control video_device:chr_file rw_file_perms;
 allow system_control vndbinder_device:chr_file { read write open ioctl };
 
+#allow system_control init:binder call;
 allow system_control hal_graphics_composer_default:binder call;
 allow system_control hidl_base_hwservice:hwservice_manager add;
 allow system_control hwservicemanager:binder {call transfer};
