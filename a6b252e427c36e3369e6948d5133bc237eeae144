@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8779742_81007802",
+        "filename": "sepolicy/vendor/hal_camera_default.te",
+        "patchSetId": 15
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-05-04T16:05:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc3cc63e_04f91183",
+      "range": {
+        "startLine": 1,
+        "startChar": 60,
+        "endLine": 1,
+        "endChar": 80
+      },
+      "revId": "a6b252e427c36e3369e6948d5133bc237eeae144",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b627286_86dc4af3",
@@ -47,6 +71,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fedf6935_4facd1c1",
+        "filename": "sepolicy/vendor/hal_tv_cec_default.te",
+        "patchSetId": 15
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-05-04T16:05:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b627286_86dc4af3",
+      "range": {
+        "startLine": 6,
+        "startChar": 60,
+        "endLine": 6,
+        "endChar": 94
+      },
+      "revId": "a6b252e427c36e3369e6948d5133bc237eeae144",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e333c0d6_db3651ef",
@@ -60,6 +108,30 @@
       "writtenOn": "2022-05-04T14:27:42Z",
       "side": 1,
       "message": "Isn\u0027t this basically getting relabelled in line #16?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 69
+      },
+      "revId": "a6b252e427c36e3369e6948d5133bc237eeae144",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "308fe5ec_bd659fce",
+        "filename": "sepolicy/vendor/property_contexts",
+        "patchSetId": 15
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-05-04T16:05:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e333c0d6_db3651ef",
       "range": {
         "startLine": 10,
         "startChar": 0,
