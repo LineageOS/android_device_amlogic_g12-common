@@ -177,7 +177,6 @@ vendor/lib/libmeson_display_adapter_remote.so
 vendor/lib/libmeson_display_service.so
 vendor/lib/libms12api_v24.so
 vendor/lib/libnano.so
-vendor/lib/liboemcrypto.so
 vendor/lib/libomx_av_core_alt.so
 vendor/lib/libomx_clock_utils_alt.so
 vendor/lib/libomx_framework_alt.so
