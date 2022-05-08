@@ -16,6 +16,24 @@
       "message": "Moved privapp policy to private",
       "revId": "90acc46213feb0fd332218be15219016b398de62",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab87dbab_ea28a3a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-05-08T01:45:51Z",
+      "side": 1,
+      "message": "Actually, this denial appears to be SUW - which exists on TV GSI, so lets leave this in vendor.",
+      "parentUuid": "44f7658a_802f7e47",
+      "revId": "90acc46213feb0fd332218be15219016b398de62",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
