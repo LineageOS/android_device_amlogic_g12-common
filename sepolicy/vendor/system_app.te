@@ -6,6 +6,8 @@ allow system_app systemcontrol_hwservice:hwservice_manager find;
 
 allow system_app hdmicecd:binder {call transfer};
 
+allow system_app hal_graphics_allocator_default_tmpfs:file rw_file_perms;
+
 binder_call(system_app, system_control)
 
 get_prop(system_app, system_prop)
