@@ -56,9 +56,6 @@
 /sys/devices/platform/meson-fb/graphics/fb0/free_scale_switch u:object_r:sysfs_graphics_device:s0
 /sys/module/amdolby_vision/parameters/dolby_vision_enable     u:object_r:sysfs_graphics_device:s0
 /sys/module/amdolby_vision/parameters/dolby_vision_ll_policy  u:object_r:sysfs_graphics_device:s0
-/sys/module/amvdec_av1/parameters/frame_height                u:object_r:sysfs_graphics_device:s0
-/sys/module/amvdec_vp9/parameters/frame_height                u:object_r:sysfs_graphics_device:s0
-/sys/module/amvdec_avs2/parameters/frame_height               u:object_r:sysfs_graphics_device:s0
 /sys/module/di/parameters(/.*)?                               u:object_r:sysfs_graphics_device:s0
 /sys/module/fb/parameters/osd_logo_index                      u:object_r:sysfs_graphics_device:s0
 
@@ -108,13 +105,14 @@
 
 # Media
 /dev/amresource_mgr u:object_r:video_device:s0
+/dev/amstream_hevc_frame u:object_r:amstream_device:s0
 /dev/amvecm         u:object_r:amvecm_device:s0
 /dev/amvenc_avc     u:object_r:media_device:s0
 /dev/HevcEnc        u:object_r:media_device:s0
 
 /sys/class/codec_mm/tvp_enable                       u:object_r:sysfs_media:s0
 /sys/module/am_vecm/parameters(/.*)?                 u:object_r:sysfs_media:s0
-/sys/module/amvdec_(.*)/parameters/double_write_mode u:object_r:sysfs_media:s0
+/sys/module/amvdec_(.*)/parameters(/.*)?              u:object_r:sysfs_media:s0
 
 # Param
 /mnt/vendor/param(/.*)? u:object_r:param_tv_file:s0
