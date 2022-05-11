@@ -24,6 +24,7 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
+        <uses-library android:name="droidlogic" />
         <activity
             android:name=".ColorSpaceSettingsActivity"
             android:label="@string/button_panel_title"
