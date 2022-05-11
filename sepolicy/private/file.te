@@ -1,0 +1,1 @@
+type sysfs_hdmitx_device, fs_type, sysfs_type;

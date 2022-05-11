@@ -1,1 +1,2 @@
 allow init blur_sysprop_notifier_exec:file r_file_perms;
+allow init sysfs_hdmitx_device:file rw_file_perms;
