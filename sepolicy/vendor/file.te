@@ -1,5 +1,6 @@
 type hidraw_audio_device, dev_type;
 type media_device, dev_type;
+type amstream_device, dev_type;
 
 type param_tv_file, file_type;
 

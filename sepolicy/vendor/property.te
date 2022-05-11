@@ -6,3 +6,4 @@ vendor_internal_prop(vendor_media_prop);
 vendor_internal_prop(vendor_wifi_prop);
 
 vendor_public_prop(vendor_hdmi_prop);
+vendor_public_prop(vendor_netflix_prop);
