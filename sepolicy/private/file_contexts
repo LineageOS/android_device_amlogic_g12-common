@@ -1,2 +1,5 @@
 # Blur
 /(system_ext|system/system_ext)/bin/blur_sysprop_notifier    u:object_r:blur_sysprop_notifier_exec:s0
+
+# HDMITX
+/sys/devices/virtual/amhdmitx/amhdmitx0/attr                 u:object_r:sysfs_hdmitx_device:s0
