@@ -3,3 +3,6 @@
 
 # HDMITX
 /sys/devices/virtual/amhdmitx/amhdmitx0/attr                 u:object_r:sysfs_hdmitx_device:s0
+
+# Media
+/sys/class/codec_mm/fastplay_enable                          u:object_r:sysfs_media:s0
