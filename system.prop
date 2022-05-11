@@ -6,3 +6,6 @@
 
 ## fastbootd
 ro.fastbootd.available=true
+
+# Colorspace
+ubootenv.var.colorattribute=
