@@ -1,2 +1,5 @@
 # Blur
 /(system_ext|system/system_ext)/bin/blur_sysprop_notifier    u:object_r:blur_sysprop_notifier_exec:s0
+
+# Media
+/sys/class/codec_mm/fastplay_enable                          u:object_r:sysfs_media:s0
