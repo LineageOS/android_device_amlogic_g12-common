@@ -14,3 +14,6 @@ genfscon sysfs /devices/platform/ffe40000.bifrost/mem_pool_size          u:objec
 genfscon sysfs /devices/platform/ffe40000.bifrost/mem_pool_max_size      u:object_r:sysfs_graphics_device:s0
 genfscon sysfs /devices/platform/ffe40000.bifrost/power_policy           u:object_r:sysfs_graphics_device:s0
 genfscon sysfs /devices/platform/ffe40000.bifrost/soft_job_timeout       u:object_r:sysfs_graphics_device:s0
+
+genfscon debugfs /mali0/ctx         u:object_r:debugfs_mali:s0
+genfscon debugfs /mali0/gpu_memory  u:object_r:debugfs_mali:s0
