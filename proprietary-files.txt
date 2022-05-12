@@ -8,13 +8,6 @@ product/etc/permissions/split-permissions-google.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
 product/etc/sysconfig/google_atv.xml
-product/media/audio/alarms/Alarm_Beep_02.ogg
-product/media/audio/ui/Effect_Tick.ogg
-product/media/audio/ui/KeypressDelete.ogg
-product/media/audio/ui/KeypressInvalid.ogg
-product/media/audio/ui/KeypressReturn.ogg
-product/media/audio/ui/KeypressSpacebar.ogg
-product/media/audio/ui/KeypressStandard.ogg
 -product/priv-app/DfuService/DfuService.apk
 -product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
 -product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
