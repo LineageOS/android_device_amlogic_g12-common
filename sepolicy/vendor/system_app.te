@@ -1,3 +1,5 @@
+allow system_app debugfs_mali:dir r_dir_perms;
+
 allow system_app sysfs_power:file r_file_perms;
 
 allow system_app hdmicecd_hwservice:hwservice_manager find;

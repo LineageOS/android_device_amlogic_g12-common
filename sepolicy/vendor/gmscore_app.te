@@ -1,0 +1,2 @@
+allow gmscore_app debugfs_mali:dir r_dir_perms;
+allow gmscore_app debugfs_mali:file r_file_perms;
