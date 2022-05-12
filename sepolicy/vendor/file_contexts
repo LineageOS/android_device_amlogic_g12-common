@@ -83,6 +83,8 @@
 
 /sys/devices/platform/ffe40000.bifrost(/.*)? u:object_r:sysfs_mali:s0
 
+/sys/kernel/debug/ion/heaps(/.*)? u:object_r:debugfs_ionheaps:s0
+
 /vendor/bin/hw/android\.hardware\.graphics\.composer@2\.4-service\.droidlogic u:object_r:hal_graphics_composer_default_exec:s0
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl-arm\.so     u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/arm\.graphics-V1-ndk_platform\.so                            u:object_r:same_process_hal_file:s0

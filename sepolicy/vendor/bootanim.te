@@ -1,2 +1,4 @@
+allow bootanim debugfs_mali:dir r_dir_perms;
+
 allow bootanim system_data_file:dir search;
 allow bootanim hal_graphics_allocator_default_tmpfs:file rw_file_perms;

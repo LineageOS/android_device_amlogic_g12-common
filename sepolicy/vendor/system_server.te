@@ -4,4 +4,5 @@ allow system_server frp_block_device:blk_file r_file_perms;
 allow system_server sysfs_amhdmitx:file r_file_perms;
 allow system_server sysfs_rtc:file r_file_perms;
 
+allow system_server debugfs_mali:dir r_dir_perms;
 allow system_server hal_graphics_allocator_default_tmpfs:file rw_file_perms;
