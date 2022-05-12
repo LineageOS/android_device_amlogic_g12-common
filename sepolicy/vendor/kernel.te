@@ -1,3 +1,5 @@
+allow kernel debugfs_mali:dir r_dir_perms;
+
 allow kernel device:dir { create_dir_perms };
 allow kernel device:chr_file { create setattr };
 allow kernel sepolicy_file:file r_file_perms;
