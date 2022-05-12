@@ -1,3 +1,6 @@
+type debugfs_ionheaps, fs_type, debugfs_type;
+type debugfs_mali, fs_type, debugfs_type;
+
 type esm_device, dev_type;
 
 type hidraw_audio_device, dev_type;
