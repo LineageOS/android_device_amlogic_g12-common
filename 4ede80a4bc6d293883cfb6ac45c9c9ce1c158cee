@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97f37e12_935fc234",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2022-05-15T09:11:13Z",
+      "side": 1,
+      "message": "Unsure if gmscore_app should be added. Also funny is that there are some places that only seem to require dir perms, but no file perms",
+      "revId": "4ede80a4bc6d293883cfb6ac45c9c9ce1c158cee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
