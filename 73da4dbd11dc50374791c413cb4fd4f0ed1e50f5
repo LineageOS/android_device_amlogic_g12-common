@@ -16,6 +16,24 @@
       "message": "Unnecessary edit.",
       "revId": "73da4dbd11dc50374791c413cb4fd4f0ed1e50f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "693fba66_c540d420",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2022-05-15T09:45:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fbc1c9c_07eeb882",
+      "revId": "73da4dbd11dc50374791c413cb4fd4f0ed1e50f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
