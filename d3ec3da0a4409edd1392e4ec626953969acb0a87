@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f73f38d4_d9db6bbd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2022-05-15T08:50:16Z",
+      "side": 1,
+      "message": "I now/still see those:\n05-15 10:46:52.628  3425  3425 I android.hardwar: type\u003d1400 audit(0.0:4): avc: denied { read } for name\u003d\"attr\" dev\u003d\"sysfs\" ino\u003d8031 scontext\u003du:r:hal_graphics_composer_default:s0 tcontext\u003du:object_r:sysfs_hdmitx_device:s0 tclass\u003dfile permissive\u003d1\n05-15 10:46:52.628  3425  3425 I android.hardwar: type\u003d1400 audit(0.0:5): avc: denied { open } for path\u003d\"/sys/devices/virtual/amhdmitx/amhdmitx0/attr\" dev\u003d\"sysfs\" ino\u003d8031 scontext\u003du:r:hal_graphics_composer_default:s0 tcontext\u003du:object_r:sysfs_hdmitx_device:s0 tclass\u003dfile permissive\u003d1\n05-15 10:46:54.032  3425  3425 I HwBinder:3425_2: type\u003d1400 audit(0.0:8): avc: denied { read } for name\u003d\"attr\" dev\u003d\"sysfs\" ino\u003d8031 scontext\u003du:r:hal_graphics_composer_default:s0 tcontext\u003du:object_r:sysfs_hdmitx_device:s0 tclass\u003dfile permissive\u003d1\n05-15 10:46:54.032  3425  3425 I HwBinder:3425_2: type\u003d1400 audit(0.0:9): avc: denied { open } for path\u003d\"/sys/devices/virtual/amhdmitx/amhdmitx0/attr\" dev\u003d\"sysfs\" ino\u003d8031 scontext\u003du:r:hal_graphics_composer_default:s0 tcontext\u003du:object_r:sysfs_hdmitx_device:s0 tclass\u003dfile permissive\u003d1\n",
+      "revId": "d3ec3da0a4409edd1392e4ec626953969acb0a87",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
