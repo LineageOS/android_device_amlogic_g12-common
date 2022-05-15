@@ -33,6 +33,24 @@
       "message": "I can\u0027t add it to vendor sepolicy as type is declared in private... hmmm.",
       "revId": "d3ec3da0a4409edd1392e4ec626953969acb0a87",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15bc821d_24a786b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2022-05-15T08:57:33Z",
+      "side": 1,
+      "message": "This should be rebased out of this chain for now, I need to find a way to write to the env properties to have the mode set at boot.",
+      "parentUuid": "5e69b6f5_f15a0cb9",
+      "revId": "d3ec3da0a4409edd1392e4ec626953969acb0a87",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
