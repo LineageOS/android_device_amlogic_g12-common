@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2021 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="rgb_color_space"
+        android:title="@string/use_rgb_colorspace"
+        android:summary="@string/use_rgb_colorspace_summary"
+        android:defaultValue="0" />
+</PreferenceScreen>
