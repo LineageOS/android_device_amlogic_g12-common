@@ -40,6 +40,9 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 ## Display
 TARGET_SCREEN_DENSITY := 320
 
+# GPU
+TARGET_AMLOGIC_GPU_ARCH := bifrost
+
 ## HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
