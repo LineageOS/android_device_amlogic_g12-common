@@ -22,3 +22,9 @@ vendor/etc/drm/playready/zgpriv_protected.dat
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
 vendor/lib/libplayready.so
 vendor/lib/libplayreadymediadrmplugin.so
+
+## TEE HDCP - from wade - Dynalink/sti6130d350/sti6130d350:10/QT/20220222:user/release-keys
+vendor/bin/tee_hdcp|906be1f4a6cbc7e5d5e6c7f9c75510738c4a3d14
+vendor/bin/tee_key_inject|4048719b00ad7168599616742919c8b8a60897fa
+vendor/etc/init/tee_hdcp.rc|654b0e242fdef6ac9ca03cd0899779355cc29312
+vendor/etc/init/tee_key_inject.rc|f312f1afad60ca32db4bea28b1132c0a93968254
