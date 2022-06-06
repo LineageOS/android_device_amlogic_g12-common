@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "846dfeb6_f864275f",
+        "filename": "sepolicy/vendor/untrusted_app.te",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2022-06-06T21:22:44Z",
+      "side": 1,
+      "message": "This line broke compiling. The type does not exist in merged policy.",
+      "revId": "5c06248e86a2ef2eacbbae8d504ff8cd89e7fb0f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
