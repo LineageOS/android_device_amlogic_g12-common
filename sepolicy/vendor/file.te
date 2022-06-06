@@ -1,3 +1,5 @@
+type esm_device, dev_type;
+
 type hidraw_audio_device, dev_type;
 type media_device, dev_type;
 type amstream_device, dev_type;

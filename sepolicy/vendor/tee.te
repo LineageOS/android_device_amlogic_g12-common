@@ -7,3 +7,4 @@ allow tee tee_data_file:file r_file_perms;
 allowxperm tee sda_block_device:blk_file ioctl { 0xb300-0xb301 };
 
 allow tee self:capability sys_rawio;
+allow tee tee_key_inject_exec:file entrypoint;
