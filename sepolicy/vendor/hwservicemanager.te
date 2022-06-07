@@ -1,6 +1,0 @@
-allow hwservicemanager system_control:dir search;
-allow hwservicemanager system_control:file { read open };
-allow hwservicemanager system_control:process getattr;
-
-allow hwservicemanager hdmicecd:binder transfer;
-allow hwservicemanager system_control:binder { call transfer };

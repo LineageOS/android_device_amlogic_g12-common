@@ -1,2 +1,0 @@
-allow hal_oemlock_default systemcontrol_hwservice:hwservice_manager find;
-allow hal_oemlock_default system_control:binder call;

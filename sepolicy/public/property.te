@@ -1,3 +1,0 @@
-system_public_prop(persist_audio_prop);
-system_public_prop(media_prop);
-system_public_prop(omx_prop);

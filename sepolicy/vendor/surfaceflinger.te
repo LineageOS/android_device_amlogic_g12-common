@@ -1,4 +1,0 @@
-allow surfaceflinger gpu_device:chr_file rw_file_perms;
-allow surfaceflinger hal_graphics_allocator_default_tmpfs:file rw_file_perms;
-
-#allow surfaceflinger init:binder call;

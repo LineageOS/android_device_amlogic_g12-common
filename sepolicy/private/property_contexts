@@ -1,8 +1,0 @@
-# Audio
-persist.audio.debug.read            u:object_r:persist_audio_prop:s0
-persist.audio.debug.search          u:object_r:persist_audio_prop:s0
-
-media.amnuplayer.audio.delayus      u:object_r:media_prop:s0
-
-# Fastbootd
-ro.fastbootd.available    u:object_r:exported_default_prop:s0

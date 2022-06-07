@@ -1,1 +1,0 @@
-allow display_device sysfs:filesystem associate;

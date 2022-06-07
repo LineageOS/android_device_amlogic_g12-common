@@ -1,1 +1,0 @@
-allow sysfs_graphics_device sysfs:filesystem associate;
