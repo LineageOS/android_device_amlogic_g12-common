@@ -6,9 +6,6 @@
 
 $(call inherit-product, vendor/amlogic/g12-common/g12-common-vendor.mk)
 
-## AAPT
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
-
 ## Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -61,9 +58,6 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     camera.device@3.5-impl
-
-## Characteristics
-PRODUCT_CHARACTERISTICS := tv
 
 ## Codecs
 PRODUCT_COPY_FILES += \
@@ -159,10 +153,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
 
-## Logo
-PRODUCT_HOST_PACKAGES += \
-    res_packer
-
 ## Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
@@ -243,3 +233,6 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
+
+## Inherit from the main common tree product makefile
+$(call inherit-product, device/amlogic/common/amlogic.mk)

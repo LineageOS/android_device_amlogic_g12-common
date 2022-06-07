@@ -73,9 +73,6 @@ vendor.media.libplayer.curlenable=true
 vendor.media.libplayer.seek.fwdsearch=1
 vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
 
-## NRDP
-ro.vendor.nrdp.validation=ninja_7
-
 ## OMX
 ro.vendor.media.support.omx2=true
 vendor.media.omx2.in_buffer=5
@@ -87,12 +84,6 @@ vendor.media.sf.omxvideo-optmize=1
 
 ## OEM Lock
 ro.oem_unlock_supported=1
-
-## Platform
-ro.vendor.platform.is.tv=0
-
-## SOC
-ro.soc.manufacturer=Amlogic
 
 ## USB
 vendor.usb.controller=ff400000.dwc2_a
