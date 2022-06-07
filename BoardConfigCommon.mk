@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -17,15 +17,6 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 0
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 2
 BOARD_AVB_ROLLBACK_INDEX := 0
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-
-## Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a53
-TARGET_KERNEL_ARCH := arm64
 
 ## Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -113,16 +104,10 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 
-## Platform
-TARGET_BOARD_PLATFORM := amlogic
-
 ## Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
-
-## SELinux
-include device/amlogic/sepolicy/sepolicy.mk
 
 ## Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
@@ -139,3 +124,6 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+## Include the main common tree BoardConfig makefile
+include device/amlogic/common/BoardConfigAmlogic.mk
