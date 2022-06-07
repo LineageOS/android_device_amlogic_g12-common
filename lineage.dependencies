@@ -1,34 +1,6 @@
 [
   {
-    "repository": "android_device_amlogic_sepolicy",
-    "target_path": "device/amlogic/sepolicy"
-  },
-  {
     "repository": "android_kernel_amlogic_linux-4.9",
     "target_path": "kernel/amlogic/linux-4.9"
-  },
-  {
-    "repository": "android_hardware_amlogic_kernel-modules_mali-driver",
-    "target_path": "hardware/amlogic/kernel-modules/mali-driver"
-  },
-  {
-    "repository": "android_hardware_amlogic_kernel-modules_media",
-    "target_path": "hardware/amlogic/kernel-modules/media"
-  },
-  {
-    "repository": "android_hardware_amlogic_kernel-modules_optee",
-    "target_path": "hardware/amlogic/kernel-modules/optee"
-  },
-  {
-    "repository": "android_hardware_amlogic_tools_dtbtool",
-    "target_path": "hardware/amlogic/tools/dtbtool"
-  },
-  {
-    "repository": "android_hardware_amlogic_tools_imagepacker",
-    "target_path": "hardware/amlogic/tools/imagepacker"
-  },
-  {
-    "repository": "android_hardware_amlogic_tools_respacker",
-    "target_path": "hardware/amlogic/tools/respacker"
   }
 ]
