@@ -1,31 +1,9 @@
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-## Audio
-ro.af.client_heap_size_kbyte=1536
-ro.config.ringtone=Ring_Synth_04.ogg
-ro.config.notification_sound=pixiedust.ogg
-
-## Battery (Fake)
-ro.boot.fake_battery=42
-
 ## Bluetooth
-atv.setup.bt_remote_pairing=true
 ro.boot.btmacaddr=22:22:ce:d2:ca:13
 
 ## Camera
 camera.disable_zsl_mode=1
 rw.camera.usb.faceback=true
 
-## HDMI
-ro.hdmi.cec.source.playback_device_action_on_routing_control=wake_up_and_send_active_source
-ro.sys.hdmiin.enable=true
-
 ## Identifiers
 ro.oem.key1=ATV00100020
-
-## LMK
-ro.lmk.use_new_strategy=true
