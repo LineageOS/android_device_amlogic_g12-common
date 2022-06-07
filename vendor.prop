@@ -4,10 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-## Audio
-ro.config.media_vol_default=20
-ro.config.media_vol_steps=25
-
 ## Bluetooth
 persist.bluetooth.bluetooth_audio_hal.disabled=false
 ro.vendor.autoconnectbt.btclass=50c
@@ -24,10 +20,6 @@ dalvik.vm.heapsize=384m
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
 
-## DRM
-drm.service.enabled=1
-vendor.drm.service.enable=true
-
 ## HDMI
 mbx.hdmiin.switchfull=false
 mbx.hdmiin.videolayer=false
@@ -39,11 +31,6 @@ ro.vendor.platform.has.mbxuimode=true
 ro.vendor.platform.has.realoutputmode=true
 ro.vendor.platform.hdmi.device_type=4
 ro.vendor.platform.need.display.hdmicec=true
-
-## LMKD
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
-ro.lmk.use_minfree_levels=true
 
 # Graphics
 debug.renderengine.backend=skiaglthreaded
@@ -73,9 +60,6 @@ vendor.media.libplayer.curlenable=true
 vendor.media.libplayer.seek.fwdsearch=1
 vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
 
-## NRDP
-ro.vendor.nrdp.validation=ninja_7
-
 ## OMX
 ro.vendor.media.support.omx2=true
 vendor.media.omx2.in_buffer=5
@@ -89,16 +73,5 @@ vendor.media.sf.omxvideo-optmize=1
 ## OEM Lock
 ro.oem_unlock_supported=1
 
-## Platform
-ro.vendor.platform.is.tv=0
-
-## SOC
-ro.soc.manufacturer=Amlogic
-
 ## USB
 vendor.usb.controller=ff400000.dwc2_a
-
-## Wi-Fi
-ro.carrier=wifi-only
-wifi.direct.interface=p2p-dev-wlan0
-wifi.interface=wlan0
