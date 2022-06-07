@@ -4,10 +4,6 @@
     "target_path": "device/amlogic/common"
   },
   {
-    "repository": "android_hardware_amlogic_kernel-modules_mali-driver",
-    "target_path": "hardware/amlogic/kernel-modules/mali-driver"
-  },
-  {
     "repository": "android_hardware_amlogic_kernel-modules_media",
     "target_path": "hardware/amlogic/kernel-modules/media"
   },
