@@ -35,7 +35,12 @@ TARGET_SCREEN_DENSITY := 320
 TARGET_AMLOGIC_GPU_ARCH := bifrost
 
 ## HIDL
+ifeq ($(BOARD_HAVE_BLUETOOTH),false)
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+else
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_bt.xml
+endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 ## Kernel
