@@ -16,6 +16,23 @@
       "message": "We can later move this into amlogic-common tree if intended.",
       "revId": "0f605fc6288dd8e7fb75f5923f7e67719806ea70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "638cee18_56a9dd23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-06-09T15:24:01Z",
+      "side": 1,
+      "message": "in my experience doing this is kind of odd. It will show up in the dump var that they are set, but then none of the actual packages will be included",
+      "revId": "0f605fc6288dd8e7fb75f5923f7e67719806ea70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
