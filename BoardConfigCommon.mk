@@ -40,6 +40,12 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 ## Display
 TARGET_SCREEN_DENSITY := 320
 
+## GMS
+ifeq ($(WITH_GMS),true)
+WITH_GMS_TV := true
+GMS_MAKEFILE := gms_minimal.mk
+endif
+
 # GPU
 TARGET_AMLOGIC_GPU_ARCH := bifrost
 
