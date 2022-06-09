@@ -33,6 +33,24 @@
       "message": "I wonder how BOARD_HAVE_BLUETOOTH logic works on gx targets.",
       "revId": "86bdd2a7af46b8d41e2376c7cb1549c5a28e7b79",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a251bf53_9786f7c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-06-09T16:28:38Z",
+      "side": 1,
+      "message": "I doesn\u0027t - Discovered this yesterday, if you look at the split change, I changed the logic behind it so it uses a product var to declare that you _dont_ have bluetooth instead of declaring that you _do_. Might not be the best way.",
+      "parentUuid": "787f3822_756b21b9",
+      "revId": "86bdd2a7af46b8d41e2376c7cb1549c5a28e7b79",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
