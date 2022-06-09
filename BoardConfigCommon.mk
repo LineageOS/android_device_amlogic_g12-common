@@ -43,6 +43,12 @@ TARGET_SCREEN_DENSITY := 320
 # GPU
 TARGET_AMLOGIC_GPU_ARCH := bifrost
 
+## GMS
+ifeq ($(WITH_GMS),true)
+WITH_GMS_TV := true
+GMS_MAKEFILE := gms_minimal.mk
+endif
+
 ## HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
