@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ef64c31_98b2fbf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-06-09T20:48:08Z",
+      "side": 1,
+      "message": "build/make/core/config.mk:736: error: When PRODUCT_SHIPPING_API_LEVEL \u003e\u003d 28, TARGET_USES_64_BIT_BINDER must be true.\n",
+      "revId": "ac8adcb4e6e07aa478de8b58e606a0dd9668ad71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
