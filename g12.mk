@@ -102,6 +102,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service.software
 
+## GMS
+ifeq ($(WITH_GMS),true)
+GMS_MAKEFILE=gms_minimal.mk
+endif
+
 ## Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4.vendor
