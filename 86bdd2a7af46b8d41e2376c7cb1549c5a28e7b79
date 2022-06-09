@@ -51,6 +51,23 @@
       "parentUuid": "787f3822_756b21b9",
       "revId": "86bdd2a7af46b8d41e2376c7cb1549c5a28e7b79",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f0af128_5d409735",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-06-09T16:29:42Z",
+      "side": 1,
+      "message": "Know you know this bruno, but for others, product vars can be read from boardconfig but not vice versa - creates fun situations like this one.",
+      "revId": "86bdd2a7af46b8d41e2376c7cb1549c5a28e7b79",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
