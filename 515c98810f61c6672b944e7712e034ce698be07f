@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0baeba88_36bb37b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15346
+      },
+      "writtenOn": "2022-06-09T15:32:38Z",
+      "side": 1,
+      "message": "Actually why does this have to be in product? Can\u0027t we set all this in build env? If we really need it in product, vendor_extra can be thrown together easily",
+      "revId": "515c98810f61c6672b944e7712e034ce698be07f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
