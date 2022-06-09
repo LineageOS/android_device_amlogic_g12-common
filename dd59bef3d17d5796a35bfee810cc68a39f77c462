@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df92ebeb_0ec05f72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-06-09T22:08:48Z",
+      "side": 1,
+      "message": "\u003e Patch Set 4:\n\u003e \n\u003e I only did this because stock had it fwiw.\n\nI know, but we can safely remove it. I did it on mi845 already and if you look at other recent devices like oneplus sm8350 it never shipped with drm 1.0 service.",
+      "revId": "dd59bef3d17d5796a35bfee810cc68a39f77c462",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
