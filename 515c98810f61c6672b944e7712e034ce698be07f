@@ -16,6 +16,24 @@
       "message": "Actually why does this have to be in product? Can\u0027t we set all this in build env? If we really need it in product, vendor_extra can be thrown together easily",
       "revId": "515c98810f61c6672b944e7712e034ce698be07f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3f03f07_ceec9197",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-06-09T15:36:04Z",
+      "side": 1,
+      "message": "You just need to have WITH_GMS exported in your env. That\u0027s why. For sure GMS_TV is needed, and from our experience on minimal fits. This way you don\u0027t need to export vars.",
+      "parentUuid": "0baeba88_36bb37b4",
+      "revId": "515c98810f61c6672b944e7712e034ce698be07f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
