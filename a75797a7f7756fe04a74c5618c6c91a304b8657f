@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e851abea_b6f15c37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2022-06-11T07:23:19Z",
+      "side": 1,
+      "message": "Are we not missing amlogic/common in lineage.dependencies then?",
+      "revId": "a75797a7f7756fe04a74c5618c6c91a304b8657f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
