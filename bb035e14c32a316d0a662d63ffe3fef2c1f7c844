@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fcbe0406_1b3ccf82",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2022-07-02T09:41:35Z",
+      "side": 1,
+      "message": "why not just ifeq ($(BOARD_HAVE_BLUETOOTH),true) and +\u003d bt manifest",
+      "revId": "bb035e14c32a316d0a662d63ffe3fef2c1f7c844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b875d02c_adefebab",
         "filename": "manifest.xml",
         "patchSetId": 1
