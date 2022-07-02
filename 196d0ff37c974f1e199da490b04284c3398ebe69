@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb04ec41_fadab0b9",
+        "filename": "g12.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-07-02T16:36:08Z",
+      "side": 1,
+      "message": "This prop is useless. You can set to to true for devices that don\u0027t support BT.",
+      "revId": "196d0ff37c974f1e199da490b04284c3398ebe69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
