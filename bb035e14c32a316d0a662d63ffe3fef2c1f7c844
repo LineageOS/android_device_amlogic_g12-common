@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "541f7c66_38032bb4",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-07-02T16:34:05Z",
+      "side": 1,
+      "message": "see gx-common version, there is reason.",
+      "parentUuid": "fcbe0406_1b3ccf82",
+      "revId": "bb035e14c32a316d0a662d63ffe3fef2c1f7c844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b875d02c_adefebab",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-07-02T07:13:46Z",
       "side": 1,
       "message": "You missed this.",
+      "revId": "bb035e14c32a316d0a662d63ffe3fef2c1f7c844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a790b40_391c3793",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-07-02T16:34:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b875d02c_adefebab",
       "revId": "bb035e14c32a316d0a662d63ffe3fef2c1f7c844",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
