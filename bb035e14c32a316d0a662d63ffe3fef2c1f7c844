@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b875d02c_adefebab",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-07-02T07:13:46Z",
+      "side": 1,
+      "message": "You missed this.",
+      "revId": "bb035e14c32a316d0a662d63ffe3fef2c1f7c844",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
