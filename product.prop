@@ -14,7 +14,6 @@ ro.boot.fake_battery=42
 
 ## Bluetooth
 atv.setup.bt_remote_pairing=true
-config.disable_bluetooth=false
 ro.boot.btmacaddr=22:22:ce:d2:ca:13
 
 ## Camera
