@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, vendor/amlogic/g12-common/g12-common-vendor.mk)
-
 ## Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -243,3 +241,6 @@ PRODUCT_PACKAGES += \
 
 ## Inherit from the main common tree product makefile
 $(call inherit-product, device/amlogic/common/amlogic.mk)
+
+## Inherit from the common proprietary files makefile
+$(call inherit-product, vendor/amlogic/g12-common/g12-common-vendor.mk)

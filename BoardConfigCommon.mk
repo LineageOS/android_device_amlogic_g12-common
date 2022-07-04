@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-include vendor/amlogic/g12-common/BoardConfigVendor.mk
-
 COMMON_PATH := device/amlogic/g12-common
 
 ## Android Verified Boot
@@ -132,3 +130,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 ## Include the main common tree BoardConfig makefile
 include device/amlogic/common/BoardConfigAmlogic.mk
+
+## Include the common proprietary BoardConfig makefile
+include vendor/amlogic/g12-common/BoardConfigVendor.mk
