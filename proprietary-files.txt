@@ -13,8 +13,6 @@ product/etc/sysconfig/google_atv.xml
 -product/priv-app/DfuService/DfuService.apk
 -product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
 system/etc/permissions/privapp-permissions-google.xml
-system_ext/bin/blur_sysprop_notifier
-system_ext/etc/init/blur_sysprop_notifier.rc
 system_ext/etc/permissions/privapp-permissions-google-se.xml
 
 # Audio
