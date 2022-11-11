@@ -12,8 +12,6 @@ product/etc/sysconfig/google_atv.xml
 -product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
 -product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
 system/etc/permissions/privapp-permissions-google.xml
-system_ext/bin/blur_sysprop_notifier
-system_ext/etc/init/blur_sysprop_notifier.rc
 system_ext/etc/permissions/privapp-permissions-deadpool.xml
 system_ext/etc/permissions/privapp-permissions-google-se.xml
 -system_ext/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
