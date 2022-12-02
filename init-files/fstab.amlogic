@@ -1,20 +1,20 @@
 ## Dynamic partitions
-odm                   /odm                ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
-product               /product            ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
-system                /system             ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
-system_ext            /system_ext         ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
-vendor                /vendor             ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
+odm                   /odm                ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
+product               /product            ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
+system                /system             ext4      ro,barrier=1                                                     wait,avb=vbmeta,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+system_ext            /system_ext         ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
+vendor                /vendor             ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
 
 ## Block devices
 /dev/block/boot       /boot               emmc      defaults                                                         defaults
-/dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
 /dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
-/dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,quota,formattable,reservedsize=32M,checkpoint=block
+/dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
 /dev/block/metadata   /metadata           ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,first_stage_mount
 /dev/block/misc       /misc               emmc      defaults                                                         defaults
 /dev/block/param      /mnt/vendor/param   ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota,formattable
 /dev/block/recovery   /recovery           emmc      defaults                                                         recoveryonly
 /dev/block/tee        /mnt/vendor/tee     ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
+/dev/block/userdata   /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,quota,formattable,reservedsize=32M,checkpoint=block
 
 ## Virtual devices
 /dev/block/loop       auto                loop      defaults                                                         voldmanaged=loop:auto
