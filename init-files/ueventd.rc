@@ -40,6 +40,7 @@
 /dev/amaudio_utils        0660   media        system
 /dev/amaudio_ctl          0660   media        system
 /dev/amvenc_avc           0660   mediacodec   system
+/dev/amvecm               0660   system       system
 /dev/HevcEnc              0660   mediacodec   system
 /dev/amsubtitle           0660   media        system
 /dev/jpegenc              0660   media        system
@@ -97,6 +98,9 @@
 /dev/rtkbt_dev            0660   bluetooth    bluetooth
 /dev/hidraw*              0660   system       audio
 /dev/btusb0               0660   bluetooth    bluetooth
+#unisoc
+/dev/ttyBT0               0660   bluetooth     bluetooth
+/dev/ttyBT1               0660   bluetooth     bluetooth
 
 /dev/display              0660   root         graphics
 
@@ -124,6 +128,8 @@
 /sys/devices/platform/aml_bt/rfkill/rfkill0   type    0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0          state   0660    bluetooth   bluetooth
 /sys/devices/bt-dev.*/rfkill/rfkill0          type    0660    bluetooth   bluetooth
+/sys/devices/platform/mtty.0/rfkill/rfkill1    state   0660    bluetooth   bluetooth
+/sys/devices/platform/mtty.0/rfkill/rfkill1    type    0660    bluetooth   bluetooth
 
 # HDMI CEC
 /sys/class/amhdmitx/amhdmitx0       hpd_state               0664      system      system
