@@ -2,7 +2,9 @@
 ##  are from adt3-user 12 STT1.211025.001.Z4 7928920 release-keys.
 
 # ATV Specific
+product/etc/permissions/com.google.android.tv.dfuservice.xml
 product/etc/permissions/privapp-permissions-atv-product.xml
+product/etc/permissions/privapp-permissions-deadpool.xml
 product/etc/permissions/privapp-permissions-google-p.xml
 product/etc/permissions/split-permissions-google.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
@@ -10,13 +12,10 @@ product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
 product/etc/sysconfig/google_atv.xml
 -product/priv-app/DfuService/DfuService.apk
 -product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
--product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
 system/etc/permissions/privapp-permissions-google.xml
 system_ext/bin/blur_sysprop_notifier
 system_ext/etc/init/blur_sysprop_notifier.rc
-system_ext/etc/permissions/privapp-permissions-deadpool.xml
 system_ext/etc/permissions/privapp-permissions-google-se.xml
--system_ext/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
 
 # Audio
 system_ext/bin/param_set
@@ -25,11 +24,8 @@ vendor/lib/libAmlAudioOutPort.so
 vendor/lib/libamadec.so
 vendor/lib/libamaudioutils.so
 vendor/lib/libamladecs.so
-vendor/lib/libamlaudiohal.so
-vendor/lib/libamlaudiohal@7.0.so
-vendor/lib/libamlaudiohal_deathhandler.so
+vendor/lib/libamlaudiohal.7.0.so
 vendor/lib/libamlaudiorc.so
-vendor/lib/libamlmediautils.so
 vendor/lib/libamlparser.so
 vendor/lib/libamlresampler.so
 vendor/lib/libamlspeed.so
@@ -54,6 +50,7 @@ vendor/lib/soundfx/libvirtualsurround.so
 vendor/lib/soundfx/libvirtualx.so
 
 # Bluetooth
+product/priv-app/DeadpoolService/DeadpoolService.apk
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic
 vendor/etc/bluetooth/auto_pairing.conf
 vendor/etc/bluetooth/blacklist.conf
@@ -75,6 +72,7 @@ vendor/bin/ddrtest.sh
 vendor/etc/lowmemorykiller.txt
 vendor/etc/lowmemorykiller_2G.txt
 vendor/etc/lowmemorykiller_512M.txt
+vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml
 vendor/etc/permissions/android.software.cant_save_state.xml
 
 # Composer
@@ -90,18 +88,12 @@ vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 
 # Droidlogic
--system_ext/priv-app/droidlogic-res/droidlogic-res.apk
--vendor/framework/droidlogic.jar
-system_ext/etc/permissions/droidlogic_permissions.xml
+-vendor/framework/droidlogic.software.core.jar
 system_ext/lib/libjniuevent.so
 vendor/etc/permissions/droidlogic.software.core.xml
 
 # DRM
-vendor/bin/oemcrypto_cas_test
-vendor/lib/libcasoemcrypto.so
-vendor/lib/libdec_ca_wvcas.so
 vendor/lib/libsecmem.so
-vendor/lib/mediacas/libwvmediacas.so
 
 # Dumpstate
 -vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.droidlogic.xml
@@ -158,8 +150,10 @@ vendor/usr/keylayout/Vendor_0002_Product_0002.kl
 vendor/usr/keylayout/Vendor_000d_Product_3838.kl
 vendor/usr/keylayout/Vendor_000d_Product_3839.kl
 vendor/usr/keylayout/Vendor_005d_Product_0001.kl
+vendor/usr/keylayout/Vendor_005d_Product_0002.kl
 vendor/usr/keylayout/Vendor_0484_Product_5738.kl
 vendor/usr/keylayout/Vendor_0508_Product_0110.kl
+vendor/usr/keylayout/Vendor_0957_Product_0006.kl
 vendor/usr/keylayout/Vendor_0c45_Product_1109.kl
 vendor/usr/keylayout/Vendor_1915_Product_0001.kl
 vendor/usr/keylayout/Vendor_7045_Product_1820.kl
@@ -188,6 +182,12 @@ vendor/lib/libmediahal_videodec.so
 
 # Memtrack
 vendor/lib/hw/memtrack.amlogic.so
+
+# OEM Lock
+vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
+vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
+vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
+vendor/lib/android.hardware.oemlock@1.0.so
 
 # OMX
 odm/lib/libHwAudio_dcvdec.so
@@ -270,5 +270,8 @@ vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 # Wi-Fi
-vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/p2p_supplicant.conf:vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant_overlay.conf
+
+# Sort
+vendor/lib/libdsm.so
