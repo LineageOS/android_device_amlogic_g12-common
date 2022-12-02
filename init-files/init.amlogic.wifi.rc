@@ -1,0 +1,34 @@
+on fs
+   chown bluetooth bluetooth /sys/module/bt_device/parameters/btpower_evt
+   chmod 0666 /sys/module/bt_device/parameters/btpower_evt
+
+   chown bluetooth bluetooth /sys/module/bt_device/parameters/btwake_evt
+   chmod 0666 /sys/module/bt_device/parameters/btwake_evt
+
+on property:vendor.bcm_wifi=bcm
+   chown system wifi /sys/module/dhd/parameters/firmware_path
+   chmod 0660 /sys/module/dhd/parameters/firmware_path
+   chown system wifi /sys/module/bcmdhd/parameters/firmware_path
+   chmod 0660 /sys/module/bcmdhd/parameters/firmware_path
+   chown system wifi /sys/module/dhdpci/parameters/firmware_path
+   chmod 0660 /sys/module/dhdpci/parameters/firmware_path
+   setprop wifi.direct.interface p2p-dev-wlan0
+
+on property:vendor.bcm_wifi=rtl
+   setprop wifi.direct.interface p2p0
+
+on property:vendor.bcm_wifi=mtk
+   setprop wifi.direct.interface p2p0
+
+on property:vendor.bcm_wifi=qca
+   setprop wifi.direct.interface p2p0
+
+on property:vendor.bcm_wifi=aml
+   setprop wifi.direct.interface p2p0
+
+on property:vendor.w1_wifi_type=ap
+   write /sys/module/vlsicomm/parameters/con_mode 6
+
+on property:vendor.w1_wifi_type=p2p
+   write /sys/module/vlsicomm/parameters/con_mode 130
+
