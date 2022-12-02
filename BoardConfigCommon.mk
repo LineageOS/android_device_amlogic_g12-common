@@ -51,7 +51,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 ## Vendor SPL
-VENDOR_SECURITY_PATCH := 2021-11-05
+VENDOR_SECURITY_PATCH := 2022-12-01
 
 ## Include the main common tree BoardConfig makefile
 include device/amlogic/common/BoardConfigAmlogic.mk
