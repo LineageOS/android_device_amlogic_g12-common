@@ -81,6 +81,9 @@ PRODUCT_PACKAGES += \
 
 ## Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
     lib_android_keymaster_keymint_utils.vendor \
     libkeymint.vendor \
     libkeymaster_messages.vendor \
@@ -95,6 +98,10 @@ ifeq ($(TARGET_HAS_TEE),false)
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service
 endif
+
+## OEM Lock
+PRODUCT_PACKAGES += \
+    android.hardware.oemlock@1.0.vendor
 
 ## Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -114,6 +121,10 @@ PRODUCT_COPY_FILES +=  \
 
 ## Platform
 TARGET_AMLOGIC_SOC ?= g12a
+
+## Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk_platform.vendor
 
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
