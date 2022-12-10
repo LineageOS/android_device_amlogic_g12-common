@@ -88,9 +88,6 @@ vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 -vendor/framework/droidlogic.software.core.jar
 vendor/etc/permissions/droidlogic.software.core.xml
 
-# DRM
-vendor/lib/libsecmem.so
-
 # Dumpstate
 -vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.droidlogic.xml
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
