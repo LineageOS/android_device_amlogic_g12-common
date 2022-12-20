@@ -33,6 +33,24 @@
       "message": "Not sure why we should reserve anything for vendor though.",
       "revId": "35ee6b4ed2e8dea65ced3794cfaf23e61633ab2e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71dcb6d3_119fd32d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2022-12-20T20:40:41Z",
+      "side": 1,
+      "message": "The idea was to make adb sync work.",
+      "parentUuid": "794d9177_af04f20a",
+      "revId": "35ee6b4ed2e8dea65ced3794cfaf23e61633ab2e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
