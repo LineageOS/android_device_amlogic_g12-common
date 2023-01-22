@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "734c0303_94072697",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2023-01-22T12:34:04Z",
+      "side": 1,
+      "message": "-\u003e Before MTG\n\nwade:/ # df -i\nFilesystem      Inodes IUsed  IFree IUse% Mounted on\n/dev/block/dm-0   3168  3135     33   99% /mnt/system\n/dev/block/dm-1    976   966     10   99% /vendor\n/dev/block/dm-2     48    41      7   86% /odm\n/dev/block/dm-3    160   140     20   88% /product\n/dev/block/dm-4    288   271     17   95% /system_ext\nwade:/ # df -h                                                                                                                                                                           \nFilesystem      Size Used Avail Use% Mounted on\n/dev/block/dm-0 648M 616M   32M  96% /mnt/system\n/dev/block/dm-1  97M  89M  8.8M  91% /vendor\n/dev/block/dm-2 1.7M 1.7M  8.0K 100% /odm\n/dev/block/dm-3 547M 146M  400M  27% /product\n/dev/block/dm-4 133M 114M   18M  87% /system_ext\n\n-\u003e After MTG (installs partially as \"disk full\" on product ):\n\nwade:/product # df -i\nFilesystem      Inodes IUsed  IFree IUse% Mounted on\n/dev/block/dm-0   3168  3134     34   99% /mnt/system\n/dev/block/dm-1    976   966     10   99% /vendor\n/dev/block/dm-2     48    41      7   86% /odm\n/dev/block/dm-3    160   148     12   93% /product\n/dev/block/dm-4    288   275     13   96% /system_ext\nwade:/product # df -h                                                                                                                                                                                         \nFilesystem      Size Used Avail Use% Mounted on\n/dev/block/dm-0 648M 616M   32M  96% /mnt/system\n/dev/block/dm-1  97M  89M  8.8M  91% /vendor\n/dev/block/dm-2 1.7M 1.7M  8.0K 100% /odm\n/dev/block/dm-3 547M 316M  231M  58% /product\n/dev/block/dm-4 133M 122M   11M  92% /system_ext\n",
+      "revId": "a6ea79b5e90a51033193e9a63d883d0f67061b58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
