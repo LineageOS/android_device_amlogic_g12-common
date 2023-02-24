@@ -6,7 +6,7 @@ system_ext            /system_ext         ext4      ro,barrier=1,discard        
 vendor                /vendor             ext4      ro,barrier=1,discard                                             wait,avb,logical,first_stage_mount
 
 ## Block devices
-/dev/block/boot       /boot               emmc      defaults                                                         defaults
+/dev/block/boot       /boot               emmc      defaults                                                         recoveryonly
 /dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
 /dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
 /dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,quota,formattable,reservedsize=32M,checkpoint=block
