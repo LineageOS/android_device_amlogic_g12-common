@@ -22,7 +22,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON}" "${ANDROID_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
 write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
@@ -40,15 +40,15 @@ printf '%s\n' 'endif' >> "$PRODUCTMK"
 # Finish
 write_footers
 
-if [ -s "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/proprietary-files.txt" ]; then
+if [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
-    setup_vendor "${DEVICE}" "${VENDOR_DEVICE}" "${ANDROID_ROOT}" false
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
     # Warning headers and guards
     write_headers
 
     # The standard device blobs
-    write_makefiles "${MY_DIR}/../../${VENDOR_DEVICE}/${DEVICE}/proprietary-files.txt" true
+    write_makefiles "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" true
 
     # Finish
     write_footers
