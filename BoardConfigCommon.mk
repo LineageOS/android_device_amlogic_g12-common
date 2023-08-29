@@ -6,9 +6,6 @@
 
 COMMON_PATH := device/amlogic/g12-common
 
-## BUILD_BROKEN_*
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 ## HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
