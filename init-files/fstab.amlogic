@@ -19,7 +19,7 @@ vendor_dlkm           /vendor_dlkm        ext4      ro,barrier=1                
 
 ## Virtual devices
 /dev/block/loop       auto                loop      defaults                                                         voldmanaged=loop:auto
-/dev/block/zram0      none                swap      defaults                                                         wait,zramsize=268435456
+/dev/block/zram0      none                swap      defaults                                                         wait,zramsize=75%
 
 ## Removable devices
 /devices/*.sd*/mmc_host/sd*                                    auto             auto      defaults                   voldmanaged=sdcard1:auto,encryptable=userdata
