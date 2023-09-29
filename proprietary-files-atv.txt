@@ -1,0 +1,21 @@
+### All blobs from this list, unless pinned and noted as otherwise,
+##  are from adt3-user 12 STT1.211025.001.Z4 7928920 release-keys.
+
+# ATV Specific
+product/etc/permissions/privapp-permissions-atv-product.xml
+product/etc/permissions/privapp-permissions-google-p.xml
+product/etc/permissions/split-permissions-google.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
+product/etc/sysconfig/google_atv.xml
+product/priv-app/DfuService/DfuService.apk
+product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
+product/priv-app/Adt3SuwCustomization/Adt3SuwCustomization.apk
+system/etc/permissions/privapp-permissions-google.xml
+system_ext/bin/blur_sysprop_notifier
+system_ext/etc/init/blur_sysprop_notifier.rc
+system_ext/etc/permissions/privapp-permissions-google-se.xml
+
+## Bluetooth
+system_ext/etc/permissions/privapp-permissions-deadpool.xml
+system_ext/priv-app/DeadpoolServiceBtServices/DeadpoolServiceBtServices.apk
