@@ -30,6 +30,13 @@ write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+# Include ATV specific blobs for ATV targets
+printf '\n%s\n' 'ifeq ($(PRODUCT_IS_ATV),true)' >> "$PRODUCTMK"
+
+write_makefiles "${MY_DIR}/proprietary-files-atv.txt" true
+
+printf '%s\n' 'endif' >> "$PRODUCTMK"
+
 # Allow opting out of OP-TEE
 printf '\n%s\n' 'ifneq ($(TARGET_HAS_TEE),false)' >> "$PRODUCTMK"
 
