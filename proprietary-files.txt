@@ -260,9 +260,6 @@ vendor/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic
 vendor/etc/init/android.hardware.usb.gadget@1.2-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.2-service.droidlogic.xml
 
-# Vulkan
-vendor/lib/hw/vulkan.amlogic.so
-
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
