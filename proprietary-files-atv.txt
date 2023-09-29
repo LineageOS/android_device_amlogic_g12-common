@@ -1,0 +1,15 @@
+### All blobs from this list, unless pinned and noted as otherwise,
+##  are from adt3-user 13 TTT1.220909.001.B7 9305992 release-keys.
+
+# ATV specific
+product/etc/permissions/com.google.android.tv.dfuservice.xml
+product/etc/permissions/privapp-permissions-atv-product.xml
+product/etc/permissions/privapp-permissions-google-p.xml
+product/etc/permissions/split-permissions-google.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
+product/etc/sysconfig/google_atv.xml
+product/priv-app/DfuService/DfuService.apk
+product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
+system/etc/permissions/privapp-permissions-google.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml
