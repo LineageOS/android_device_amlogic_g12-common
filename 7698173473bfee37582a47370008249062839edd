@@ -16,6 +16,24 @@
       "message": "if you wouldn\u0027t mind, feel like doing same for gx and maybe ne-common?",
       "revId": "7698173473bfee37582a47370008249062839edd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57c7b1d8_f57932bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-09-29T17:54:13Z",
+      "side": 1,
+      "message": "Nah, too lazy to sync them right now. It only applies to ne-common tho.",
+      "parentUuid": "e619908c_da7cdb3b",
+      "revId": "7698173473bfee37582a47370008249062839edd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
