@@ -1,7 +1,7 @@
 ### All blobs from this list, unless pinned and noted as otherwise,
 ##  are from adt3-user 12 STT1.211025.001.Z4 7928920 release-keys.
 
-# ATV Specific
+# ATV specific
 product/etc/permissions/privapp-permissions-atv-product.xml
 product/etc/permissions/privapp-permissions-google-p.xml
 product/etc/permissions/split-permissions-google.xml
