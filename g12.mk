@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
     optee-module
 
 ## Keymaster
+ifeq ($(TARGET_HAS_TEE),true)
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
     lib_android_keymaster_keymint_utils.vendor \
@@ -106,8 +107,7 @@ PRODUCT_PACKAGES += \
     libshmemcompat.vendor \
     libsoft_attestation_cert.vendor \
     libtrusty.vendor
-
-ifeq ($(TARGET_HAS_TEE),false)
+else
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service
 endif
