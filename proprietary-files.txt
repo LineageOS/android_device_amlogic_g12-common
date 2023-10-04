@@ -54,7 +54,6 @@ vendor/bin/ddrtest.sh
 vendor/etc/lowmemorykiller.txt
 vendor/etc/lowmemorykiller_2G.txt
 vendor/etc/lowmemorykiller_512M.txt
-vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml
 vendor/etc/permissions/android.software.cant_save_state.xml
 
 # Composer

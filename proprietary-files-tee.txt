@@ -4,6 +4,7 @@
 ## TEE/Keymaster
 vendor/bin/hw/android.hardware.security.keymint-service.amlogic
 vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
+vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.amlogic.xml
 vendor/lib/libtee_load_video_fw.so
 vendor/lib/libteec.so
