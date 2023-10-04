@@ -107,9 +107,6 @@ PRODUCT_PACKAGES += \
     libshmemcompat.vendor \
     libsoft_attestation_cert.vendor \
     libtrusty.vendor
-else
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1-service
 endif
 
 ## Partitions
