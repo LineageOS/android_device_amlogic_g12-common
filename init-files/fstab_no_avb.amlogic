@@ -1,0 +1,25 @@
+## Dynamic partitions
+odm                   /odm                ext4      ro,barrier=1,discard                                             wait,logical,first_stage_mount
+product               /product            ext4      ro,barrier=1,discard                                             wait,logical,first_stage_mount
+system                /system             ext4      ro,barrier=1,discard                                             wait,logical,first_stage_mount
+system_ext            /system_ext         ext4      ro,barrier=1,discard                                             wait,logical,first_stage_mount
+vendor                /vendor             ext4      ro,barrier=1,discard                                             wait,logical,first_stage_mount
+
+## Block devices
+/dev/block/boot       /boot               emmc      defaults                                                         recoveryonly
+/dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
+/dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
+/dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,quota,formattable,reservedsize=32M,checkpoint=block
+/dev/block/metadata   /metadata           ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,first_stage_mount
+/dev/block/misc       /misc               emmc      defaults                                                         defaults
+/dev/block/param      /mnt/vendor/param   ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota,formattable
+/dev/block/recovery   /recovery           emmc      defaults                                                         recoveryonly
+
+## Virtual devices
+/dev/block/loop       auto                loop      defaults                                                         voldmanaged=loop:auto
+/dev/block/zram0      none                swap      defaults                                                         wait,zramsize=268435456
+
+## Removable devices
+/devices/*.sd*/mmc_host/sd*                                    auto             auto      defaults                   voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sd*  auto             auto      defaults                   voldmanaged=usb:auto,encryptable=userdata
+/devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sr*  auto             auto      defaults                   voldmanaged=sr0:auto,encryptable=userdata
