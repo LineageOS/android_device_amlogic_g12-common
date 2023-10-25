@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6f32170_a033dbb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-25T14:57:20Z",
+      "side": 1,
+      "message": "I guess this was due to broken EPPE. Now it\u0027s unveilled:\n\nbuild/make/core/main.mk:1326: warning:  device/radxa/radxa0_tab/lineage_radxa0_tab.mk includes non-existent modules in PRODUCT_PACKAGES\nOffending entries:\nandroid.hardware.drm@1.4-service.clearkey",
+      "revId": "fe2b4b2aa9f5851fd4eb745bc1e13eb293d9bb7d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
