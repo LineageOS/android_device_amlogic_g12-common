@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2704c6a7_eac319ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-25T15:52:43Z",
+      "side": 1,
+      "message": "Please pick this to gx-common, but change it to android.hardware.drm@1.1 since the HAL there is v1.1 (double check).",
+      "revId": "71f5e15a0ebcbd1a098f32fa7a5be945ed4cbd9b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
