@@ -54,6 +54,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4eab82da_c63bd301",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-31T17:04:06Z",
+      "side": 1,
+      "message": "Works good, tested with and deadpool and radxa0.",
+      "revId": "4f4974cd2677bcfa0ff04aaed79b7d70b25aeb2c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "516c43ae_e8936343",
