@@ -20,6 +20,10 @@ on boot
     write /config/usb_gadget/g1/strings/0x409/product ${ro.product.board}
     write /config/usb_gadget/g1/configs/b.1/MaxPower 500
 
+service systemcontrol /system/bin/systemcontrol_static /system/etc/mesondisplay.cfg
+    oneshot
+    seclabel u:r:recovery:s0
+
 # USB accessory configuration
 on property:sys.usb.config=accessory && property:sys.usb.configfs=0
     write /sys/class/android_usb/android0/enable 0
