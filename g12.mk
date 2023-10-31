@@ -130,6 +130,10 @@ TARGET_AMLOGIC_SOC ?= g12a
 PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor
 
+## Recovery
+PRODUCT_COPY_FILES += \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg
+
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 

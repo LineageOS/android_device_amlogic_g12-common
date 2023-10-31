@@ -208,6 +208,7 @@ vendor/lib/libge2d.so
 odm/etc/firmware/firmware.le
 odm/etc/tvconfig/pq/pq.db
 odm/etc/tvconfig/pq/pq_default.ini
+recovery/root/system/bin/systemcontrol_static:recovery/root/system/bin/systemcontrol_static
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
 vendor/etc/init/systemcontrol.rc
