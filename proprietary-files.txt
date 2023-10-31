@@ -83,7 +83,6 @@ vendor/lib/libam_adp.so
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
-vendor/etc/mesondisplay.cfg
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so
@@ -208,6 +207,7 @@ vendor/lib/libge2d.so
 odm/etc/firmware/firmware.le
 odm/etc/tvconfig/pq/pq.db
 odm/etc/tvconfig/pq/pq_default.ini
+recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
 vendor/etc/init/systemcontrol.rc
