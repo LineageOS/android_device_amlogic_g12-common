@@ -36,6 +36,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bab19e04_43d0faa9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-10-31T15:05:28Z",
+      "side": 1,
+      "message": "yeah the ADT-3 has IR even, it\u0027s just not wired up DTBS/Software side.\n\nIt has the receiver even.",
+      "parentUuid": "5a9d2956_6f443541",
+      "revId": "4f4974cd2677bcfa0ff04aaed79b7d70b25aeb2c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "516c43ae_e8936343",
