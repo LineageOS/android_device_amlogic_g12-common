@@ -22,6 +22,30 @@
       },
       "revId": "7ebf65b7fe63571f2420af0e477bcd0d1f67fd65",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cebdbb66_063cf3cb",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-11-22T16:04:48Z",
+      "side": 1,
+      "message": "Fixed on 19.1/18.1 for g12, but gx and ne are both valid on all branches.",
+      "parentUuid": "73e3b73b_695be941",
+      "range": {
+        "startLine": 6,
+        "startChar": 42,
+        "endLine": 6,
+        "endChar": 44
+      },
+      "revId": "7ebf65b7fe63571f2420af0e477bcd0d1f67fd65",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
