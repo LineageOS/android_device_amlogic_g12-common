@@ -1,25 +1,25 @@
-### All blobs from this list, unless pinned and noted as otherwise,
-##  are from adt3-user 13 TTT1.230205.001 9565391 release-keys.
+## All blobs from this list, unless pinned and noted as otherwise,
+## are from adt3-user 13 TTT1.230205.001 9565391 release-keys.
 
 ## TEE/Keymaster
 vendor/bin/hw/android.hardware.security.keymint-service.amlogic
+vendor/bin/tee-supplicant
+vendor/bin/tee_preload_fw
 vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
+vendor/etc/init/tee-supplicant.rc
+vendor/etc/init/tee_preload_fw.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.amlogic.xml
 vendor/lib/libtee_load_video_fw.so
 vendor/lib/libteec.so
-vendor/bin/tee-supplicant
-vendor/bin/tee_preload_fw
-vendor/etc/init/tee-supplicant.rc
-vendor/etc/init/tee_preload_fw.rc
 
-## Playready
 # Depends on `libtee.so`
+## Playready
 vendor/bin/hw/android.hardware.drm@1.4-service.playready
-vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
 vendor/etc/drm/playready/bgroupcert.dat
 vendor/etc/drm/playready/zgpriv.dat
 vendor/etc/drm/playready/zgpriv_protected.dat
+vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
 vendor/lib/libplayready.so
 vendor/lib/libplayreadymediadrmplugin.so
