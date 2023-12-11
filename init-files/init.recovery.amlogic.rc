@@ -1,3 +1,5 @@
+import init.recovery.${ro.product.device}.rc
+
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.controller ${vendor.usb.controller}
