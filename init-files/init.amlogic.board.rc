@@ -1,7 +1,7 @@
 import /vendor/etc/init/hw/init.amlogic.usb.rc
 
 on post-fs-data
-    insmod /vendor/lib/modules/mali.ko
+    insmod /vendor/lib/modules/mali_kbase.ko
     insmod /vendor/lib/modules/aml_hardware_dmx.ko
 
 on boot

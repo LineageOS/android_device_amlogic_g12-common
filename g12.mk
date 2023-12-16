@@ -96,12 +96,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.amlogic
 
-## Kernel Modules
-PRODUCT_PACKAGES += \
-    mali \
-    media \
-    optee-module
-
 ## Keymaster
 ifneq ($(TARGET_HAS_TEE),false)
 PRODUCT_PACKAGES += \
