@@ -9,9 +9,6 @@ COMMON_PATH := device/amlogic/g12-common
 ## BUILD_BROKEN_*
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-# GPU
-TARGET_AMLOGIC_GPU_ARCH := bifrost
-
 ## HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
@@ -20,6 +17,17 @@ BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_dev
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
+
+## Kernel modules
+TARGET_KERNEL_EXT_MODULE_ROOT := hardware/amlogic/kernel-modules
+TARGET_KERNEL_EXT_MODULES += \
+    mali-driver/dvalin/kernel/drivers/gpu/arm/midgard \
+    media
+
+ifneq ($(TARGET_HAS_TEE),false)
+TARGET_KERNEL_EXT_MODULES += \
+    optee
+endif
 
 ## Partitions
 CORE_PARTITIONS := system vendor
