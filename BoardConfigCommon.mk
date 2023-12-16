@@ -6,9 +6,6 @@
 
 COMMON_PATH := device/amlogic/g12-common
 
-# GPU
-TARGET_AMLOGIC_GPU_ARCH ?= bifrost
-
 ## HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
@@ -21,6 +18,20 @@ TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
 ifeq ($(WITH_CONSOLE),true)
 BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend
 endif
+
+## Kernel modules
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/amlogic/kernel-modules
+TARGET_KERNEL_EXT_MODULES += \
+    mali-driver/bifrost \
+    media-4.9
+
+ifneq ($(TARGET_HAS_TEE),false)
+TARGET_KERNEL_EXT_MODULES += \
+    optee
+endif
+
+TARGET_MODULE_ALIASES += \
+    mali_kbase.ko:mali.ko
 
 ## Partitions
 SSI_PARTITIONS := product system system_ext
