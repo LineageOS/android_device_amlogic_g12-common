@@ -100,8 +100,12 @@ PRODUCT_PACKAGES += \
 ## Kernel Modules
 PRODUCT_PACKAGES += \
     mali \
-    media \
+    media
+
+ifneq ($(TARGET_HAS_TEE),false)
+PRODUCT_PACKAGES += \
     optee-module
+endif
 
 ## Keymaster
 ifneq ($(TARGET_HAS_TEE),false)
