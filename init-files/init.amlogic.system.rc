@@ -82,11 +82,11 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.amlogic
 
 on property:persist.vendor.bt_module=rtk_btusb
-    insmod /vendor/lib/modules/rtk_btusb.ko
+    insmod /vendor_dlkm/lib/modules/rtk_btusb.ko
 
 on property:persist.vendor.bt_module=btmtk_usb
-    insmod /vendor/lib/modules/btmtk_usb.ko
+    insmod /vendor_dlkm/lib/modules/btmtk_usb.ko
 
 on property:persist.vendor.bt_module=sprdbt_tty
-    insmod /vendor/lib/modules/uwe5621_bsp_sdio.ko
-    insmod /vendor/lib/modules/sprdbt_tty.ko
+    insmod /vendor_dlkm/lib/modules/uwe5621_bsp_sdio.ko
+    insmod /vendor_dlkm/lib/modules/sprdbt_tty.ko
