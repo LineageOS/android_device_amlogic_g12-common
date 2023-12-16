@@ -65,7 +65,7 @@ function blob_fixup() {
              sed -i '/setprop ro.crypto.fuse_sdcard true/d' "${2}"
              ;;
         vendor/etc/init/tee-supplicant.rc)
-             sed -i s#/vendor/lib/#/vendor/lib/modules/#g "${2}"
+             sed -i s#/vendor/lib/#/vendor_dlkm/lib/modules/#g "${2}"
              ;;
      esac
  }

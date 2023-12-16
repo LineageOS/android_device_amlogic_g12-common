@@ -99,7 +99,7 @@ vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
 
 # Kernel Modules
-vendor/lib/modules/amlogic_fbc_lib.ko
+vendor/lib/modules/amlogic_fbc_lib.ko:vendor_dlkm/lib/modules/amlogic_fbc_lib.ko
 
 # ICU
 vendor/lib/libicuuc_vendor.so
