@@ -5,15 +5,15 @@
   },
   {
     "repository": "android_hardware_amlogic_kernel-modules_mali-driver",
-    "target_path": "hardware/amlogic/kernel-modules/mali-driver"
+    "target_path": "kernel/amlogic/linux-4.9-modules/mali-driver"
   },
   {
     "repository": "android_hardware_amlogic_kernel-modules_media",
-    "target_path": "hardware/amlogic/kernel-modules/media"
+    "target_path": "kernel/amlogic/linux-4.9-modules/media"
   },
   {
     "repository": "android_hardware_amlogic_kernel-modules_optee",
-    "target_path": "hardware/amlogic/kernel-modules/optee"
+    "target_path": "kernel/amlogic/linux-4.9-modules/optee"
   },
   {
     "repository": "android_kernel_amlogic_linux-4.9",
