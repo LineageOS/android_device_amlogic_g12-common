@@ -69,7 +69,7 @@ function blob_fixup() {
              sed -i '/setprop ro.crypto.fuse_sdcard true/d' "${2}"
              ;;
         vendor/etc/init/tee-supplicant.rc)
-             sed -i 's#/vendor/lib/#/vendor/lib/modules/#g' "${2}"
+             sed -i 's#/vendor/lib/#/vendor_dlkm/lib/modules/#g' "${2}"
              ;;
         vendor/lib/hw/camera.amlogic.so|vendor/lib/hw/hwcomposer.amlogic.so|vendor/lib/libOmxCore.so)
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
