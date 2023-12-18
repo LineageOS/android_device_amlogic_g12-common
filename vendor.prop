@@ -44,8 +44,5 @@ vendor.media.omx.out_buffer2_osd=8
 vendor.media.omx.display_mode=3
 vendor.media.sf.omxvideo-optmize=1
 
-## OEM Lock
-ro.oem_unlock_supported=1
-
 ## USB
 vendor.usb.controller=ff400000.dwc2_a

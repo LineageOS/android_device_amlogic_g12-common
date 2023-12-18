@@ -153,11 +153,6 @@ vendor/lib/libmediahal_videodec.so
 # Memtrack
 vendor/lib/hw/memtrack.amlogic.so
 
-# OEM Lock
-vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
-vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
-vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
-
 # OMX
 odm/lib/libHwAudio_dcvdec.so
 odm/lib/libHwAudio_dtshd.so

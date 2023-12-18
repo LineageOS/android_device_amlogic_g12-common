@@ -124,8 +124,13 @@ PRODUCT_PACKAGES += \
 endif
 
 ## OEM Lock
+ifneq ($(TARGET_HAS_TEE),false)
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
 PRODUCT_PACKAGES += \
     android.hardware.oemlock@1.0.vendor
+endif
 
 ## Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
