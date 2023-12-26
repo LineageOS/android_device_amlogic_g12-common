@@ -16,6 +16,23 @@
       "message": "So, thought, why not guard this on is_dynamic and cache partition filesystem type being set and make it common?",
       "revId": "e909c0d42af1cb50938ec015be8193b52f1a6fb0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e31a78a_a4db2ff4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-12-26T19:14:12Z",
+      "side": 1,
+      "message": "and fwiw I mean vendor/lineage - all these are boardvars anyway.",
+      "revId": "e909c0d42af1cb50938ec015be8193b52f1a6fb0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
