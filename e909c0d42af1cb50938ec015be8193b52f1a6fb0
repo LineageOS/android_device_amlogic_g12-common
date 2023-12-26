@@ -33,6 +33,24 @@
       "message": "and fwiw I mean vendor/lineage - all these are boardvars anyway.",
       "revId": "e909c0d42af1cb50938ec015be8193b52f1a6fb0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "affe3046_e83fd9ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-12-26T19:19:22Z",
+      "side": 1,
+      "message": "This only applies to non-AB devices.",
+      "parentUuid": "6e31a78a_a4db2ff4",
+      "revId": "e909c0d42af1cb50938ec015be8193b52f1a6fb0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
