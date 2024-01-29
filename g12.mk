@@ -30,10 +30,8 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor
 
 ## Bluetooth
-ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor
-endif
 
 ## Camera
 PRODUCT_PACKAGES += \
