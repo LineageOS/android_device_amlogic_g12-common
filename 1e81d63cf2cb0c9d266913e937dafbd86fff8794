@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c64b377_831ce1dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-02-25T17:30:54Z",
+      "side": 1,
+      "message": "Tested with MTG on radax0_tab build.",
+      "revId": "1e81d63cf2cb0c9d266913e937dafbd86fff8794",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
