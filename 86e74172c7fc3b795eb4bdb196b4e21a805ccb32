@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f45a4c32_40772154",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-03-10T23:18:35Z",
+      "side": 1,
+      "message": "here and not in gx or aml-common bc we do partition symlinks for Vulcan in mk - rest don\u0027t have those sort of symlinks.",
+      "revId": "86e74172c7fc3b795eb4bdb196b4e21a805ccb32",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
