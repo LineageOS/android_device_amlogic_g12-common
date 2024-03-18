@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2021-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -60,7 +60,8 @@ PRODUCT_PACKAGES += \
 
 ## Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4.vendor
+    android.hardware.graphics.composer@2.4.vendor \
+    g12_libGLES_mali_vulkan.amlogic_symlink
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
