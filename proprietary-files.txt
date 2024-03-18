@@ -84,7 +84,7 @@ vendor/lib/libam_adp.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
 vendor/lib/arm.graphics-V1-ndk_platform.so
-vendor/lib/egl/libGLES_mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.amlogic.so
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so
 vendor/lib/libamgralloc_ext.so
