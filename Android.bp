@@ -1,7 +1,14 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2021-2024 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 soong_namespace {}
+
+install_symlink {
+    name: "g12_libGLES_mali_vulkan.amlogic_symlink",
+    vendor: true,
+    installed_location: "lib/hw/vulkan.amlogic.so",
+    symlink_target: "lib/egl/libGLES_mali.so",
+}
