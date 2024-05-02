@@ -3,7 +3,6 @@ ro.boot.btmacaddr=22:22:ce:d2:ca:13
 
 ## Camera
 camera.disable_zsl_mode=1
-rw.camera.usb.faceback=true
 
 ## Identifiers
 ro.oem.key1=ATV00100020
