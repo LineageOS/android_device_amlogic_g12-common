@@ -16,6 +16,23 @@
       "message": "Not sold on this one, don\u0027t want to dup to devkits but mehhh",
       "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bbc820b_2d06ebdd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-05-02T22:40:34Z",
+      "side": 1,
+      "message": "this is read by GMS soooo, probably want to set it, maybe allow it to be orderriden?\n\ndopinder/Sabrina are the only targets that set diff ones and I\u0027m 99% sabrina is wrong on stock.",
+      "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
