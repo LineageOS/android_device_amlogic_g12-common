@@ -1,5 +1,2 @@
 ## Bluetooth
 ro.boot.btmacaddr=22:22:ce:d2:ca:13
-
-## Identifiers
-ro.oem.key1=ATV00100020
