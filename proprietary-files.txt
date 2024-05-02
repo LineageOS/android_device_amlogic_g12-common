@@ -112,7 +112,6 @@ odm/usr/idc/Vendor_7545_Product_0021.idc
 odm/usr/keylayout/Vendor_000d_Product_3838.kl
 odm/usr/keylayout/Vendor_000d_Product_3839.kl
 odm/usr/keylayout/Vendor_7545_Product_0021.kl
-vendor/usr/keylayout/Generic.kl
 vendor/usr/keylayout/Vendor_0002_Product_0002.kl
 vendor/usr/keylayout/Vendor_000d_Product_3838.kl
 vendor/usr/keylayout/Vendor_000d_Product_3839.kl
