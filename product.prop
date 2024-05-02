@@ -1,5 +1,10 @@
+<<<<<<< HEAD   (62e523 g12: Update vendor security patch level from wade)
 ## Camera
 camera.disable_zsl_mode=1
+=======
+## Bluetooth
+ro.boot.btmacaddr=22:22:ce:d2:ca:13
+>>>>>>> CHANGE (46fc88 g12: Remove unused properties)
 
 ## Identifiers
 ro.oem.key1=ATV00100020
