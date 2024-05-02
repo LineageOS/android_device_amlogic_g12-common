@@ -25,12 +25,8 @@ libplayer.livets.softdemux=1
 libplayer.netts.recalcpts=1
 persist.sys.media.avsync=true
 persist.vendor.media.bootvideo=0050
-ro.media.camera_preview.maxsize=1920x1080
-ro.media.camera_preview.limitedrate=1920x1080x30,1280x720x30,640x480x30,320x240x28
-ro.media.camera_preview.usemjpeg=1
 ro.vendor.media.support.ffmpeg.adec=false
 #ro.vendor.sdr2hdr.enable=true
-vendor.afbcd.enable=1
 vendor.media.libplayer.curlenable=true
 vendor.media.libplayer.seek.fwdsearch=1
 vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
@@ -38,11 +34,9 @@ vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,blura
 ## OMX
 ro.vendor.media.support.omx2=true
 vendor.media.omx2.in_buffer=5
-vendor.ionvideo.enable=1
 vendor.media.omx.use.360omx2=false
 vendor.media.omx.out_buffer2_osd=8
 vendor.media.omx.display_mode=3
-vendor.media.sf.omxvideo-optmize=1
 
 ## USB
 vendor.usb.controller=ff400000.dwc2_a
