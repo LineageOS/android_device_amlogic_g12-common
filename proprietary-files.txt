@@ -46,10 +46,6 @@ vendor/lib/hw/android.hardware.bluetooth@1.0-impl-droidlogic.so
 vendor/lib/hw/camera.amlogic.so
 vendor/lib/libispaaa.so
 
-# Cgroups
-vendor/etc/cgroups.json
-vendor/etc/task_profiles.json
-
 # Common
 vendor/bin/ddrtest.sh
 vendor/etc/lowmemorykiller.txt
