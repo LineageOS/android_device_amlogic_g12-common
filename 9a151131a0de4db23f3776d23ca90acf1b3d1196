@@ -50,6 +50,24 @@
       "message": "Could always handle it like PRODUCT_GMS_CLIENTID_BASE is done in vendor/lineage.",
       "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a92ae44_fb67e457",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-05-03T15:38:35Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/391739",
+      "parentUuid": "0ec5c227_f99fb069",
+      "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
