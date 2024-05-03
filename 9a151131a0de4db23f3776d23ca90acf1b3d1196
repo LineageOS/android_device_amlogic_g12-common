@@ -33,6 +33,23 @@
       "message": "this is read by GMS soooo, probably want to set it, maybe allow it to be orderriden?\n\ndopinder/Sabrina are the only targets that set diff ones and I\u0027m 99% sabrina is wrong on stock.",
       "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ec5c227_f99fb069",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2024-05-03T00:16:17Z",
+      "side": 1,
+      "message": "Could always handle it like PRODUCT_GMS_CLIENTID_BASE is done in vendor/lineage.",
+      "revId": "9a151131a0de4db23f3776d23ca90acf1b3d1196",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
