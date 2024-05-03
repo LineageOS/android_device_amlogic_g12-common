@@ -13,6 +13,3 @@ on boot
     write /sys/module/amvdec_mh264/parameters/reorder_dpb_size_margin 9
     write /sys/module/amvdec_h265/parameters/dynamic_buf_num_margin 9
     write /sys/module/amvdec_vp9/parameters/max_buf_num 12
-
-on property:ro.boot.oem.key1=*
-    setprop ro.oem.key1 ${ro.boot.oem.key1}
