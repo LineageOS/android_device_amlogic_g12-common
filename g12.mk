@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2021-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -144,14 +144,20 @@ TARGET_AMLOGIC_SOC ?= g12a
 
 ## Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk_platform.vendor
+    android.hardware.power-service.lineage-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 ## Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 ## Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr
 
 ## Thermal
 PRODUCT_PACKAGES += \
