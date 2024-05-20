@@ -38,7 +38,11 @@ BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 10000000
 endif
 
 ## Properties
+<<<<<<< HEAD   (a8de69 g12: Commonize a few things)
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+=======
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+>>>>>>> CHANGE (b798b9 g12: Move default BT MAC to common)
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery

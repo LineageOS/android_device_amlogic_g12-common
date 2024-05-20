@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (a8de69 g12: Commonize a few things)
 ## Bluetooth
 ro.boot.btmacaddr=22:22:ce:d2:ca:13
 
@@ -7,3 +8,5 @@ rw.camera.usb.faceback=true
 
 ## Identifiers
 ro.oem.key1=ATV00100020
+=======
+>>>>>>> CHANGE (b798b9 g12: Move default BT MAC to common)
