@@ -18,6 +18,10 @@ TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 TARGET_KERNEL_VARIANT_CONFIG ?= g12a_variant_defconfig
 
+ifeq ($(WITH_CONSOLE),true)
+BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend
+endif
+
 ## Partitions
 CORE_PARTITIONS := system vendor
 ADDITIONAL_PARTITIONS := odm product system_ext
