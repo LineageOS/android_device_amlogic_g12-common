@@ -10,11 +10,12 @@ vendor                /vendor             ext4      ro,barrier=1                
 /dev/block/cache      /cache              ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
 /dev/block/data       /data               ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,quota,formattable,reservedsize=32M,checkpoint=block
 /dev/block/dtbo       /dtbo               emmc      defaults                                                         defaults
+/dev/block/factory    /mnt/vendor/factory ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,nofail
 /dev/block/metadata   /metadata           ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,first_stage_mount
 /dev/block/misc       /misc               emmc      defaults                                                         defaults
-/dev/block/param      /mnt/vendor/param   ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota,formattable
+/dev/block/param      /mnt/vendor/param   ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,quota,formattable,nofail
 /dev/block/recovery   /recovery           emmc      defaults                                                         recoveryonly
-/dev/block/tee        /mnt/vendor/tee     ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable
+/dev/block/tee        /mnt/vendor/tee     ext4      noatime,nosuid,nodev,nodelalloc,nomblk_io_submit,errors=panic    wait,check,formattable,nofail
 
 ## Virtual devices
 /dev/block/loop       auto                loop      defaults                                                         voldmanaged=loop:auto
