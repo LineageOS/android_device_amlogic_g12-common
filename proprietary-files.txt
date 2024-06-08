@@ -65,10 +65,6 @@ vendor/lib/libmeson_display_service.so
 vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 
-# Droidlogic
-vendor/etc/permissions/droidlogic.software.core.xml
-vendor/framework/droidlogic.software.core.jar
-
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
 vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
@@ -94,6 +90,11 @@ vendor/bin/hw/android.hardware.health@2.1-service.droidlogic
 vendor/etc/init/android.hardware.health@2.1-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
+
+# IR - from wade - sti6130d350-user 12 SC 20221221 release-keys
+vendor/etc/init/init.hbg.remote.rc|c03db2bffcec0495cd952498cc71128811195246
+vendor/etc/remote.txt|9ad9e7e511b8bfa59af837c90aebb02a880096b2
+vendor/lib/hw/consumerir.amlogic.so|e0b675d2ca48fedf452fd028d92bd98972eba738
 
 # Kernel Modules
 vendor/lib/modules/amlogic_fbc_lib.ko
@@ -128,8 +129,6 @@ vendor/lib/libmediahal_videodec.so
 vendor/lib/hw/memtrack.amlogic.so
 
 # OMX
-odm/lib/libHwAudio_dcvdec.so
-odm/lib/libHwAudio_dtshd.so
 vendor/lib/libOmxAudio.so
 vendor/lib/libOmxBase.so
 vendor/lib/libOmxCore.so
@@ -170,9 +169,6 @@ vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 
 # systemcontrol
-odm/etc/firmware/firmware.le
-odm/etc/tvconfig/pq/pq.db
-odm/etc/tvconfig/pq/pq_default.ini
 recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
