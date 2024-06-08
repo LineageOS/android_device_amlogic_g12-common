@@ -98,6 +98,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.amlogic
 
+## IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-service \
+    android.hardware.ir@1.0-impl
+
 ## Kernel Modules
 PRODUCT_PACKAGES += \
     mali \
