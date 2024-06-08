@@ -64,9 +64,6 @@ fi
 
 function blob_fixup() {
      case "${1}" in
-        odm/etc/tvconfig/pq/pq_default.ini)
-             sed -i 's/pq.AllPQMoudle.en/pq.AllPQModule.en/g' "${2}"
-             ;;
         vendor/etc/init/fs.rc)
              sed -i '/media 0770 media_rw media_rw/d' "${2}"
              sed -i '/setprop ro.crypto.fuse_sdcard true/d' "${2}"
