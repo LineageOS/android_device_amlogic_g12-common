@@ -68,6 +68,14 @@ vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 # Droidlogic
 vendor/etc/permissions/droidlogic.software.core.xml
 vendor/framework/droidlogic.software.core.jar
+vendor/framework/droidlogic.tv.software.core.jar
+
+# Droidlogic - from wade - sti6130d350-user 12 SC 20221221 release-keys
+system/etc/permissions/droidlogic-hiddenapi-package-whitelist.xml
+system_ext/etc/permissions/com.droidlogic.tv.settings.xml
+system_ext/etc/permissions/droidlogic_permissions.xml
+system_ext/priv-app/droidlogic-res/droidlogic-res.apk
+system_ext/priv-app/DroidTvSettings/DroidTvSettings.apk
 
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
@@ -94,6 +102,11 @@ vendor/bin/hw/android.hardware.health@2.1-service.droidlogic
 vendor/etc/init/android.hardware.health@2.1-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
+
+# IR - from wade - sti6130d350-user 12 SC 20221221 release-keys
+vendor/etc/init/init.hbg.remote.rc
+vendor/etc/remote.txt
+vendor/lib/hw/consumerir.amlogic.so
 
 # Kernel Modules
 vendor/lib/modules/amlogic_fbc_lib.ko
@@ -170,9 +183,6 @@ vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 
 # systemcontrol
-odm/etc/firmware/firmware.le
-odm/etc/tvconfig/pq/pq.db
-odm/etc/tvconfig/pq/pq_default.ini
 recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
