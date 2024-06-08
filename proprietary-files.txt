@@ -69,6 +69,14 @@ vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 vendor/etc/permissions/droidlogic.software.core.xml
 vendor/framework/droidlogic.software.core.jar
 
+# Droidlogic - from wade - sti6130d350-user 12 SC 20221221 release-keys
+system/etc/permissions/droidlogic-hiddenapi-package-whitelist.xml|de9a75881f3e54ca43938f719b54a984737ee4fa
+system_ext/etc/permissions/com.droidlogic.tv.settings.xml|0f70e11e9c7b6624f1dd2e6b7fc86607bd183d59|34c1cff6803313d4b77ff826623e3263de2792e0
+system_ext/etc/permissions/droidlogic_permissions.xml|1791b686f2c8b1310507c8f62796a4885998c8da
+system_ext/priv-app/DroidTvSettings/DroidTvSettings.apk|ea682dc3182b4f60bd1bb1014af4ef3067f8c46b
+system_ext/priv-app/droidlogic-res/droidlogic-res.apk|2c373845c14b86b8655924464d68aedf0a9eff0d
+vendor/framework/droidlogic.tv.software.core.jar|e527e9e1f3437f8ba662bb77567b59e52af4fb3c
+
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
 vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
@@ -94,6 +102,11 @@ vendor/bin/hw/android.hardware.health@2.1-service.droidlogic
 vendor/etc/init/android.hardware.health@2.1-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
+
+# IR - from wade - sti6130d350-user 12 SC 20221221 release-keys
+vendor/etc/init/init.hbg.remote.rc|c03db2bffcec0495cd952498cc71128811195246
+vendor/etc/remote.txt|9ad9e7e511b8bfa59af837c90aebb02a880096b2
+vendor/lib/hw/consumerir.amlogic.so|e0b675d2ca48fedf452fd028d92bd98972eba738
 
 # Kernel Modules
 vendor/lib/modules/amlogic_fbc_lib.ko
@@ -170,9 +183,6 @@ vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 
 # systemcontrol
-odm/etc/firmware/firmware.le
-odm/etc/tvconfig/pq/pq.db
-odm/etc/tvconfig/pq/pq_default.ini
 recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol

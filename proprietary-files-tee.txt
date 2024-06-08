@@ -6,7 +6,24 @@ vendor/bin/hw/android.hardware.oemlock@1.0-service.droidlogic
 vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc
 vendor/etc/vintf/manifest/android.hardware.oemlock@1.0-service.droidlogic.xml
 
-## TEE/Keymaster
+## Playready
+vendor/bin/hw/android.hardware.drm@1.4-service.playready
+vendor/etc/drm/playready/bgroupcert.dat
+vendor/etc/drm/playready/zgpriv.dat
+vendor/etc/drm/playready/zgpriv_protected.dat
+vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
+vendor/lib/libplayready.so
+vendor/lib/libplayreadymediadrmplugin.so
+
+## Netflix - from wade - sti6130d350-user 12 SC 20221221 release-keys
+vendor/bin/hw/android.hardware.drm@1.4-service.netflix|a142b52dc546c591acefa3a1adf19793e0254b71
+vendor/etc/init/android.hardware.drm@1.4-service.netflix.rc|0cdc8bcf31d8300f8f54a9150d103ae6c399dd89
+vendor/etc/permissions/droidlogic.software.netflix.xml|f9798f7873372120d392377a55a5fe61279a98a7
+vendor/lib/libnetflixplugin.so|660811fd9186157912b715132da15289793ec5b2
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.netflix.xml|2ce709a302f21d2cc5532e35d32ce1db03827f56
+
+## TEE
 vendor/bin/hw/android.hardware.security.keymint-service.amlogic
 vendor/bin/tee-supplicant
 vendor/bin/tee_preload_fw
@@ -18,19 +35,11 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service.amlogic.xml
 vendor/lib/libtee_load_video_fw.so
 vendor/lib/libteec.so
 
-# Depends on `libtee.so`
-## Playready
-vendor/bin/hw/android.hardware.drm@1.4-service.playready
-vendor/etc/drm/playready/bgroupcert.dat
-vendor/etc/drm/playready/zgpriv.dat
-vendor/etc/drm/playready/zgpriv_protected.dat
-vendor/etc/init/android.hardware.drm@1.4-service.playready.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml
-vendor/lib/libplayready.so
-vendor/lib/libplayreadymediadrmplugin.so
-
-## TEE HDCP - from wade - Dynalink/sti6130d350/sti6130d350:10/QT/20220222:user/release-keys
+## TEE HDCP - from wade - sti6130d350-user 12 SC 20221221 release-keys
+vendor/bin/oemcrypto_test_aml|0e4b0e39eb1a568a8bce5b4927c1fac9f03b19ed
 vendor/bin/tee_hdcp|906be1f4a6cbc7e5d5e6c7f9c75510738c4a3d14
 vendor/bin/tee_key_inject|4048719b00ad7168599616742919c8b8a60897fa
+vendor/bin/tee_provision|c4505c7de7be67e3eb42296ac3e0fc84d94229f1
+vendor/bin/videomediaconvertortest|1fdd8cec2674b74e5406300e9d04088bab5be701
 vendor/etc/init/tee_hdcp.rc|654b0e242fdef6ac9ca03cd0899779355cc29312
 vendor/etc/init/tee_key_inject.rc|f312f1afad60ca32db4bea28b1132c0a93968254
