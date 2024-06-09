@@ -16,6 +16,24 @@
       "message": "Pointless to be in its own commit. Squash into the next commit.\n\nI don\u0027t really like having IR HAL everywhere, tho...",
       "revId": "6dad49e6ebd551737c17470ab6195616298fdc55",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "626a7f34_4ca5ee34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-06-09T17:55:25Z",
+      "side": 1,
+      "message": "it bails gracefully.\n\nNo real overhead.\n\nPlus as proven by people on XDA, people actively add IR to the unpopulated header lol",
+      "parentUuid": "d437c6a7_0c05e807",
+      "revId": "6dad49e6ebd551737c17470ab6195616298fdc55",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
