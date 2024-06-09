@@ -92,6 +92,14 @@ if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/propriet
         extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
     fi
 
+    if [ "${TARGET_SOC}" == "g12a" ]
+    then
+      extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-g12a.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    elif [ "${TARGET_SOC}" == "sm1" ]
+    then
+      extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-sm1.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    fi
+
     if [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
         extract_firmware "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" "${SRC}"
     fi
