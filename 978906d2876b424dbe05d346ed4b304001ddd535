@@ -16,6 +16,24 @@
       "message": "Remove",
       "revId": "978906d2876b424dbe05d346ed4b304001ddd535",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de2912bf_d1a393ec",
+        "filename": "manifest.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-06-09T19:47:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "78235ffb_a1d98ed0",
+      "revId": "978906d2876b424dbe05d346ed4b304001ddd535",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
