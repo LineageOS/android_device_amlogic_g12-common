@@ -65,7 +65,7 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
       write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-sm1.txt" true
     fi
 
-    if [ -f "${MY_DIR}/../../${VENDOR_BRNAHD}/${DEVICE}/proprietary-firmware.txt" ]; then
+    if [ -f "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-firmware.txt" ]; then
         append_firmware_calls_to_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-firmware.txt"
     fi
 
