@@ -24,6 +24,3 @@ vendor/lib/vendor.amlogic.hardware.droidvold@1.0.so|6bc377dcf2837382913072f9188f
 vendor/lib/vendor.amlogic.hardware.systemcontrol@1.0.so|03a249199deecbd846fd4b779cf6cc50212281eb
 vendor/lib/vendor.amlogic.hardware.systemcontrol@1.1.so|a9d728cbe1361239d8fe9257df8d166a9ed78865
 vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so|d7455026b9e19b6e49e26ce4a9b50c1f905e2e81
-
-## TEE - SOC Specific
-vendor/bin/hw/android.hardware.security.keymint-service.amlogic|0fad4ea718c26abd0d1faad369de76edb3efdfa4
