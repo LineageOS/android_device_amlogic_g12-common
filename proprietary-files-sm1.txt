@@ -1,5 +1,5 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
-## are from sabrina_prod_stable-user 12 STTL.231114.004 11218674 release-keys.
+## are from sabrina_prod_stable-user 12 STTE.240315.002 11695351 release-keys.
 
 ## Composer
 vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic|3d59efbaf93bb6a534738b024ebd2bb4b3d10c65
@@ -15,7 +15,7 @@ vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so|662c72f559599d6199db3
 
 ## systemcontrol - Vendor
 vendor/bin/hdcp_tx22|7db5ef22d8417586f900f0e246f6d22b3e0dc25f
-vendor/bin/systemcontrol|51faae04764b69d7b660f344ba4735a8cd28c277
+vendor/bin/systemcontrol|ff502c83d0f6ac52bc053784984d493200b7ba30
 vendor/etc/init/systemcontrol.rc|816b3193c97518903c15efb172a6225177e9bd96
 vendor/lib/libfbc.so|c04fd40373778bb1b43f96d2d86f99936dc2026f
 vendor/lib/libpqcontrol.so|a1b752d1fed2cfe2a2df353e1e686434088daa1b
