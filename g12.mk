@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
 
 ## Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4.vendor
+    android.hardware.graphics.composer@2.4.vendor \
+    libion.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -158,9 +159,14 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr
 
+## Systemcontrol
+PRODUCT_PACKAGES += \
+    libsqlite.vendor
+
 ## Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0.vendor \
+    libjsoncpp.vendor
 
 ## USB
 PRODUCT_PACKAGES += \
