@@ -179,6 +179,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.2.vendor
 
+## VNDK
+PRODUCT_PACKAGES += \
+    libui_shim.vendor
+
 ## Widevine DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
