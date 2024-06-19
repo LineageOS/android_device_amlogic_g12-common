@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eb5bd16_4aaadbb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-06-19T20:51:14Z",
+      "side": 1,
+      "message": "I don\u0027t remember, shouldn\u0027t we also update sha1sum of the remaining patched files?",
+      "revId": "0c537e58f1a58f7f998c54ba6fd47c06ab6eedf1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
