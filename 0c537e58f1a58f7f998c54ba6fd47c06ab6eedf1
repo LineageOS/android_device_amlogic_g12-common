@@ -16,6 +16,24 @@
       "message": "I don\u0027t remember, shouldn\u0027t we also update sha1sum of the remaining patched files?",
       "revId": "0c537e58f1a58f7f998c54ba6fd47c06ab6eedf1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57274d12_91fcb645",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-06-20T03:15:38Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s needed tbh.\n\nWe already grep check it, and add the dep - NOT pinning it makes it easier to update and not miss it in future versions.",
+      "parentUuid": "0eb5bd16_4aaadbb3",
+      "revId": "0c537e58f1a58f7f998c54ba6fd47c06ab6eedf1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
