@@ -58,6 +58,9 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
 ## Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
+## Updater
+AB_OTA_UPDATER := false
+
 ## Vendor SPL
 VENDOR_SECURITY_PATCH := 2024-07-01
 
