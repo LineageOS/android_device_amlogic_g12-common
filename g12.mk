@@ -59,9 +59,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-## dumpstate
+## Dumpstate
 PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1.vendor
+    android.hardware.dumpstate@1.1.vendor \
+    libdumpstateutil.vendor
 
 ## Graphics
 PRODUCT_PACKAGES += \
@@ -134,8 +135,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
 PRODUCT_PACKAGES += \
-    android.hardware.oemlock@1.0.vendor \
-    libdumpstateutil.vendor
+    android.hardware.oemlock@1.0.vendor
 endif
 
 ## Partitions
