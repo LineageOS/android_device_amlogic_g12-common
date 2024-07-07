@@ -138,8 +138,6 @@ vendor/usr/keylayout/Vendor_7545_Product_0190.kl
 # Media (Hardware)
 vendor/bin/DecInfo_test
 vendor/bin/esplayer
-vendor/lib/firmware/video/h264_enc.bin
-vendor/lib/firmware/video/video_ucode.bin
 vendor/lib/libamavutils.so
 
 # Media
