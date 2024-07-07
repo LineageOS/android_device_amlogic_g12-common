@@ -119,6 +119,11 @@ PRODUCT_PACKAGES += \
     libtrusty.vendor
 endif
 
+## Media firmware
+PRODUCT_COPY_FILES += \
+    kernel/amlogic/kernel-modules/media-4.9/firmware/h264_enc.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/h264_enc.bin \
+    kernel/amlogic/kernel-modules/media-4.9/firmware/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin
+
 ## OEM Lock
 ifneq ($(TARGET_HAS_TEE),false)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
