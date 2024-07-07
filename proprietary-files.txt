@@ -96,8 +96,6 @@ vendor/etc/init/sysfs_permissions.rc
 ## Media (Hardware)
 vendor/bin/DecInfo_test
 vendor/bin/esplayer
-vendor/lib/firmware/video/h264_enc.bin
-vendor/lib/firmware/video/video_ucode.bin
 vendor/lib/libamavutils.so
 
 ## Media
