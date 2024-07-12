@@ -1,3 +1,4 @@
+import /vendor/etc/init/hw/init.amlogic.lkm.rc
 import /vendor/etc/init/hw/init.amlogic.system.rc
 
 on property:sys.boot_completed=1
