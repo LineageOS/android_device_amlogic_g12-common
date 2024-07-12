@@ -100,7 +100,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc
 
 PRODUCT_PACKAGES += \
-    fstab.amlogic
+    fstab.amlogic \
+    vendor_modprobe.sh
 
 ## Keymaster
 ifneq ($(TARGET_HAS_TEE),false)

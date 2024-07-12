@@ -1,5 +1,8 @@
 import /vendor/etc/init/hw/init.amlogic.system.rc
 
+on early-init
+    start vendor.modprobe
+
 on property:sys.boot_completed=1
     # restrict cpusets
     write /dev/cpuset/top-app/cpus 0-3
@@ -8,3 +11,10 @@ on property:sys.boot_completed=1
     write /dev/cpuset/system-background/cpus 0-1
     write /dev/cpuset/restricted/cpus 0-1
 
+service vendor.modprobe /vendor/bin/vendor_modprobe.sh
+    class main
+    user root
+    group root system
+    disabled
+    seclabel u:r:vendor_modprobe:s0
+    oneshot
