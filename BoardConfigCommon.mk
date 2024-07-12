@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2021-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -20,6 +20,7 @@ BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend ignore_loglevel
 endif
 
 ## Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/amlogic/kernel-modules
 TARGET_KERNEL_EXT_MODULES += \
     mali-driver/bifrost \
