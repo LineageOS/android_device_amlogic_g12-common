@@ -13,10 +13,9 @@ vendor/lib/libmeson_display_service.so|87ab70a6415319d01d3d4425b55528c56aecfb59
 vendor/lib/libvideotunnel.so|c98c4ccdc23269f76366aa11f1b2bb604bd4b148
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so|3423bf0a114126afb5a41e783e549d785851c700
 
-## systemcontrol - Vendor
+## SystemControl
 vendor/bin/hdcp_tx22|72a3d43142f9b937aed2aa5d4008a27ce6d353ca
 vendor/bin/systemcontrol|611600c771f6671c7f90c435b316572c1296bb77
-vendor/etc/init/systemcontrol.rc|816b3193c97518903c15efb172a6225177e9bd96
 vendor/lib/libfbc.so|6bf646664d723cab59058cefdeae555caabdae7b
 vendor/lib/libpqcontrol.so|ac03f510d625285cfe55b35671e9b38f59c1ae02
 vendor/lib/libsystemcontrolservice.so|073b914cecfed0266373c853df61e6fe37a0272f

@@ -19,6 +19,9 @@ on init
     chmod 666 /dev/video_composer.0
     chmod 666 /dev/video_composer.1
 
+on early-boot
+    start system_control
+
 on boot
     # osd logo legacy path
     chown system graphics /sys/module/fb/parameters/osd_logo_index
@@ -60,6 +63,12 @@ on boot
     chmod 666 /sys/class/video/show_first_frame_nosync
     chown media system /sys/class/video/show_first_frame_nosync
 
+on post-fs-data
+    mkdir  /mnt/vendor/param/pq
+    mkdir  /mnt/vendor/param/logo
+    chmod 0755 /mnt/vendor/param/pq
+    chmod 0755 /mnt/vendor/param/logo
+
 service remotecfg /vendor/bin/remotecfg /vendor/etc/remote.conf
     class main
     oneshot
@@ -70,6 +79,12 @@ service hdcp_tx22 /vendor/bin/hdcp_tx22 \
     class main
     disabled
     oneshot
+
+service system_control /vendor/bin/systemcontrol
+    user root
+    group system root media audio
+    interface vendor.amlogic.hardware.systemcontrol@1.0::ISystemControl default
+    interface vendor.amlogic.hardware.systemcontrol@1.1::ISystemControl default
 
 service bugreport /system/bin/dumpstate -d -p -B -z \
     -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
