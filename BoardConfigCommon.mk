@@ -6,6 +6,9 @@
 
 COMMON_PATH := device/amlogic/g12-common
 
+## BUILD_BROKEN_*
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # GPU
 TARGET_AMLOGIC_GPU_ARCH := bifrost
 
