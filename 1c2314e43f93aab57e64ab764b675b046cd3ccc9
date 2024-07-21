@@ -16,6 +16,24 @@
       "message": "I am not so sure about this... since vendor/lib/libpqcontrol.so reads the typo\u0027ed entry value.",
       "revId": "1c2314e43f93aab57e64ab764b675b046cd3ccc9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "463efd79_66cd7e31",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-21T22:29:15Z",
+      "side": 1,
+      "message": "Seriously, all this change is doing is disabling PQ altogether.\n\n\u003e  common/frameworks/services/systemcontrol/PQ/utils/include/CConfigFile.h\n\u003e  #define CFG_ALL_PQ_MOUDLE_ENABLE                \"pq.AllPQMoudle.en\"\n\n\u003e  common/frameworks/services/systemcontrol/PQ/CPQControl.cpp\n\u003e  config_value \u003d mPQConfigFile-\u003eGetString(CFG_SECTION_PQ, CFG_ALL_PQ_MOUDLE_ENABLE, \"enable\");",
+      "parentUuid": "1a0b96f4_75459e5d",
+      "revId": "1c2314e43f93aab57e64ab764b675b046cd3ccc9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
