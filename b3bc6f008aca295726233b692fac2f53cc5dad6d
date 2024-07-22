@@ -16,6 +16,23 @@
       "message": "It\u0027d be nice if you could double check this on sabrina, since other targets like deadpool also hit the denial (which is a neverallow) and this doesn\u0027t solve it.",
       "revId": "b3bc6f008aca295726233b692fac2f53cc5dad6d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a1b6e93_c4ad9338",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-07-22T01:27:59Z",
+      "side": 1,
+      "message": "ugh, you are correct: [   10.185610] type\u003d1400 audit(1720667344.500:55): avc:  denied  { net_admin } for  comm\u003d\"systemcontrol\" capability\u003d12  scontext\u003du:r:system_control:s0 tcontext\u003du:r:system_control:s0 tclass\u003dcapability permissive\u003d0 - still on Sabrina.\n\nI could have _sworn_ this worked when I tried.",
+      "revId": "b3bc6f008aca295726233b692fac2f53cc5dad6d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
