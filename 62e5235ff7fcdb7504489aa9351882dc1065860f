@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42ca4e49_1da51715",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-07-22T00:10:13Z",
+      "side": 1,
+      "message": "blobs didn\u0027t change extraction on 20 -\u003e 21, should be reflective of one another.",
+      "revId": "62e5235ff7fcdb7504489aa9351882dc1065860f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
