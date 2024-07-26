@@ -92,12 +92,6 @@ vendor/lib/libamgralloc_ext.so
 # HDMI CEC
 vendor/lib/hw/hdmi_cec.amlogic.so
 
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service.droidlogic
-vendor/etc/init/android.hardware.health@2.1-service.droidlogic.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1-servcie.droidlogic.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so
-
 # Kernel Modules
 vendor/lib/modules/amlogic_fbc_lib.ko:vendor_dlkm/lib/modules/amlogic_fbc_lib.ko
 
