@@ -21,7 +21,6 @@ vendor/lib/libnano.so
 vendor/lib/libsonic_ext.so
 
 # Audio Effects
-vendor/etc/audio_effects.conf
 vendor/lib/soundfx/libavl.so
 vendor/lib/soundfx/libbalance.so
 vendor/lib/soundfx/libdbx.so
