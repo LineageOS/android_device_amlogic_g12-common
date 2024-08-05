@@ -1,13 +1,13 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
-## are from sabrina_prod_stable-user 12 STTE.240315.002 11695351 release-keys.
+## are from sabrina_prod_stable-user 12 STTL.240508.005 12011027 release-keys.
 
 ## Composer
-vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic|3d59efbaf93bb6a534738b024ebd2bb4b3d10c65
+vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic|2e9a56800bc0cbb1e3aa83506c41c7f57193b9fa
 vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc|689db5f70830b552185429f04b9dba2f2b51bb02
 -vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml|d8c4e120e0b771b05bb38c3cfe91d983e511c7ea
 vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so|62eba15c9159c9f8b3a071a8efc58106b5cc2737
 vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so|01fc678f2966779cc3a5c3a7d1d156c8d0a67572
-vendor/lib/hw/hwcomposer.amlogic.so|1822dc9b6ece03c5b6fda4a70fcba8dde0b98812|03cb651f9ede2c1ff05bdc52fc03ff557e110ed2
+vendor/lib/hw/hwcomposer.amlogic.so|1822dc9b6ece03c5b6fda4a70fcba8dde0b98812|1822dc9b6ece03c5b6fda4a70fcba8dde0b98812
 vendor/lib/libmeson_display_adapter_remote.so|e0ef6a547fe8f7e53c3a8103b76b6a62848ea38c
 vendor/lib/libmeson_display_service.so|1c6a3a233620847635f788eff203d263c18b4e57
 vendor/lib/libvideotunnel.so|540f2161f82b069f1802413aa5407bd17238b7ef
