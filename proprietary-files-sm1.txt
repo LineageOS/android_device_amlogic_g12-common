@@ -1,5 +1,5 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
-## are from sabrina_prod_stable-user 12 STTE.240315.002 11695351 release-keys.
+## are from sabrina_prod_stable-user 12 STTL.240508.005 12011027 release-keys.
 
 ## Composer
 vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic|3d59efbaf93bb6a534738b024ebd2bb4b3d10c65
