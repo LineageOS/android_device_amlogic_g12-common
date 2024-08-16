@@ -23,6 +23,44 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function lib_to_package_fixup_vendor_variants() {
+    if [ "$2" != "vendor" ]; then
+        return 1
+    fi
+
+    case "$1" in
+        vendor.amlogic.hardware.subtitleserver@1.0 | \
+        libvendorfont | libsubtitlebinder)
+            echo "$1_vendor"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+function lib_to_package_fixup_system_ext_variants() {
+    if [ "$2" != "system_ext" ]; then
+        return 1
+    fi
+
+    case "$1" in
+        libamavutils)
+            echo "$1_system_ext"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+function lib_to_package_fixup() {
+    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+        lib_to_package_fixup_proto_3_9_1 "$1" ||
+        lib_to_package_fixup_system_ext_variants "$@" ||
+        lib_to_package_fixup_vendor_variants "$@"
+}
+
 # Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
