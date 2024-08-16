@@ -107,7 +107,7 @@ vendor/etc/init/sysfs_permissions.rc
 ## Media (Hardware)
 vendor/bin/DecInfo_test
 vendor/bin/esplayer
-vendor/lib/libamavutils.so
+vendor/lib/libamavutils.so;MODULE_SUFFIX=_vendor
 
 ## Media
 vendor/lib/libmediahal_mediasync.so
