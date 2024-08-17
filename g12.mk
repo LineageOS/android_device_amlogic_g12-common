@@ -20,18 +20,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
-    android.hardware.audio@7.0.vendor \
-    android.hardware.audio@7.0-util.vendor \
-    android.hardware.audio.common@7.0-util \
-    android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio.effect@7.0-util.vendor \
-    av-types-aidl-cpp.vendor \
-    libaudiofoundation.vendor \
-    libaudioroute.vendor
-
-## Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor
+    android.hardware.audio.effect@6.0-impl
 
 ## Camera
 PRODUCT_PACKAGES += \
@@ -42,10 +31,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
-    camera.device@3.5-impl \
-    libexif.vendor \
-    libjpeg.vendor \
-    libyuv.vendor
+    camera.device@3.5-impl
 
 ## Cgroups
 PRODUCT_COPY_FILES += \
@@ -59,18 +45,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-## Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1.vendor \
-    libdumpstateutil.vendor
-
 ## Graphics
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4.vendor \
-    libdmabufheap.vendor \
-    libion.vendor \
-    libutilscallstack.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
@@ -98,23 +73,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.amlogic
 
-## Keymaster
-ifneq ($(TARGET_HAS_TEE),false)
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk_platform.vendor \
-    android.hardware.security.secureclock-V1-ndk_platform.vendor \
-    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
-    lib_android_keymaster_keymint_utils.vendor \
-    libkeymint.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libshmemutil.vendor \
-    libshmemcompat.vendor \
-    libsoft_attestation_cert.vendor \
-    libtrusty.vendor
-endif
-
 ## Media firmware
 PRODUCT_COPY_FILES += \
     kernel/amlogic/kernel-modules/media-4.9/firmware/h264_enc.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/h264_enc.bin \
@@ -124,9 +82,6 @@ PRODUCT_COPY_FILES += \
 ifneq ($(TARGET_HAS_TEE),false)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
-
-PRODUCT_PACKAGES += \
-    android.hardware.oemlock@1.0.vendor
 endif
 
 ## Partitions
@@ -152,28 +107,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr
-
-## SystemControl
-PRODUCT_PACKAGES += \
-    libsqlite.vendor
-
-## Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor \
-    libjsoncpp.vendor
-
-## USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget@1.2.vendor
-
-## VNDK
-PRODUCT_PACKAGES += \
-    libui_shim.vendor
-
-## Widevine DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 ## Inherit from the main common tree product makefile
 $(call inherit-product, device/amlogic/common/amlogic.mk)
