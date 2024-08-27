@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2023 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -48,7 +48,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -65,16 +66,28 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/etc/init/fs.rc)
+            [ "$2" = "" ] && return 0
              sed -i '/media 0770 media_rw media_rw/d' "${2}"
              sed -i '/setprop ro.crypto.fuse_sdcard true/d' "${2}"
              ;;
         vendor/etc/init/tee-supplicant.rc)
+            [ "$2" = "" ] && return 0
              sed -i 's#/vendor/lib/#/vendor/lib/modules/#g' "${2}"
              ;;
         vendor/lib/hw/camera.amlogic.so|vendor/lib/hw/hwcomposer.amlogic.so|vendor/lib/libOmxCore.so)
+            [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
