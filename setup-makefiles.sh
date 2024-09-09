@@ -28,7 +28,7 @@ setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" tr
 write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
 
 # The standard common blobs
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Include ATV specific blobs for ATV targets
 printf '\n%s\n' 'ifeq ($(PRODUCT_IS_ATV),true)' >> "$PRODUCTMK"
@@ -55,7 +55,7 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
     write_headers
 
     # The standard device blobs
-    write_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" true
+    write_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt"
 
     if [ "${TARGET_SOC}" == "g12a" ]
     then
