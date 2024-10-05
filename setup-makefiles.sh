@@ -33,14 +33,14 @@ write_makefiles "${MY_DIR}/proprietary-files.txt"
 # Include ATV specific blobs for ATV targets
 printf '\n%s\n' 'ifeq ($(PRODUCT_IS_ATV),true)' >> "$PRODUCTMK"
 
-write_makefiles "${MY_DIR}/proprietary-files-atv.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-atv.txt"
 
 printf '%s\n' 'endif' >> "$PRODUCTMK"
 
 # Allow opting out of OP-TEE
 printf '\n%s\n' 'ifneq ($(TARGET_HAS_TEE),false)' >> "$PRODUCTMK"
 
-write_makefiles "${MY_DIR}/proprietary-files-tee.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-tee.txt"
 
 printf '%s\n' 'endif' >> "$PRODUCTMK"
 
@@ -59,10 +59,10 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
 
     if [ "${TARGET_SOC}" == "g12a" ]
     then
-      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-g12a.txt" true
+      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-g12a.txt"
     elif [ "${TARGET_SOC}" == "sm1" ]
     then
-      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-sm1.txt" true
+      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-sm1.txt"
     fi
 
     if [ -f "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-firmware.txt" ]; then
