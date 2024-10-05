@@ -9,7 +9,7 @@ vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so|9160ef2a9c
 vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so|c7f3ae1880e279fc639724b8d5bf0bbf8d21bf34
 vendor/lib/hw/hwcomposer.amlogic.so|4afb1464a67c819561cb4b92410a00fa7771402e|8a1895cb74dff9a89d0f5f5fb0799637dc944e50
 vendor/lib/libmeson_display_adapter_remote.so|c8a8b9735c7ecc0df7c35a2b1a86d5019fe76ad9
-vendor/lib/libmeson_display_service.so|87ab70a6415319d01d3d4425b55528c56aecfb59
+vendor/lib/libmeson_display_service.so|87ab70a6415319d01d3d4425b55528c56aecfb59|427597cebd0f1e8b3cb20b66b46f33a58c705bcf
 vendor/lib/libvideotunnel.so|c98c4ccdc23269f76366aa11f1b2bb604bd4b148
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so|3423bf0a114126afb5a41e783e549d785851c700
 
