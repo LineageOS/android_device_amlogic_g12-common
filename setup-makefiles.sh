@@ -25,6 +25,7 @@ source "${HELPER}"
 
 function vendor_imports() {
     cat <<EOF >>"$1"
+		"vendor/amlogic/radxa0",
 		"vendor/amlogic/g12-common",
 EOF
 }
