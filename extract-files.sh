@@ -80,7 +80,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
              sed -i 's#/vendor/lib/#/vendor/lib/modules/#g' "${2}"
              ;;
-        vendor/lib/hw/camera.amlogic.so|vendor/lib/hw/hwcomposer.amlogic.so|vendor/lib/libOmxCore.so)
+        vendor/lib/hw/camera.amlogic.so | vendor/lib/hw/hwcomposer.amlogic.so | \
+            vendor/lib/libOmxBase.so | vendor/lib/libOmxCore.so | vendor/lib/libOmxVideo.so | \
+            vendor/lib/libmeson_display_service.so)
             [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
