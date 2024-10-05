@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a981d28_23879b69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-05T12:56:02Z",
+      "side": 1,
+      "message": "out/target/product/radxa0_tab/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko: error: found ELF prebuilt in PRODUCT_COPY_FILES, use cc_prebuilt_binary / cc_prebuilt_library_shared instead. \nout/target/product/radxa0_tab/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko: error: found ELF file: vendor/amlogic/g12-common/proprietary/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko",
+      "revId": "0f3effebd3056d0f6a8da3ccd9ace53c6fd55dab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
