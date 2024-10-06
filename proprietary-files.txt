@@ -1,6 +1,10 @@
 ## All blobs from this list, unless pinned and noted as otherwise,
 ## are from adt3-user 13 TTT1.230205.001 9565391 release-keys.
 
+## ATV specific
+product/etc/permissions/privapp-permissions-atv-product.xml
+product/priv-app/Adt3LauncherCustomization/Adt3LauncherCustomization.apk
+
 ## Audio
 vendor/lib/hw/audio.primary.amlogic.so
 vendor/lib/libAmlAudioOutPort.so
@@ -33,6 +37,8 @@ vendor/lib/soundfx/libvirtualsurround.so
 vendor/lib/soundfx/libvirtualx.so
 
 ## Bluetooth
+product/etc/permissions/privapp-permissions-deadpool.xml
+product/priv-app/DeadpoolService/DeadpoolService.apk
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic
 vendor/etc/bluetooth/auto_pairing.conf
 vendor/etc/bluetooth/blacklist.conf
