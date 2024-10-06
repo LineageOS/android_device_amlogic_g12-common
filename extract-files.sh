@@ -71,6 +71,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/android.hardware.security.keymint-service.amlogic)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.hardware.security.keymint-V1-ndk_platform.so/android.hardware.security.keymint-V3-ndk.so/" "${2}"
+            ;;
         vendor/etc/init/fs.rc)
             [ "$2" = "" ] && return 0
              sed -i '/media 0770 media_rw media_rw/d' "${2}"
