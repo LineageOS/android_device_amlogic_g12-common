@@ -4,7 +4,6 @@
 ## ATV specific
 product/etc/permissions/privapp-permissions-atv-product.xml
 product/etc/permissions/privapp-permissions-google-p.xml
-product/etc/permissions/split-permissions-google.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/google.xml:product/etc/sysconfig/google-lineage.xml
 product/etc/sysconfig/google_atv.xml
