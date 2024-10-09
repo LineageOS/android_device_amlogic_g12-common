@@ -58,6 +58,18 @@ vendor/etc/lowmemorykiller_2G.txt
 vendor/etc/lowmemorykiller_512M.txt
 vendor/etc/permissions/android.software.cant_save_state.xml
 
+## Composer
+vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic
+vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc
+-vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml
+vendor/lib/android.hardware.graphics.composer@2.1-resources-vendor.so
+vendor/lib/android.hardware.graphics.composer@2.2-resources-vendor.so                                         
+vendor/lib/hw/hwcomposer.amlogic.so
+vendor/lib/libmeson_display_adapter_remote.so
+vendor/lib/libmeson_display_service.so
+vendor/lib/libvideotunnel.so                            
+vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so                                         
+
 ## Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic
 vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc
@@ -142,6 +154,18 @@ vendor/etc/seccomp_policy/mediaswcodec.policy
 
 ## systemcontrol - Recovery
 recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
+
+## systemcontrol - Vendor
+vendor/bin/hdcp_tx22
+vendor/bin/systemcontrol
+vendor/etc/init/systemcontrol.rc
+vendor/lib/libfbc.so
+vendor/lib/libpqcontrol.so
+vendor/lib/libsystemcontrolservice.so
+vendor/lib/vendor.amlogic.hardware.droidvold@1.0.so
+vendor/lib/vendor.amlogic.hardware.systemcontrol@1.0.so
+vendor/lib/vendor.amlogic.hardware.systemcontrol@1.1.so
+vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so
 
 ## Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.droidlogic
