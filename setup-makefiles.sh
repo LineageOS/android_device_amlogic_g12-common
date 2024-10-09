@@ -30,13 +30,6 @@ write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt"
 
-# Allow opting out of OP-TEE
-printf '\n%s\n' 'ifneq ($(TARGET_HAS_TEE),false)' >> "$PRODUCTMK"
-
-write_makefiles "${MY_DIR}/proprietary-files-tee.txt"
-
-printf '%s\n' 'endif' >> "$PRODUCTMK"
-
 # Finish
 write_footers
 
@@ -49,6 +42,10 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
 
     # The standard device blobs
     write_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt"
+
+    if [ -f "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files-tee.txt" ]; then
+      write_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files-tee.txt"
+    fi
 
     if [ "${TARGET_SOC}" == "g12a" ]
     then
