@@ -74,10 +74,6 @@ function blob_fixup() {
              sed -i '/media 0770 media_rw media_rw/d' "${2}"
              sed -i '/setprop ro.crypto.fuse_sdcard true/d' "${2}"
              ;;
-        vendor/etc/init/tee-supplicant.rc)
-            [ "$2" = "" ] && return 0
-             sed -i 's#/vendor/lib/#/vendor/lib/modules/#g' "${2}"
-             ;;
         vendor/lib/hw/camera.amlogic.so|vendor/lib/hw/hwcomposer.amlogic.so|vendor/lib/libOmxCore.so)
             [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
@@ -99,7 +95,6 @@ if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
     setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-    extract "${MY_DIR}/proprietary-files-tee.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; then
