@@ -25,7 +25,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "g12a g12b sm1" "TARGET_AMLOGIC_SOC"
+write_headers "sm1" "TARGET_AMLOGIC_SOC"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt"
@@ -49,14 +49,6 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
 
     # The standard device blobs
     write_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt"
-
-    if [ "${TARGET_SOC}" == "g12a" ]
-    then
-      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-g12a.txt"
-    elif [ "${TARGET_SOC}" == "sm1" ]
-    then
-      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-sm1.txt"
-    fi
 
     if [ -f "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-firmware.txt" ]; then
         append_firmware_calls_to_makefiles "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-firmware.txt"

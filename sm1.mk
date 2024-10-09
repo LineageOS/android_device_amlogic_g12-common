@@ -134,7 +134,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 ## Platform
-TARGET_AMLOGIC_SOC ?= g12a
+TARGET_AMLOGIC_SOC ?= sm1
 
 ## Power
 PRODUCT_PACKAGES += \
