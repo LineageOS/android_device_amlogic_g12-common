@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd2772ed_26e07339",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "com.google.android.tv.axel in per-device, similar to AiAi on pixels, and is shipped on no-gapps builds. So we need this file. But we could pull it to device tree and pair it down.",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b827baad_5b419934",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "only gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e0f822d_9a70cf3b",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "in gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca87bf79_a2074ba7",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "in gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60c6e196_e71b8dec",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "is in gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd88ff5f_dcb04271",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "has nothing but gapps we don\u0027t include, kill",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97534702_8114762b",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "same",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d116cdd9_cd6aa833",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T17:41:02Z",
+      "side": 0,
+      "message": "just include in proprietary-files.txt. No-op on tablet builds.",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
