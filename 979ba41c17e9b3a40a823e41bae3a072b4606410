@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e493ec7e_b5186aaf",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "bd2772ed_26e07339",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b827baad_5b419934",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-10-09T17:41:02Z",
       "side": 0,
       "message": "only gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ced542cc_073937ca",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "b827baad_5b419934",
       "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -52,6 +88,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6af2092f_ddb15a98",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9e0f822d_9a70cf3b",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ca87bf79_a2074ba7",
@@ -65,6 +119,24 @@
       "writtenOn": "2024-10-09T17:41:02Z",
       "side": 0,
       "message": "in gapps",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6189a696_ad76ee5a",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "ca87bf79_a2074ba7",
       "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -86,6 +158,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0d9f66b_68f94dd4",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "60c6e196_e71b8dec",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cd88ff5f_dcb04271",
@@ -99,6 +189,24 @@
       "writtenOn": "2024-10-09T17:41:02Z",
       "side": 0,
       "message": "has nothing but gapps we don\u0027t include, kill",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b25cd1bd_10493c62",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "cd88ff5f_dcb04271",
       "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -120,6 +228,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c26ae3c_cd93dc3b",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "97534702_8114762b",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d116cdd9_cd6aa833",
@@ -133,6 +259,24 @@
       "writtenOn": "2024-10-09T17:41:02Z",
       "side": 0,
       "message": "just include in proprietary-files.txt. No-op on tablet builds.",
+      "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17edaa76_84593a0b",
+        "filename": "proprietary-files-atv.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-09T19:05:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "d116cdd9_cd6aa833",
       "revId": "979ba41c17e9b3a40a823e41bae3a072b4606410",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
