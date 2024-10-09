@@ -25,6 +25,7 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.netflix.xml|
 vendor/lib/libnetflixplugin.so|660811fd9186157912b715132da15289793ec5b2
 
 ## TEE
+vendor/bin/hw/android.hardware.security.keymint-service.amlogic
 vendor/bin/tee-supplicant
 vendor/bin/tee_preload_fw
 vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc
