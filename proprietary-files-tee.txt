@@ -16,14 +16,6 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xm
 vendor/lib/libplayready.so
 vendor/lib/libplayreadymediadrmplugin.so
 
-## Netflix - from wade - sti6130d350-user 12 SC 20240419 release-keys
-system/system/etc/sysconfig/netflix.xml|a63698bfa31a9261eb329d0fbbc975faaff37b68
-vendor/bin/hw/android.hardware.drm@1.4-service.netflix|a142b52dc546c591acefa3a1adf19793e0254b71
-vendor/etc/init/android.hardware.drm@1.4-service.netflix.rc|0cdc8bcf31d8300f8f54a9150d103ae6c399dd89
-vendor/etc/permissions/droidlogic.software.netflix.xml|f9798f7873372120d392377a55a5fe61279a98a7
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.netflix.xml|2ce709a302f21d2cc5532e35d32ce1db03827f56
-vendor/lib/libnetflixplugin.so|660811fd9186157912b715132da15289793ec5b2
-
 ## TEE
 vendor/bin/hw/android.hardware.security.keymint-service.amlogic
 vendor/bin/tee-supplicant
