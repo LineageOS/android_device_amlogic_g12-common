@@ -28,7 +28,7 @@ TARGET_KERNEL_EXT_MODULES += \
     mali-driver/bifrost \
     media-4.9
 
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 TARGET_KERNEL_EXT_MODULES += \
     optee
 endif

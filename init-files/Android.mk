@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE           := fstab.amlogic
 LOCAL_MODULE_TAGS      := optional
 LOCAL_MODULE_CLASS     := ETC
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 LOCAL_SRC_FILES        := fstab.amlogic
 else
 LOCAL_SRC_FILES        := fstab_no_avb.amlogic
@@ -18,7 +18,7 @@ LOCAL_MODULE           := fstab.amlogic_ramdisk
 LOCAL_MODULE_STEM      := fstab.amlogic
 LOCAL_MODULE_TAGS      := optional
 LOCAL_MODULE_CLASS     := ETC
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 LOCAL_SRC_FILES        := fstab.amlogic
 else
 LOCAL_SRC_FILES        := fstab_no_avb.amlogic
@@ -31,7 +31,7 @@ LOCAL_MODULE           := fstab.amlogic_first_stage_ramdisk
 LOCAL_MODULE_STEM      := fstab.amlogic
 LOCAL_MODULE_TAGS      := optional
 LOCAL_MODULE_CLASS     := ETC
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 LOCAL_SRC_FILES        := fstab.amlogic
 else
 LOCAL_SRC_FILES        := fstab_no_avb.amlogic

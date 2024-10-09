@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     fstab.amlogic
 
 ## Keymaster
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \
@@ -121,7 +121,7 @@ PRODUCT_COPY_FILES += \
     kernel/amlogic/kernel-modules/media-4.9/firmware/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin
 
 ## OEM Lock
-ifneq ($(TARGET_HAS_TEE),false)
+ifeq ($(TARGET_HAS_TEE),true)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
