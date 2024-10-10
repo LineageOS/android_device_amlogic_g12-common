@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0502ccb_52eb9b01",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-10T18:17:43Z",
+      "side": 1,
+      "message": "Remove trailing spaces",
+      "revId": "a2b7ab87f4cca373424b768dde19df2812d8691d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab5f27c0_deeb3c2d",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-10T18:17:43Z",
+      "side": 1,
+      "message": "Here too",
+      "revId": "a2b7ab87f4cca373424b768dde19df2812d8691d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fad88eea_2bc8eb74",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-10T18:17:43Z",
+      "side": 1,
+      "message": "and here",
+      "revId": "a2b7ab87f4cca373424b768dde19df2812d8691d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
