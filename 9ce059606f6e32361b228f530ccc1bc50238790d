@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71d4ee2e_6cdcf84e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-10T06:41:31Z",
+      "side": 1,
+      "message": "I still think that the better option is to kill -tee.txt and add to target devices that support TEE only. That way the flag is automatically killed in vendor repos.",
+      "revId": "9ce059606f6e32361b228f530ccc1bc50238790d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
