@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b0461a2_050997ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-10-13T15:18:01Z",
+      "side": 1,
+      "message": "You shouldn\u0027t be doing this, specially now that blobs are not common anymore. Anyway, now there\u0027s no turning back, this can\u0027t be reverted.",
+      "revId": "d5e42d054a86a8afe093d2b89416103025583d49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
