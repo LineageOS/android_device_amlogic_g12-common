@@ -1,3 +1,5 @@
+<<<<<<< PATCH SET (50e221 g12: Adopt Python extract utils)
+=======
 #!/bin/bash
 #
 # SPDX-FileCopyrightText: 2016 The CyanogenMod Project
@@ -88,3 +90,4 @@ if [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/proprietary-files.txt" ]; the
     # Finish
     write_footers
 fi
+>>>>>>> BASE      (a6e4df g12: Automatically add apk/jar/vintf fragments to PRODUCT_PA)

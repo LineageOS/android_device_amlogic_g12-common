@@ -1,3 +1,5 @@
+<<<<<<< PATCH SET (50e221 g12: Adopt Python extract utils)
+=======
 #!/bin/bash
 #
 # SPDX-FileCopyrightText: 2016 The CyanogenMod Project
@@ -110,3 +112,4 @@ if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR_BRAND}/${DEVICE}/pr
 fi
 
 "${MY_DIR}/setup-makefiles.sh"
+>>>>>>> BASE      (a6e4df g12: Automatically add apk/jar/vintf fragments to PRODUCT_PA)
