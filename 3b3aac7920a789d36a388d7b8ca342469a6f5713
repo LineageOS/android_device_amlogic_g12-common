@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "140dfbd9_0a4660fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-28T06:32:37Z",
+      "side": 1,
+      "message": "okay, at this point the diff is patchily 0.18 + copyright changes.\n\nThe only thing we\u0027re waiting on is recovery module support.",
+      "revId": "3b3aac7920a789d36a388d7b8ca342469a6f5713",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
