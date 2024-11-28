@@ -152,8 +152,10 @@ vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 
-## systemcontrol
-recovery/root/system/bin/systemcontrol_static|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
+## systemcontrol - Recovery
+recovery/root/system/bin/systemcontrol_static;EXTRACT_ONLY|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
+
+## systemcontrol - Vendor
 vendor/bin/hdcp_tx22
 vendor/bin/systemcontrol
 vendor/etc/init/systemcontrol.rc
