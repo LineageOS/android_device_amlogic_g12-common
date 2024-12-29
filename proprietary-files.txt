@@ -156,10 +156,10 @@ vendor/etc/vintf/manifest/memtrack-amlogic.xml
 vendor/lib/libmemtrack-amlogic.so
 
 ## Recovery
-recovery/root/system/bin/hw/android.hardware.fastboot-service.amlogic_recovery;EXTRACT_ONLY
-recovery/root/system/bin/systemcontrol_static;EXTRACT_ONLY
-recovery/root/system/etc/init/android.hardware.fastboot-service.amlogic_recovery.rc;EXTRACT_ONLY
-recovery/root/system/etc/vintf/manifest/android.hardware.fastboot-service.amlogic.xml;EXTRACT_ONLY
+recovery/system/bin/hw/android.hardware.fastboot-service.amlogic_recovery
+recovery/system/bin/systemcontrol_static
+recovery/system/etc/init/android.hardware.fastboot-service.amlogic_recovery.rc
+recovery/system/etc/vintf/manifest/android.hardware.fastboot-service.amlogic.xml
 
 ## remotecfg
 vendor/bin/remotecfg
