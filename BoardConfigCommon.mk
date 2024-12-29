@@ -9,7 +9,7 @@ COMMON_PATH := device/amlogic/g12-common
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 ## BUILD_BROKEN_*
-# Needed for systemcontrol blobs copy-files to recovery via TARGET_RECOVERY_DEVICE_DIRS
+# Needed for prebuilt kernel modules
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 ## Kernel
@@ -58,7 +58,6 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery
-TARGET_RECOVERY_DEVICE_DIRS += vendor/amlogic/g12-common/proprietary
 ifneq ($(strip $(TARGET_BOOTDEVICE)),)
   TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.$(TARGET_BOOTDEVICE).amlogic
 else
