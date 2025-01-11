@@ -70,8 +70,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init-files/init.amlogic.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi.rc \
     $(LOCAL_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc
 
-PRODUCT_PACKAGES += \
-    fstab.amlogic
+ifneq ($(TARGET_HAS_TEE),false)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+endif
 
 ## Media firmware
 PRODUCT_COPY_FILES += \
