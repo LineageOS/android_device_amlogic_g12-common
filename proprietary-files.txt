@@ -187,3 +187,4 @@ vendor/lib/libwvhidl.so
 ## Wi-Fi
 vendor/etc/wifi/p2p_supplicant.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant.conf
