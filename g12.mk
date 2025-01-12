@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2024 The LineageOS Project
+# Copyright (C) 2021-2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -60,26 +60,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mesondisplay.cfg
 
-# Init-Files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/init.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.board.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.media.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.system.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.usb.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi.rc \
-    $(LOCAL_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc
+# Init
+PRODUCT_PACKAGES += \
+    init.amlogic.board.rc \
+    init.amlogic.media.rc \
+    init.amlogic.rc \
+    init.amlogic.recovery.rc \
+    init.amlogic.system.rc \
+    init.amlogic.usb.rc \
+    init.amlogic.wifi.rc
 
 ifneq ($(TARGET_HAS_TEE),false)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+PRODUCT_PACKAGES += \
+    fstab.amlogic \
+    fstab.amlogic.ramdisk
 else
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+PRODUCT_PACKAGES += \
+    fstab_no_avb.amlogic \
+    fstab_no_avb.amlogic.ramdisk
 endif
 
 ## Media firmware
