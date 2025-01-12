@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2021-2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -53,7 +53,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery
 TARGET_RECOVERY_DEVICE_DIRS += vendor/amlogic/g12-common/proprietary
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.amlogic
 
 ## Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools

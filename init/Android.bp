@@ -1,0 +1,67 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.amlogic",
+    src: "fstab.amlogic",
+    soc_specific: true,
+    ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "fstab_no_avb.amlogic",
+    src: "fstab_no_avb.amlogic",
+    soc_specific: true,
+    ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.board.rc",
+    src: "init.amlogic.board.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.media.rc",
+    src: "init.amlogic.media.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.rc",
+    src: "init.amlogic.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.recovery.rc",
+    src: "init.amlogic.recovery.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.system.rc",
+    src: "init.amlogic.system.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.usb.rc",
+    src: "init.amlogic.usb.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.wifi.rc",
+    src: "init.amlogic.wifi.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
