@@ -137,8 +137,10 @@ vendor/lib/libomx_worker_peer_alt.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libthreadworker_alt.so
 
-## remotecfg
-vendor/bin/remotecfg
+## remotecfg - v1.1.0 - from adt3-user 11 RTT1.200909.003.A2 6832896 release-keys
+vendor/bin/remotecfg|6735ab3cd6f776318f7b11de3e10bd62275642df
+
+## remotecfg - Configs
 vendor/etc/remote.cfg
 vendor/etc/remote.tab1
 vendor/etc/remote.tab2
