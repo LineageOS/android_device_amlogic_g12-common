@@ -25,6 +25,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic', 'vendor/bin/hw/android.hardware.thermal@2.0-service.droidlogic'): blob_fixup()
+        .add_needed('libbase_shim.so'),
    (
         'vendor/lib/hw/camera.amlogic.so',
         'vendor/lib/hw/hwcomposer.amlogic.so',
