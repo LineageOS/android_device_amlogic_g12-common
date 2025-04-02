@@ -7,6 +7,7 @@
 COMMON_PATH := device/amlogic/g12-common
 
 ## BUILD_BROKEN_*
+# Needed for systemcontrol blobs copy-files to recovery via TARGET_RECOVERY_DEVICE_DIRS
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 ## HIDL
