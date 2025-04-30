@@ -155,7 +155,7 @@ vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
 
 ## systemcontrol - Recovery
-recovery/root/system/bin/systemcontrol_static;EXTRACT_ONLY|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
+recovery/root/system/bin/systemcontrol_static:system/bin/systemcontrol_static;RECOVERY_AVAILABLE|f4ad06b9486cbe9d4a67fa3c2b55a1e821183f8e
 
 ## systemcontrol - Vendor
 vendor/bin/hdcp_tx22

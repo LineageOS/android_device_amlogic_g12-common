@@ -6,10 +6,6 @@
 
 COMMON_PATH := device/amlogic/g12-common
 
-## BUILD_BROKEN_*
-# Needed for systemcontrol blobs copy-files to recovery via TARGET_RECOVERY_DEVICE_DIRS
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 ## HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
@@ -53,7 +49,6 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery
-TARGET_RECOVERY_DEVICE_DIRS += vendor/amlogic/g12-common/proprietary
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
 
 ## Releasetools
