@@ -67,6 +67,21 @@ service remotecfg /vendor/bin/remotecfg /vendor/etc/remote.conf
     oneshot
     seclabel u:r:remotecfg:s0
 
+service remotecfg1 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab1 -d 
+    class main 
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service remotecfg2 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab2 -d 
+    class main 
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service remotecfg3 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab3 -d 
+    class main 
+    oneshot
+    seclabel u:r:remotecfg:s0
+
 service hdcp_tx22 /vendor/bin/hdcp_tx22 \
     -f /odm/etc/firmware/firmware.le
     class main
