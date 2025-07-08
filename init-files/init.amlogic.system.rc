@@ -62,7 +62,7 @@ on boot
     chmod 666 /sys/class/video/show_first_frame_nosync
     chown media system /sys/class/video/show_first_frame_nosync
 
-service remotecfg /vendor/bin/remotecfg /vendor/etc/remote.conf
+service remotecfg /vendor/bin/remotecfg /odm/etc/remote.conf
     class main
     oneshot
     seclabel u:r:remotecfg:s0
