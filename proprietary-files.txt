@@ -141,10 +141,10 @@ vendor/lib/libthreadworker_alt.so
 vendor/bin/remotecfg|6735ab3cd6f776318f7b11de3e10bd62275642df
 
 ## remotecfg - Configs
-vendor/etc/remote.cfg
-vendor/etc/remote.tab1
-vendor/etc/remote.tab2
-vendor/etc/remote.tab3
+vendor/etc/remote.cfg:odm/etc/remote.cfg
+vendor/etc/remote.tab1:odm/etc/remote.tab1
+vendor/etc/remote.tab2:odm/etc/remote.tab2
+vendor/etc/remote.tab3:odm/etc/remote.tab3
 
 ## screen_source
 vendor/lib/hw/screen_source.amlogic.so

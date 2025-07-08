@@ -67,17 +67,17 @@ service remotecfg /vendor/bin/remotecfg /vendor/etc/remote.conf
     oneshot
     seclabel u:r:remotecfg:s0
 
-service remotecfg1 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab1 -d 
+service remotecfg1 /vendor/bin/remotecfg -c /odm/etc/remote.cfg -t /odm/etc/remote.tab1 -d
     class main
     oneshot
     seclabel u:r:remotecfg:s0
 
-service remotecfg2 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab2 -d 
+service remotecfg2 /vendor/bin/remotecfg -c /odm/etc/remote.cfg -t /odm/etc/remote.tab2 -d
     class main
     oneshot
     seclabel u:r:remotecfg:s0
 
-service remotecfg3 /vendor/bin/remotecfg -c /vendor/etc/remote.cfg -t /vendor/etc/remote.tab3 -d 
+service remotecfg3 /vendor/bin/remotecfg -c /odm/etc/remote.cfg -t /odm/etc/remote.tab3 -d
     class main
     oneshot
     seclabel u:r:remotecfg:s0
