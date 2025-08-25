@@ -37,6 +37,12 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libmeson_display_service.so'
     ): blob_fixup()
         .add_needed('libui_shim.so'),
+    (
+        'vendor/bin/hw/android.hardware.memtrack-service.droidlogic',
+        'vendor/lib/libmemtrack-amlogic.so'
+    ): blob_fixup()
+        .replace_needed('android.hardware.memtrack-V1-ndk_platform.so', 'android.hardware.memtrack-V1-ndk.so')
+        .replace_needed('libbase.so', 'libbase-v33.so'),
     ('vendor/etc/init/fs.rc'): blob_fixup()
         .regex_replace('    mkdir /data/media 0770 media_rw media_rw\n', '')
         .regex_replace('    setprop ro.crypto.fuse_sdcard true\n', ''),

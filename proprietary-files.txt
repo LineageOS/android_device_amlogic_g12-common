@@ -117,8 +117,11 @@ vendor/lib/libmediahal_tsplayer.so
 vendor/lib/libmediahal_tunnelrenderer.so
 vendor/lib/libmediahal_videodec.so
 
-## Memtrack
-vendor/lib/hw/memtrack.amlogic.so
+# Memtrack - from ohm_gtv-userdebug-12-SC-eng.bin.ya.20230223.173800-test-keys
+vendor/bin/hw/android.hardware.memtrack-service.droidlogic|d9969b405a38afdcc462f5a6727b688d89e95544|975eabcac990c4fbc4369c9848f3ab2dc9b04a80
+vendor/etc/init/memtrack-amlogic.rc|3c566f2d4c805b02a6a19e34d2a9f49e20a8314d
+vendor/etc/vintf/manifest/memtrack-amlogic.xml|74b207b3676789d464f3c4e001cf69ca66755aa6
+vendor/lib/libmemtrack-amlogic.so|154f20c65933786639be0b8fd609a6399e2cd67f|a5725f34493e8c87bcd11ce4e2b8a64047ba392e
 
 ## OMX
 vendor/lib/libOmxAudio.so
