@@ -46,8 +46,6 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/etc/init/fs.rc'): blob_fixup()
         .regex_replace('    mkdir /data/media 0770 media_rw media_rw\n', '')
         .regex_replace('    setprop ro.crypto.fuse_sdcard true\n', ''),
-    'vendor/etc/bluetooth/bt_vendor.conf': blob_fixup()
-        .regex_replace('/etc/bluetooth/', '/vendor/etc/bluetooth/'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
