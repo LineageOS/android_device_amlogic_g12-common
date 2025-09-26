@@ -37,8 +37,6 @@ vendor/lib/soundfx/libvirtualsurround.so
 vendor/lib/soundfx/libvirtualx.so
 
 ## Bluetooth
-product/etc/permissions/privapp-permissions-deadpool.xml
-product/priv-app/DeadpoolService/DeadpoolService.apk
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic
 vendor/etc/bluetooth/auto_pairing.conf
 vendor/etc/bluetooth/blacklist.conf
