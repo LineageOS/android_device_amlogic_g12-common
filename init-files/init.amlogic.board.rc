@@ -29,5 +29,8 @@ on property:sys.boot_completed=1
     write /dev/cpuset/background/cpus 3
     write /dev/cpuset/restricted/cpus 3
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on early-init
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
