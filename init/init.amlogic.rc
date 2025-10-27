@@ -152,6 +152,9 @@ service resmanload /vendor/bin/resmanload
     oneshot
 
 on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
     write /proc/sys/vm/page-cluster 0
     write /dev/cpuctl/background/cpu.uclamp.max 50
     write /dev/cpuctl/system-background/cpu.uclamp.max 50
