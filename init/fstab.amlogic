@@ -1,7 +1,7 @@
 ## Dynamic partitions
 odm                   /odm                erofs     ro                                                               wait,avb,logical,first_stage_mount
 product               /product            ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
-system                /system             ext4      ro,barrier=1                                                     wait,avb=vbmeta,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey"
+system                /system             ext4      ro,barrier=1                                                     wait,avb=vbmeta,logical,first_stage_mount
 system_dlkm           /system_dlkm        erofs     ro                                                               wait,avb,logical,first_stage_mount
 system_ext            /system_ext         ext4      ro,barrier=1                                                     wait,avb,logical,first_stage_mount
 vendor                /vendor             erofs     ro                                                               wait,avb,logical,first_stage_mount
