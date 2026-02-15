@@ -70,16 +70,31 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init-files/init.amlogic.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi.rc \
     $(LOCAL_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc
 
+# Support both AVB/Non-AVB variants of multiple boot mediums (default to eMMC)
 ifneq ($(TARGET_HAS_TEE),false)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  ifneq ($(strip $(TARGET_BOOTDEVICE)),)
+  PRODUCT_COPY_FILES += \
+      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  else
+  PRODUCT_COPY_FILES += \
+      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  endif
 else
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-    $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  ifneq ($(strip $(TARGET_BOOTDEVICE)),)
+  PRODUCT_COPY_FILES += \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  else
+  PRODUCT_COPY_FILES += \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
+      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
+  endif
 endif
 
 ## Media firmware
