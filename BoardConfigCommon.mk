@@ -14,7 +14,14 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
 ## Kernel
-BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true androidboot.boot_devices=ffe07000.emmc use_uvm=1
+BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true use_uvm=1
+ifeq ($(TARGET_BOOTDEVICE),usb)
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=ff500000.dwc3
+else ifeq ($(TARGET_BOOTDEVICE),sdcard)
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=ffe05000.sd2
+else
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=ffe07000.emmc
+endif
 TARGET_KERNEL_CONFIG := g12a_defconfig
 TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 
