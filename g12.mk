@@ -40,10 +40,20 @@ PRODUCT_COPY_FILES += \
 
 ## Codecs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_audio_ddp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_ddp.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_audio_dts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_dts.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_audio_dtshd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_dtshd.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_audio_ffmpeg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio_ffmpeg.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_audio.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_encoder.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_encoder.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_performance_encoder.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_performance_encoder.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_performance_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_performance_video.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_video_ext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_video_ext.xml \
+    $(LOCAL_PATH)/media/media_codecs_amlogic_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_amlogic_video.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-    $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+    $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
 ## Graphics
 PRODUCT_COPY_FILES += \
