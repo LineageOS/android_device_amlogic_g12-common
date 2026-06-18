@@ -1,0 +1,10 @@
+## Buttons
+poweroff.doubleclick=1
+sys.vendor.global.settingskey=dashboard
+
+## Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
+## HWUI
+ro.hwui.texture_cache_size=40.5f
+ro.hwui.layer_cache_size=33.75f
