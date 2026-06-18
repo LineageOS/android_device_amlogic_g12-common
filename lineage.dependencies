@@ -4,19 +4,23 @@
     "target_path": "device/amlogic/common"
   },
   {
-    "repository": "android_hardware_amlogic_kernel-modules_mali-driver",
-    "target_path": "kernel/amlogic/kernel-modules/mali-driver"
+    "type": "kernel",
+    "version": "5.15"
   },
   {
-    "repository": "android_hardware_amlogic_kernel-modules_media",
-    "target_path": "kernel/amlogic/kernel-modules/media-4.9"
+    "repository": "android_kernel_amlogic_kernel-5.15",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/kernel"
   },
   {
-    "repository": "android_hardware_amlogic_kernel-modules_optee",
-    "target_path": "kernel/amlogic/kernel-modules/optee"
+    "repository": "android_kernel_amlogic_common_drivers",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/common_drivers"
   },
   {
-    "repository": "android_kernel_amlogic_linux-4.9",
-    "target_path": "kernel/amlogic/linux-4.9"
+    "repository": "android_kernel_amlogic_gpu-modules",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/gpu-modules"
+  },
+  {
+    "repository": "android_kernel_amlogic_media-modules",
+    "target_path": "kernel/platform/kernel-5.15/vendor/amlogic/media-modules"
   }
 ]
