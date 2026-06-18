@@ -3,6 +3,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+## Audio
+aaudio.mmap_policy=2
+aaudio.mixer_bursts=1
+audio.offload.video=true
+audio.offload.min.duration.secs=5
+
 ## Bluetooth
 bluetooth.core.gap.le.privacy.enabled=false
 bluetooth.profile.a2dp.source.enabled?=true
@@ -10,6 +16,7 @@ bluetooth.profile.asha.central.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
 bluetooth.profile.gatt.enabled?=true
 bluetooth.profile.hfp.ag.enabled?=true
+bluetooth.profile.hid.device.enabled?=false
 bluetooth.profile.hid.host.enabled?=true
 bluetooth.profile.mcp.server.enabled?=true
 bluetooth.profile.opp.enabled?=true
@@ -18,35 +25,108 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.core.gap.le.conn.min.limit=6
 persist.vendor.bluetooth.prefferedrole=master
 
-# Crypto
+## C2
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2-poolmask=458752
+debug.stagefright.c2inputsurface=-1
+debug.vendor.media.c2.vdec.support_10bit=false
+vendor.media.c2.vdec.di.post=true
+vendor.media.c2.vdec.enable_h264_4k_mmu=true
+vendor.media.codec2.disable_secure=false
+vendor.media.codec2.support=true
+vendor.media.mediahal.tsplayer.vtbuffer_number_limit=1
+vendor.media.mediahal.tsplayer.vvc_support=1
+vendor.media.mediahal.videodec.afr.policy=0
+vendor.media.mediahal.videodec.media.c2_prealloc_4k_segment0_size=240
+vendor.media.mediahal.videodec.media.c2_prealloc_segment0_size=146800640
+vendor.media.mediahal.videodec.media.c2_prealloc_segment1_size=73400320
+vendor.media.mediahal.videodec.media.c2_prealloc_segment2_size=33554432
+vendor.media.mediahal.videodec.media.c2_secure_prealloc=true
+vendor.media.mediahal.videodec.media.c2_segment0_max_size=0
+vendor.media.multiaudio.decoder.support=1
+
+## Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+## Dolby
+ro.vendor.platform.disable.audiorawout=false
+ro.vendor.platform.support.dts=false
+
+## EGL
+ro.vendor.arm.egl.configs.nv12.hal_format=0x100
+ro.vendor.arm.egl.configs.nv12.recordable=true
+ro.vendor.arm.egl.configs.nv21.hal_format=0x101
+ro.vendor.arm.egl.configs.nv21.recordable=true
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=true
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=true
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
+ro.vendor.arm.egl.configs.yuv420.hal_format=0x108
+
+## Gralloc
+ro.vendor.arm.gralloc.no_afbc_usage_flags=0x20000000
+ro.vendor.arm.gralloc.no_afbc_usage_mask=0x60000000
+ro.vendor.arm.gralloc.force_back_buffer_usage_flags=0x40000000000000
+ro.vendor.arm.gralloc.force_back_buffer_usage_mask=0x40000000000000
+ro.vendor.arm.gralloc.shared_access_usage_flags=0x10000000
+ro.vendor.arm.gralloc.shared_access_usage_mask=0x50000000
+ro.vendor.arm.gralloc.afrc_rgba_usage_flags=0x50000000,0x60000000,0x40000000
+ro.vendor.arm.gralloc.afrc_rgba_usage_mask=0x70000000
+ro.vendor.arm.gralloc.afrc_luma_usage_flags=0x50000000,0x60000000,0x40000000
+ro.vendor.arm.gralloc.afrc_luma_usage_mask=0x70000000
+ro.vendor.arm.gralloc.afrc_chroma_usage_flags=0x100000000000000,0x80000000000000,0x180000000000000
+ro.vendor.arm.gralloc.afrc_chroma_usage_mask=0x180000000000000
+
 ## Graphics
-debug.renderengine.backend=skiaglthreaded
+debug.sf.early_gl_app_phase_offset_ns=1000000
+debug.sf.early_gl_phase_offset_ns=1000000
+persist.vendor.media.bootvideo=0050
 ro.hardware.vulkan=amlogic
 ro.opengles.version=196610
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.supports_background_blur=1
+ro.surface_flinger.vsync_event_phase_offset_ns=2000000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=4000000
+
+## Hardware Composer
+ro.vendor.hwc.default.config=true
+vendor.hwc.di_channel_number=2
+
+## HDMI
+ro.vendor.platform.earlysuspend=false
+ro.vendor.platform.has.realoutputmode=true
+ro.vendor.platform.need.display.hdmicec=true
+vendor.tv.dtv.fake_pid=0x2fff
+
+## Logging
+log.tag.HDMI=DEBUG
 
 ## Media
-libplayer.livets.softdemux=1
-libplayer.netts.recalcpts=1
 persist.sys.media.avsync=true
 persist.vendor.media.bootvideo=0050
+ro.vendor.media.dv.standalone.component=true
 ro.vendor.media.support.ffmpeg.adec=false
+ro.vendor.platform.has.tuner=0
 #ro.vendor.sdr2hdr.enable=true
-vendor.media.libplayer.curlenable=true
-vendor.media.libplayer.seek.fwdsearch=1
-vendor.media.libplayer.modules=vhls_mod,dash_mod,curl_mod,prhls_mod,vm_mod,bluray_mod
+vendor.afbcd.enable=1
 
 ## NRDP
 ro.vendor.nrdp.validation=ninja_7
 
 ## OMX
-ro.vendor.media.support.omx2=true
-vendor.media.omx2.in_buffer=5
-vendor.media.omx.use.360omx2=false
-vendor.media.omx.out_buffer2_osd=8
-vendor.media.omx.display_mode=3
+ro.vendor.platform.is.dualspdif=true
+ro.vendor.platform.support.av1=true
+vendor.media.audio.syncshow=1
+vendor.media.support.mvc=true
+vendor.tv.dtv.tf.disable=false
+
+## Screen Control
+ro.vendor.screencontrol.maxbufsize=104857600
 
 ## USB
 vendor.usb.controller=ff400000.dwc2_a
+
+## Wi-Fi
+wifi.direct.interface=p2p0
