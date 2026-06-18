@@ -74,18 +74,31 @@ Only the three quirks included above are recognized at this point:
     a texture and possibly other code, so just DON'T USE THIS QUIRK.
 
 -->
-
-<MediaCodecs>
-    <!-- dolby vision -->
-    <Include href="media_codecs_amlogic_dolby_vision.xml"/>
-    <Include href="media_codecs_amlogic_video.xml"/>
-    <Include href="media_codecs_amlogic_video_ext.xml"/>
-    <Settings>
-        <Setting name="max-video-encoder-input-buffers" value="9" />
-        <Setting name="supports-multiple-secure-codecs" value="false" />
-        <Setting name="supports-secure-with-non-secure-codec" value="true" />
-        <Variant name="slow-cpu" enabled="true" />
-    </Settings>
-   <Include href="media_codecs_amlogic_encoder.xml"/>
-   <Include href="media_codecs_amlogic_audio.xml"/>
-</MediaCodecs>
+<Included>
+    <Decoders>
+        <MediaCodec name="c2.amlogic.audio.decoder.dts" type="audio/vnd.dts">
+            <Limit name="channel-count" max="6" />
+            <Limit name="sample-rate" ranges="44100,48000" />
+            <Limit name="bitrate" range="32000-1524000" />
+            <Feature name="tunneled-playback" />
+        </MediaCodec>
+        <MediaCodec name="c2.amlogic.audio.decoder.dtshd" type="audio/vnd.dts.hd">
+            <Limit name="channel-count" max="8" />
+            <Limit name="sample-rate" ranges="44100,48000,88200,96000,176000,192000" />
+            <Limit name="bitrate" range="32000-24500000" />
+            <Feature name="tunneled-playback" />
+        </MediaCodec>
+        <MediaCodec name="c2.amlogic.audio.decoder.dtse" type="audio/vnd.dts.hd;profile=lbr">
+            <Limit name="channel-count" max="8" />
+            <Limit name="sample-rate" ranges="22050,24000,44100,48000" />
+            <Limit name="bitrate" range="32000-768000" />
+            <Feature name="tunneled-playback" />
+        </MediaCodec>
+        <MediaCodec name="c2.amlogic.audio.decoder.dtsuhd" type="audio/vnd.dts.uhd;profile=p2">
+            <Limit name="channel-count" max="10" />
+            <Limit name="sample-rate" ranges="48000" />
+            <Limit name="bitrate" range="96000-768000" />
+            <Feature name="tunneled-playback" />
+        </MediaCodec>
+    </Decoders>
+</Included>
