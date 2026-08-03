@@ -5,6 +5,9 @@
 
 COMMON_PATH := device/amlogic/g12-common
 
+## Architecture
+TARGET_CPU_VARIANT_RUNTIME := cortex-a53
+
 ## BUILD_BROKEN_*
 # Needed for systemcontrol blobs copy-files to recovery via TARGET_RECOVERY_DEVICE_DIRS
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
