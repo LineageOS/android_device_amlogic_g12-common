@@ -19,7 +19,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service
 
 ## Camera
 PRODUCT_PACKAGES += \
@@ -32,6 +33,12 @@ PRODUCT_PACKAGES += \
     camera.device@3.4-impl \
     camera.device@3.5-impl
 
+## HDMI CEC
+ifeq ($(PRODUCT_IS_ATV),true)
+PRODUCT_PACKAGES += \
+    android.hardware.tv.cec@1.0-impl \
+    android.hardware.tv.cec@1.0-service
+endif
 ## Cgroups
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -131,6 +138,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr
+
+## USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 ## Inherit from the main common tree product makefile
 $(call inherit-product, device/amlogic/common/amlogic.mk)
