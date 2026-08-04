@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
 ## Bluetooth
 bluetooth.core.gap.le.privacy.enabled=false
 bluetooth.profile.a2dp.source.enabled?=true
