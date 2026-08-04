@@ -15,6 +15,10 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 ## HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
+ifneq ($(BOARD_HAVE_BLUETOOTH),false)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_bt.xml
+endif
+
 ## Kernel
 BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true use_uvm=1
 ifeq ($(TARGET_BOOTDEVICE),usb)
