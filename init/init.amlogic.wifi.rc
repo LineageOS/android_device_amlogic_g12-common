@@ -1,11 +1,22 @@
 on fs
+   chown bluetooth bluetooth /sys/module/amlogic_wireless/parameters/btpower_evt
+   chmod 0666 /sys/module/amlogic_wireless/parameters/btpower_evt
+
    chown bluetooth bluetooth /sys/module/bt_device/parameters/btpower_evt
    chmod 0666 /sys/module/bt_device/parameters/btpower_evt
+
+   chown bluetooth bluetooth /sys/module/amlogic_wireless/parameters/btwake_evt
+   chmod 0666 /sys/module/amlogic_wireless/parameters/btwake_evt
 
    chown bluetooth bluetooth /sys/module/bt_device/parameters/btwake_evt
    chmod 0666 /sys/module/bt_device/parameters/btwake_evt
 
-on property:vendor.bcm_wifi=bcm
+service bcmdl /vendor/xbin/bcmdl -n /vendor/etc/wifi/43569/nvram_ap6269a2.nvm /vendor/etc/wifi/43569/fw_bcm43569a2_ag.bin.trx
+    class main
+    oneshot
+    disabled
+
+on property:vendor.wifi_name=bcm
    chown system wifi /sys/module/dhd/parameters/firmware_path
    chmod 0660 /sys/module/dhd/parameters/firmware_path
    chown system wifi /sys/module/bcmdhd/parameters/firmware_path
@@ -14,17 +25,30 @@ on property:vendor.bcm_wifi=bcm
    chmod 0660 /sys/module/dhdpci/parameters/firmware_path
    setprop wifi.direct.interface p2p-dev-wlan0
 
-on property:vendor.bcm_wifi=rtl
+on property:vendor.wifi_name=rtl
+   setprop wifi.direct.interface ap0
+
+on property:vendor.wifi_name=rtl8852bs
    setprop wifi.direct.interface p2p0
 
-on property:vendor.bcm_wifi=mtk
+on property:vendor.wifi_name=rtl8852be
    setprop wifi.direct.interface p2p0
 
-on property:vendor.bcm_wifi=qca
+on property:vendor.wifi_name=mtk
    setprop wifi.direct.interface p2p0
 
-on property:vendor.bcm_wifi=aml
+on property:vendor.wifi_name=qca
+   setprop wifi.direct.interface ap0
+
+on property:vendor.wifi_name=aml
+   setprop wifi.direct.interface ap0
+
+on property:vendor.wifi_name=nxp
    setprop wifi.direct.interface p2p0
+
+on property:vendor.wifi_name=atbm603x
+   setprop wifi.direct.interface ap0
+   setprop ro.vendor.platform.wifi.suspend true
 
 on property:vendor.w1_wifi_type=ap
    write /sys/module/vlsicomm/parameters/con_mode 6
