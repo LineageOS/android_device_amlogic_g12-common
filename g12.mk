@@ -18,8 +18,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service
 
 ## Camera
@@ -63,19 +63,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.opengles.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
-    frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+    frameworks/native/data/etc/android.software.opengles.deqp.level-2022-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
+    frameworks/native/data/etc/android.software.vulkan.deqp.level-2022-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/graphics/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg \
     $(LOCAL_PATH)/configs/graphics/mesondisplay.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mesondisplay.cfg
-
-## HDMI CEC
-ifeq ($(PRODUCT_IS_ATV),true)
-PRODUCT_PACKAGES += \
-    android.hardware.tv.cec@1.0-impl \
-    android.hardware.tv.cec@1.0-service
-endif
 
 ## Init
 $(call soong_config_set,amlogic_fstab,bootdevice,$(TARGET_BOOTDEVICE))
@@ -123,19 +116,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr
 
-## USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
-
 ## VINTF
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest_bt.xml
-endif
-
-ifeq ($(PRODUCT_IS_ATV),true)
-DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest_tv.xml
 endif
 
 ## Inherit from the main common tree product makefile
