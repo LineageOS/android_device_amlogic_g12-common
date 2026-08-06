@@ -34,8 +34,10 @@ ifeq ($(WITH_CONSOLE),true)
 endif
 
 ## Partitions
+BOARD_USES_SYSTEM_DLKMIMAGE := true
+BOARD_USES_VENDOR_DLKMIMAGE := true
 SSI_PARTITIONS := product system system_ext
-TREBLE_PARTITIONS := odm vendor vendor_dlkm
+TREBLE_PARTITIONS := odm system_dlkm vendor vendor_dlkm
 ALL_PARTITIONS := $(SSI_PARTITIONS) $(TREBLE_PARTITIONS)
 
 BOARD_AMLOGIC_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
