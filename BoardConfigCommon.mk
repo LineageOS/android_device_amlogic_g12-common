@@ -28,26 +28,10 @@ else ifeq ($(TARGET_BOOTDEVICE),sdcard)
 else
   BOARD_KERNEL_CMDLINE += androidboot.boot_devices=ffe07000.emmc
 endif
-TARGET_KERNEL_CONFIG := g12a_defconfig
-TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 
 ifeq ($(WITH_CONSOLE),true)
   BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend ignore_loglevel
 endif
-
-## Kernel modules
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/amlogic/kernel-modules
-TARGET_KERNEL_EXT_MODULES += \
-    mali-driver/bifrost \
-    media-4.9
-
-ifneq ($(TARGET_HAS_TEE),false)
-TARGET_KERNEL_EXT_MODULES += \
-    optee
-endif
-
-TARGET_MODULE_ALIASES += \
-    mali_kbase.ko:mali.ko
 
 ## Partitions
 SSI_PARTITIONS := product system system_ext
