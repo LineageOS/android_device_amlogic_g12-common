@@ -80,8 +80,8 @@ PRODUCT_PACKAGES += \
     fstab.amlogic.ramdisk \
     init.amlogic.rc \
     init.amlogic.board.rc \
+    init.amlogic.bluetooth.rc \
     init.amlogic.media.rc \
-    init.amlogic.system.rc \
     init.amlogic.usb.rc \
     init.amlogic.wifi.rc \
     init.recovery.amlogic.rc
