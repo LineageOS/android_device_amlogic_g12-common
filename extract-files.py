@@ -24,27 +24,27 @@ namespace_imports = [
 
 blob_fixups: blob_fixups_user_type = {
     (
-       'vendor/bin/hw/android.hardware.thermal@2.0-service.droidlogic',
-       'vendor/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic'
+       'vendor/lib/egl/libGLES_mali.so',
+       'vendor/lib/hw/android.hardware.graphics.allocator-V2-arm.so',
+       'vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so',
+       'vendor/lib/hw/mapper.arm.so',
+       'vendor/bin/hw/android.hardware.graphics.allocator-service'
     ): blob_fixup()
-        .add_needed('libbase_shim.so'),
+        .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'vendor/lib/libamlaudiohal@7.0.so': blob_fixup()
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+    'vendor/lib/hw/audio.primary.amlogic.so': blob_fixup()
+        .replace_needed('android.hardware.bluetooth.audio-V3-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so')
+        .add_needed('libbluetooth_audio_session_aidl_shim.so'),
     (
         'vendor/lib/hw/camera.amlogic.so',
         'vendor/lib/hw/hwcomposer.amlogic.so',
-        'vendor/lib/libOmxBase.so',
-        'vendor/lib/libOmxCore.so',
-        'vendor/lib/libOmxVideo.so',
-        'vendor/lib/libmeson_display_service.so'
+        'vendor/lib/libmeson_display_service.so',
+        'vendor/lib/libscreencontrolservice.so'
     ): blob_fixup()
         .add_needed('libui_shim.so'),
-    (
-        'vendor/bin/hw/android.hardware.memtrack-service.droidlogic',
-        'vendor/lib/libmemtrack-amlogic.so'
-    ): blob_fixup()
-        .replace_needed('android.hardware.memtrack-V1-ndk_platform.so', 'android.hardware.memtrack-V1-ndk.so')
-        .replace_needed('libbase.so', 'libbase-v33.so'),
     ('vendor/etc/init/fs.rc'): blob_fixup()
-        .regex_replace('    mkdir /data/media 0770 media_rw media_rw\n', '')
+        .regex_replace('    mkdir /data/media 0770 media_rw media_rw encryption=None\n', '')
         .regex_replace('    setprop ro.crypto.fuse_sdcard true\n', ''),
 }  # fmt: skip
 
