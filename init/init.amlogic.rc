@@ -1,18 +1,123 @@
-import /vendor/etc/init/hw/init.amlogic.system.rc
+import /vendor/etc/init/hw/init.amlogic.usb.rc
+import /vendor/etc/init/hw/init.amlogic.board.rc
+import /vendor/etc/init/hw/init.amlogic.wifi.rc
+import /vendor/etc/init/hw/init.amlogic.media.rc
+import /vendor/etc/init/hw/init.amlogic.sku.rc
+import /vendor/etc/init/hw/init.amlogic.wifi_buildin.rc
+import /vendor/etc/init/hw/init.amlogic.bluetooth.rc
+import /vendor/etc/init/hw/init.amlogic.target.rc
+
+on early-init
+    mount proc proc /proc remount hidepid=2,gid=3009
 
 on init
-    write /sys/block/zram0/comp_algorithm zstd
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
+    write /sys/block/zram0/comp_algorithm lz4
+
+    #30 means reserve 3% memory using for high water mark, 1GB DDR x 3% = 30MB
+    write /proc/sys/vm/watermark_scale_factor 80
+    write /proc/sys/vm/swappiness 150
+    write /proc/sys/vm/watermark_boost_factor 0
+    #12288KB
+    write /proc/sys/vm/min_free_kbytes 12288
+
+    #debug
+    write /proc/sys/kernel/softlockup_panic 1
+    write /proc/sys/kernel/panic_on_rcu_stall 1
+    write /sys/module/rcupdate/parameters/rcu_cpu_stall_timeout 30
+
+    #init the unifykeys
+    write /sys/class/unifykeys/attach 1
+    chmod 666 /dev/video_composer.0
+    chmod 666 /dev/video_composer.1
+    chmod 666 /dev/video_composer.2
+    chmod 660 /dev/di_process.0
+    chmod 660 /dev/di_process.1
+
+on boot
+    # osd logo legacy path
+    chown system graphics /sys/module/fb/parameters/osd_logo_index
+    chmod 0660 /sys/module/fb/parameters/osd_logo_index
+    # osd logo new path
+    chown system graphics /sys/module/aml_media/parameters/osd_logo_index
+    chmod 0660 /sys/module/aml_media/parameters/osd_logo_index
+
+    chmod 0666 /sys/class/tsync_pcr/tsync_vpts_adjust
+    chmod 0666 /sys/class/amstream/reset_audio_port
+
+    # HDMI/LCD switch
+    chown media system /sys/class/switch/hdmi/state
+    chmod 0660 /sys/class/switch/hdmi/state
+    chown media system /sys/devices/virtual/switch/hdmi/state
+    chmod 0660 /sys/devices/virtual/switch/hdmi/state
+    chmod 666 /dev/v4lvideo
+    chmod 666 /dev/video30
+    chmod 666 /dev/video31
+    chmod 666 /dev/video32
+    chmod 666 /dev/video33
+    chmod 666 /dev/video34
+    chmod 666 /dev/video35
+    chmod 666 /dev/video36
+    chmod 666 /dev/video37
+    chmod 666 /dev/video38
+    # thermal
+    chown system system /sys/class/thermal/thermal_zone0/mode
+    chown system system /sys/class/thermal/thermal_zone1/mode
+    chmod 664 /sys/class/thermal/thermal_zone0/mode
+    chmod 664 /sys/class/thermal/thermal_zone1/mode
+
+    #vfm map
+    chown media  system /sys/class/vfm/map
+    chmod 666 /sys/class/vfm/map
+    write /sys/class/vfm/map "rm default"
+    write /sys/class/vfm/map "add default decoder ppmgr deinterlace amvideo"
+
+    chmod 666 /sys/class/video/show_first_frame_nosync
+    chown media system /sys/class/video/show_first_frame_nosync
+
+    #0: normal user and root user can read
+    #1: only root user can read
+    write /proc/sys/kernel/dmesg_restrict 0
+
+    # default set dolby mode to RF
+    write /sys/class/audiodsp/ac3_drc_control "drchighcutscale 0"
+    write /sys/class/audiodsp/ac3_drc_control "drclowboostscale 0"
+    write /sys/class/audiodsp/ac3_drc_control "drcmode 3"
+
+    # Allow custom remote configs to be used via persist.vendor.amlogic.remotecfg.path
+    mkdir /data/vendor/remotecfg 775 root shell
 
 on fs
-    mount_all /vendor/etc/fstab.amlogic
+    mount_all /vendor/etc/fstab.amlogic --early
 
     restorecon_recursive /mnt/vendor/param
 
     verity_update_state
 
+    start resmanload
+
+on late-fs
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.amlogic --late
+
+    # Enable ZRAM
+    swapon_all /vendor/etc/fstab.amlogic
+
 on post-fs-data
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+
+    #for adla
+    mkdir /data/vendor/nn 0777 system system
+
+    #for wvcas
+    mkdir /data/vendor/cas 0700 root root
+    mkdir /data/vendor/mediacas 0770 media mediadrm
 
     #for irdeto
     mkdir /data/vendor/irdeto 0770 system system
@@ -21,13 +126,49 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
-on property:sys.boot_completed=1
-    # restrict cpusets
-    write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/cpus 0-1
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-1
-    write /dev/cpuset/restricted/cpus 0-1
+service remotecfg /vendor/bin/remotecfg ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.conf
+    class main
+    oneshot
+    seclabel u:r:remotecfg:s0
 
-   # Enable ZRAM on boot_complete
-   swapon_all /vendor/etc/fstab.amlogic
+service remotecfg1 /vendor/bin/remotecfg -c ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.cfg -t ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.tab1 -d
+    class main
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service remotecfg2 /vendor/bin/remotecfg -c ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.cfg -t ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.tab2 -d
+    class main
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service remotecfg3 /vendor/bin/remotecfg -c ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.cfg -t ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.tab3 -d
+    class main
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service resmanload /vendor/bin/resmanload
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    write /proc/sys/vm/page-cluster 0
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+
+    write /dev/cpuctl/background/cpu.shares 1024
+    write /dev/cpuctl/system-background/cpu.shares 1024
+    write /dev/cpuctl/dex2oat/cpu.shares 512
+    write /dev/cpuctl/system/cpu.shares 20480
+    # We only have system and background groups holding tasks and the groups below are empty
+    write /dev/cpuctl/camera-daemon/cpu.shares 2048
+    write /dev/cpuctl/foreground/cpu.shares 20480
+    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
+    write /dev/cpuctl/rt/cpu.shares 20480
+    write /dev/cpuctl/top-app/cpu.shares 20480
+
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 400
+
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 1
