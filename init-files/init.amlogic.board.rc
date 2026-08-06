@@ -1,14 +1,12 @@
 on early-init
     loglevel 3
+    exec_background u:r:modprobe:s0 -- /system/bin/modprobe -a -d /system_dlkm/lib/modules --all=/system_dlkm/lib/modules/modules.load
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules --all=/vendor/lib/modules/modules.load
+
 on init
-    insmod /vendor/lib/modules/mali.ko
-    insmod /odm/lib/modules/dovi.ko
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mali_kbase
 
 on post-fs-data
-    insmod /oem/overlay/dovi.ko
-    insmod /vendor/lib/modules/dovi.ko
-    insmod /vendor/lib/sl_hdr.ko
-    insmod /vendor/lib/modules/atbm8881_fe.ko
     insmod /vendor/lib/modules/aml_hardware_dmx.ko
 
 on boot
