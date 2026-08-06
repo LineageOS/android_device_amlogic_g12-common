@@ -30,7 +30,7 @@ TARGET_KERNEL_VERSION ?= 5.15
 
 ## Partitions
 SSI_PARTITIONS := product system system_ext
-TREBLE_PARTITIONS := odm vendor vendor_dlkm
+TREBLE_PARTITIONS := odm system_dlkm vendor vendor_dlkm
 ALL_PARTITIONS := $(SSI_PARTITIONS) $(TREBLE_PARTITIONS)
 
 BOARD_AMLOGIC_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
