@@ -8,18 +8,32 @@ import /vendor/etc/init/cppreopts_amlogic.rc
 import /vendor/etc/init/hw/init.amlogic.bluetooth.rc
 import /vendor/etc/init/hw/init.amlogic.target.rc
 
+on early-init
+    mount proc proc /proc remount hidepid=2,gid=3009
+
 on init
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
     #start console
     #30 means reserve 3% memory using for high water mark, 1GB DDR x 3% = 30MB
-    write /proc/sys/vm/watermark_scale_factor 30
+    write /proc/sys/vm/watermark_scale_factor 80
+    write /proc/sys/vm/swappiness 150
     write /proc/sys/vm/watermark_boost_factor 0
     #12288KB
     write /proc/sys/vm/min_free_kbytes 12288
+
+    #debug
+    write /proc/sys/kernel/softlockup_panic 1
+    write /proc/sys/kernel/panic_on_rcu_stall 1
+    write /sys/module/rcupdate/parameters/rcu_cpu_stall_timeout 30
 
     #init the unifykeys
     write /sys/class/unifykeys/attach 1
     chmod 666 /dev/video_composer.0
     chmod 666 /dev/video_composer.1
+    chmod 666 /dev/video_composer.2
+    chmod 660 /dev/di_process.0
+    chmod 660 /dev/di_process.1
 
 on boot
     # osd logo legacy path
@@ -62,8 +76,30 @@ on boot
     chmod 666 /sys/class/video/show_first_frame_nosync
     chown media system /sys/class/video/show_first_frame_nosync
 
+    #0: normal user and root user can read
+    #1: only root user can read
+    write /proc/sys/kernel/dmesg_restrict 0
+
+    # default set dolby mode to RF
+    write /sys/class/audiodsp/ac3_drc_control "drchighcutscale 0"
+    write /sys/class/audiodsp/ac3_drc_control "drclowboostscale 0"
+    write /sys/class/audiodsp/ac3_drc_control "drcmode 3"
+
     # Allow custom remote configs to be used via persist.vendor.amlogic.remotecfg.path
     mkdir /data/vendor/remotecfg 775 root shell
+
+on fs
+    start resmanload
+
+service resmanload /vendor/bin/resmanload
+    disabled
+    oneshot
+
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+#service watchdogd /sbin/watchdogd 10 20
+#    class core
+#    disabled
+#    seclabel u:r:watchdogd:s0
 
 service remotecfg /vendor/bin/remotecfg ${persist.vendor.amlogic.remotecfg.path:-/vendor/etc}/remote.conf
     class main
@@ -85,11 +121,12 @@ service remotecfg3 /vendor/bin/remotecfg -c ${persist.vendor.amlogic.remotecfg.p
     oneshot
     seclabel u:r:remotecfg:s0
 
-service hdcp_tx22 /vendor/bin/hdcp_tx22 \
-    -f /odm/etc/firmware/firmware.le
-    class main
-    disabled
-    oneshot
+#service hdcp_rx22 /vendor/bin/hdcp_rx22 \
+#    -f /mnt/vendor/param/firmware.le
+#    class main
+#    disabled
+#    oneshot
+#    seclabel u:r:hdcp_rx22:s0
 
 service bugreport /system/bin/dumpstate -d -p -B -z \
     -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
@@ -103,13 +140,27 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.amlogic
+    #30 means reserve 3% memory using for high water mark, 1GB DDR x 3% = 30MB
+    write /proc/sys/vm/watermark_scale_factor 80
 
-on property:persist.vendor.bt_module=rtk_btusb
-    insmod /vendor/lib/modules/rtk_btusb.ko
+    write /proc/sys/vm/page-cluster 0
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
 
-on property:persist.vendor.bt_module=btmtk_usb
-    insmod /vendor/lib/modules/btmtk_usb.ko
+    write /dev/cpuctl/background/cpu.shares 1024
+    write /dev/cpuctl/system-background/cpu.shares 1024
+    write /dev/cpuctl/dex2oat/cpu.shares 512
+    write /dev/cpuctl/system/cpu.shares 20480
+    # We only have system and background groups holding tasks and the groups below are empty
+    write /dev/cpuctl/camera-daemon/cpu.shares 2048
+    write /dev/cpuctl/foreground/cpu.shares 20480
+    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
+    write /dev/cpuctl/rt/cpu.shares 20480
+    write /dev/cpuctl/top-app/cpu.shares 20480
 
-on property:persist.vendor.bt_module=sprdbt_tty
-    insmod /vendor/lib/modules/uwe5621_bsp_sdio.ko
-    insmod /vendor/lib/modules/sprdbt_tty.ko
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 400
+
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 1
