@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23cef9e6_a38ed1a0",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-06T17:40:25Z",
+      "side": 1,
+      "message": "system_dlkm doesn\u0027t belong here, it should be considered SSI_PARTITION",
+      "range": {
+        "startLine": 40,
+        "startChar": 25,
+        "endLine": 40,
+        "endChar": 36
+      },
+      "revId": "c458c2649a7f89c73b4b8cd379169b569ae5821b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
