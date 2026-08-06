@@ -64,7 +64,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 AB_OTA_UPDATER := false
 
 ## Vendor SPL
-VENDOR_SECURITY_PATCH := 2024-07-01
+VENDOR_SECURITY_PATCH := 2025-02-01
 
 ## Include the main common tree BoardConfig makefile
 include device/amlogic/common/BoardConfigAmlogic.mk
