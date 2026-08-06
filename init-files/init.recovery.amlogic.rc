@@ -1,12 +1,8 @@
-import init.recovery.${ro.product.device}.rc
-
 on init
-    setprop sys.usb.configfs 1
-    setprop sys.usb.controller ${vendor.usb.controller}
+    chmod 0777 /bin/systemcontrol_static
+    chmod 0777 /sbin/remotecfg
 
 on fs
-    wait /dev/block/platform/${ro.boot.boot_devices}
-    symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
 
 on post-fs-data
     chown system system /sys/class/android_usb/android0/f_mass_storage/lun/file
@@ -15,82 +11,69 @@ on post-fs-data
     chmod 0660 /sys/class/android_usb/android0/f_rndis/ethaddr
 
 on boot
+    mkdir /udisk
+    mount configfs none /config
+    mkdir /config/usb_gadget/g1 0770 shell shell
+    mkdir /config/usb_gadget/g1/strings/0x409 0770 shell shell
+    write /config/usb_gadget/g1/bcdUSB 0x0200
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/bcdDevice 0x0223
-    write /config/usb_gadget/g1/bcdUSB 0x0200
-    write /config/usb_gadget/g1/strings/0x409/manufacturer droidlogic
-    write /config/usb_gadget/g1/strings/0x409/product ${ro.product.board}
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
+    write /config/usb_gadget/g1/strings/0x409/manufacturer {ro.product.manufacturer}
+    write /config/usb_gadget/g1/strings/0x409/product ${ro.product.name}
+    mkdir /config/usb_gadget/g1/functions/ffs.adb
+    mkdir /config/usb_gadget/g1/functions/ffs.mtp
+    mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
+    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
     write /config/usb_gadget/g1/configs/b.1/MaxPower 500
+    mkdir /dev/usb-ffs 0775 shell shell
+    mkdir /dev/usb-ffs/adb 0770 shell shell
+    mkdir /dev/usb-ffs/mtp 0770 mtp mtp
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
+    mount functionfs mtp /dev/usb-ffs/mtp rmode=0770,fmode=0660,uid=1024,gid=1024,no_disconnect=1
+    setprop sys.usb.mtp.device_type 3
+    setprop sys.usb.configfs 1
+    setprop sys.usb.controller ${vendor.usb.controller}
+    symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
+    symlink /dev/block/by-name/userdata /dev/block/userdata
+    symlink /dev/block/by-name/userdata /dev/block/data
+    write sys/class/unifykeys/attach     1
 
-service systemcontrol /system/bin/systemcontrol_static /system/etc/mesondisplay.cfg
+service systemcontrol /system/bin/systemcontrol_static /system/etc/mesondisplay.cfg 
     oneshot
     seclabel u:r:recovery:s0
 
-# USB accessory configuration
-on property:sys.usb.config=accessory && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d00
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=none && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/os_desc/use 0
+
+on property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.config=mtp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4e41
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4e42
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+
+on property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.config=ptp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4e43
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4e44
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+
+on property:sys.usb.config=adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4e40
+    write /sys/class/usb_role/ffe09000.usb-role-switch/role device
+
+on property:sys.usb.config=none && property:sys.usb.configfs=1
     setprop sys.usb.state ${sys.usb.config}
-
-# USB accessory configuration, with adb
-on property:sys.usb.config=accessory,adb && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d01
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
-    setprop sys.usb.state ${sys.usb.config}
-
-# audio accessory configuration
-on property:sys.usb.config=audio_source && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d02
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-# audio accessory configuration, with adb
-on property:sys.usb.config=audio_source,adb && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d03
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
-    setprop sys.usb.state ${sys.usb.config}
-
-# USB and audio accessory configuration
-on property:sys.usb.config=accessory,audio_source && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d04
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-# USB and audio accessory configuration, with adb
-on property:sys.usb.config=accessory,audio_source,adb && property:sys.usb.configfs=0
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18d1
-    write /sys/class/android_usb/android0/idProduct 2d05
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
-    setprop sys.usb.state ${sys.usb.config}
-
-# Used to set USB configuration at boot and to switch the configuration
-# when changing the default configuration
-on boot && property:persist.sys.usb.config=*
-    setprop sys.usb.config ${persist.sys.usb.config}
-
-#
-# USB type C
-#
+    write /config/usb_gadget/g1/os_desc/use 0
 
 # USB mode changes
 on property:sys.usb.typec.mode=dfp
@@ -101,20 +84,18 @@ on property:sys.usb.typec.mode=ufp
     write /sys/class/dual_role_usb/otg_default/mode ${sys.usb.typec.mode}
     setprop sys.usb.typec.state ${sys.usb.typec.mode}
 
-# USB data role changes
-on property:sys.usb.typec.data_role=device
-    write /sys/class/dual_role_usb/otg_default/data_role ${sys.usb.typec.data_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.data_role}
+service console /system/bin/sh
+    class core
+    console
+    disabled
+    user root
+    group shell log readproc
+    seclabel u:r:shell:s0
+    setenv HOSTNAME console
 
-on property:sys.usb.typec.data_role=host
-    write /sys/class/dual_role_usb/otg_default/data_role ${sys.usb.typec.data_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.data_role}
+on property:ro.debuggable=1
+    start console
 
-# USB power role changes
-on property:sys.usb.typec.power_role=source
-    write /sys/class/dual_role_usb/otg_default/power_role ${sys.usb.typec.power_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.power_role}
-
-on property:sys.usb.typec.power_role=sink
-    write /sys/class/dual_role_usb/otg_default/power_role ${sys.usb.typec.power_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.power_role}
+on init
+    setprop sys.usb.configfs 1
+    start console

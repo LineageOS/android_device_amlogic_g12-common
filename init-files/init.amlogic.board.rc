@@ -1,15 +1,36 @@
-import /vendor/etc/init/hw/init.amlogic.usb.rc
+on early-init
+    loglevel 3
+on init
+    insmod /vendor/lib/modules/mali.ko
+    insmod /odm/lib/modules/dovi.ko
 
 on post-fs-data
-    insmod /vendor/lib/modules/mali.ko
+    insmod /oem/overlay/dovi.ko
+    insmod /vendor/lib/modules/dovi.ko
+    insmod /vendor/lib/sl_hdr.ko
+    insmod /vendor/lib/modules/atbm8881_fe.ko
     insmod /vendor/lib/modules/aml_hardware_dmx.ko
 
 on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/module/amvdec_vp9/parameters/max_buf_num 12
+    write /sys/module/decoder_common/parameters/v4lvideo_add_di 0
+    write /sys/class/di_process/di_proc_enable 1
+    ## AP6356S for 5G settings
     write /proc/sys/net/core/rmem_max 12582912
     write /proc/sys/net/core/wmem_max 12582912
     write /proc/sys/net/core/rmem_default 2097152
     write /proc/sys/net/core/wmem_default 2097152
-    write /sys/module/amvdec_mh264/parameters/reorder_dpb_size_margin 9
-    write /sys/module/amvdec_h265/parameters/dynamic_buf_num_margin 9
-    write /sys/module/amvdec_vp9/parameters/max_buf_num 12
+
+on property:ro.boot.oem.key1=*
+    setprop ro.oem.key1 ${ro.boot.oem.key1}
+
+on property:sys.boot_completed=1
+    # end boot time fs tune
+    #write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /dev/cpuset/background/cpus 3
+    write /dev/cpuset/restricted/cpus 3
+
+on early-init
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
