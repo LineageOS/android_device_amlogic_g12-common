@@ -9,21 +9,35 @@ on boot
     chown system camera /dev/ge2d
     chmod 660 /sys/class/secmem/secmem_mm_config
     chown mediacodec system /sys/class/secmem/secmem_mm_config
+    chown system camera /dev/vicp
 
     write /sys/module/stream_input/parameters/def_vstreambuf_sizeM 10
     write /sys/module/stream_input/parameters/def_4k_vstreambuf_sizeM 15
     write /sys/devices/platform/ffe40000.bifrost/dvfs_period 50
 
+    chmod 666 /sys/class/resource_mgr/res_sys_debug
+    chmod 666 /sys/class/dec_report/debug_level
+
+on post-fs-data
+    chmod 666 /sys/module/decoder_common/parameters/max_di_instance
+    chmod 666 /sys/module/decoder_common/parameters/v4lvideo_add_di
+    chmod 666 /sys/class/di_process/di_proc_enable
+
 on fs
     insmod /vendor/lib/modules/media_clock.ko
     write /sys/module/firmware_class/parameters/path "/vendor/lib/firmware/"
     insmod /vendor/lib/modules/firmware.ko
-    insmod /vendor/lib/modules/video_framerate_adapter.ko
+    insmod /vendor/lib/modules/pts_server.ko
     insmod /vendor/lib/modules/decoder_common.ko
     insmod /vendor/lib/modules/stream_input.ko
 
-on early-boot
+on post-fs-data
+    insmod /vendor/lib/modules/media_sync.ko
+    insmod /vendor/lib/modules/amvdec_ports.ko
     insmod /vendor/lib/modules/amvdec_mh264.ko
+
+
+on early-boot
     insmod /vendor/lib/modules/amvdec_mh264_v4l.ko
     insmod /vendor/lib/modules/amvdec_h264mvc.ko
     insmod /vendor/lib/modules/amvdec_h265.ko
@@ -35,14 +49,66 @@ on early-boot
     insmod /vendor/lib/modules/amvdec_mmpeg4.ko
     insmod /vendor/lib/modules/amvdec_mmpeg4_v4l.ko
     insmod /vendor/lib/modules/amvdec_vc1.ko
+    insmod /vendor/lib/modules/amvdec_vc1_v4l.ko
     insmod /vendor/lib/modules/amvdec_vp9.ko
     insmod /vendor/lib/modules/amvdec_vp9_v4l.ko
     insmod /vendor/lib/modules/amvdec_avs2.ko
-    insmod /vendor/lib/modules/encoder.ko
-    insmod /vendor/lib/modules/vpu.ko
-    insmod /vendor/lib/modules/amvdec_ports.ko
+    insmod /vendor/lib/modules/amvdec_avs2_v4l.ko
+
+
+    insmod /vendor/lib/modules/encoder_common.ko
+    insmod /vendor/lib/modules/amlogic-encoder.ko
+    insmod /vendor/lib/modules/amlogic-jpegenc.ko
+    insmod /vendor/lib/modules/amlogic-vpu.ko
+    insmod /vendor/lib/modules/amlogic-multienc.ko
+    insmod /vendor/lib/modules/amlogic-vc8000.ko
+    insmod /vendor/lib/modules/amlogic-memalloc.ko
     insmod /vendor/lib/modules/amlogic_fbc_lib.ko
     insmod /vendor/lib/modules/amvdec_mavs.ko
+    insmod /vendor/lib/modules/amvdec_mavs_v4l.ko
     insmod /vendor/lib/modules/amvdec_av1.ko
     insmod /vendor/lib/modules/amvdec_av1_v4l.ko
-    insmod /vendor/lib/modules/media_sync.ko
+    insmod /vendor/lib/modules/amvdec_av1_t5d_v4l.ko
+    insmod /vendor/lib/modules/media_proxy.ko
+    insmod /vendor/lib/modules/video_framerate_adapter.ko
+
+    chmod 666 /sys/class/amstream/vcodec_feature
+    chown media system /sys/class/amstream/vcodec_feature
+
+on property:vendor.media.c2.vdec.game_low_latency=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
+    write /sys/module/aml_media/parameters/use_low_latency 1
+    write /proc/sys/kernel/sched_energy_aware 0
+    write /sys/module/amlogic_debug/parameters/sched_interactive_task_util 200
+
+on property:vendor.media.c2.vdec.game_low_latency=0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+    write /sys/module/aml_media/parameters/use_low_latency 0
+    write /proc/sys/kernel/sched_energy_aware 1
+    write /sys/module/amlogic_debug/parameters/sched_interactive_task_util 150
+
+on init && property:vendor.hwc.di_channel_number=2
+    setprop vendor.bootvideo.dipost 1
+
+on post-fs-data && property:persist.vendor.media.bootvideo.tsplayer=1
+    write /sys/module/decoder_common/parameters/max_di_instance 0
+    write /sys/module/decoder_common/parameters/v4lvideo_add_di 0
+
+on post-fs-data && property:persist.vendor.media.bootvideo.tsplayer=1 && property:vendor.bootvideo.dipost=1
+    write /sys/class/di_process/di_proc_enable 0
+    setprop vendor.hwc.di_channel_number 0
+    setprop vendor.media.mediahal.tsplayer.vtbuffer_number_limit 4
+
+on property:persist.vendor.media.bootvideo.tsplayer=1 && property:service.bootvideo.exit=0
+    write /sys/module/decoder_common/parameters/max_di_instance 2
+    write /sys/module/decoder_common/parameters/v4lvideo_add_di 1
+
+on property:persist.vendor.media.bootvideo.tsplayer=1 && property:service.bootvideo.exit=0 && property:vendor.bootvideo.dipost=1
+    write /sys/module/decoder_common/parameters/v4lvideo_add_di 0
+    write /sys/class/di_process/di_proc_enable 1
+    setprop vendor.hwc.di_channel_number 2
+    setprop vendor.media.mediahal.tsplayer.vtbuffer_number_limit 1
+
+
