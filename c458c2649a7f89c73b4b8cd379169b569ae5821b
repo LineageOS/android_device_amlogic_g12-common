@@ -22,6 +22,30 @@
       },
       "revId": "c458c2649a7f89c73b4b8cd379169b569ae5821b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e4dafa6_8ba989fa",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-07T01:40:49Z",
+      "side": 1,
+      "message": "we did this so it\u0027d be erofs, the label is just semantic, as we introduce this var anyway?",
+      "parentUuid": "23cef9e6_a38ed1a0",
+      "range": {
+        "startLine": 40,
+        "startChar": 25,
+        "endLine": 40,
+        "endChar": 36
+      },
+      "revId": "c458c2649a7f89c73b4b8cd379169b569ae5821b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
