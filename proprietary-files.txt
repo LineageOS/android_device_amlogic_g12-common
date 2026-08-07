@@ -82,6 +82,9 @@ vendor/lib/libge2d-2.0.so
 vendor/lib/libvendor_c2common.so
 vendor/lib/libvendor_c2componentstore.so
 
+## DRM
+vendor/apex/com.google.android.widevine.nonupdatable.apex
+
 ## Droidlogic
 vendor/etc/permissions/droidlogic.software.core.xml
 vendor/framework/droidlogic.software.core.jar
