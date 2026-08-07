@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8e44ded_a8c33e67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-07T01:46:07Z",
+      "side": 1,
+      "message": "does this migrate cleanly? or will this mean users need to wipe?\n\nwade had to have made it upgrade safe... 12 -\u003e 14.\n\nAlso - todo: erofs on treble partitios",
+      "revId": "febbb256c7015fed072c6d044d8b531f19aa8333",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
