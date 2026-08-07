@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b4f27e9_6df8f23d",
+        "filename": "g12.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-07T20:46:41Z",
+      "side": 0,
+      "message": "Remove extra line that I had removed earlier.",
+      "revId": "277f8e3fbd64be95559e3c3d794c358b8b9e578d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
