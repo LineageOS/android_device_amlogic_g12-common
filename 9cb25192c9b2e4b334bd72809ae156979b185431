@@ -16,6 +16,23 @@
       "message": "for the sake of diff, pls do what I did on ne-common, init.amlogic.rc changes to init.amlogic.system.rc, shows a better diff",
       "revId": "9cb25192c9b2e4b334bd72809ae156979b185431",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49f33871_de57c67c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-07T01:44:58Z",
+      "side": 1,
+      "message": "also, looks like we lost the cleanup commits and remotecfg stuff, etc.\n\ntodo.",
+      "revId": "9cb25192c9b2e4b334bd72809ae156979b185431",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
