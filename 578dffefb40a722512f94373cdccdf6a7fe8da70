@@ -80,6 +80,30 @@
       },
       "revId": "578dffefb40a722512f94373cdccdf6a7fe8da70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cf99e84_b88bf9b9",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-07T20:52:12Z",
+      "side": 1,
+      "message": "There\u0027s a plan to support some mainline modules and such - by defining the target kernel version we can gate those.",
+      "parentUuid": "1f9cce40_b939a549",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 29
+      },
+      "revId": "578dffefb40a722512f94373cdccdf6a7fe8da70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
