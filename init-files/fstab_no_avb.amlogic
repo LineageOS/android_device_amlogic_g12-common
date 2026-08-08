@@ -22,6 +22,6 @@ vendor_dlkm           /vendor_dlkm        ext4      ro,barrier=1                
 /dev/block/zram0      none                swap      defaults                                                         wait,zramsize=268435456
 
 ## Removable devices
-/devices/*.sd*/mmc_host/sd*                                    auto             auto      defaults                   voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sd*  auto             auto      defaults                   voldmanaged=usb:auto,encryptable=userdata
-/devices/*dwc3/xhci-hcd.0.auto/usb?/*/host*/target*/block/sr*  auto             auto      defaults                   voldmanaged=sr0:auto,encryptable=userdata
+/devices/*.sd*/*/block/mmcblk*                                 auto             auto      defaults                   voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/*dwc3/xhci-hcd*.auto/usb?/*/host*/target*/block/sd*   auto             auto      defaults                   voldmanaged=usb:auto,encryptable=userdata
+/devices/*dwc3/xhci-hcd*.auto/usb?/*/host*/target*/block/sr*   auto             auto      defaults                   voldmanaged=sr0:auto,encryptable=userdata
