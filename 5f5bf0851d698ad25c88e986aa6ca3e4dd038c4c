@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c544326_25c2a852",
+        "filename": "vendor.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-08T10:11:32Z",
+      "side": 1,
+      "message": "Pick this instead: https://review.lineageos.org/q/I83b28e6ec0217c49763a407fad1bc8c154e923ab",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 22
+      },
+      "revId": "5f5bf0851d698ad25c88e986aa6ca3e4dd038c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
