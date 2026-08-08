@@ -122,6 +122,12 @@ vendor.media.audio.syncshow=1
 vendor.media.support.mvc=true
 vendor.tv.dtv.tf.disable=false
 
+## Power
+# Starts libperfmgr's NodeLooperThread. Without it no powerhint node is ever
+# written, so early_suspend_trigger never fires and the display stays on the
+# dummy connector after wake.
+vendor.powerhal.init=1
+
 ## Screen Control
 ro.vendor.screencontrol.maxbufsize=104857600
 
