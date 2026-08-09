@@ -4,3 +4,20 @@
 //
 
 soong_namespace {}
+
+install_symlink {
+    name: "libGLES_mali_symlink",
+    soc_specific: true,
+    installed_location: "lib/egl/libGLES_mali.so",
+    symlink_target: select(soong_config_variable("amlogic", "target_amlogic_soc"), {
+        "g12b": "/vendor/lib/egl/g12b/libGLES_mali.so",
+        default: "/vendor/lib/egl/g12a/libGLES_mali.so",
+    }),
+}
+
+install_symlink {
+    name: "vulkan.amlogic_symlink",
+    soc_specific: true,
+    installed_location: "lib/hw/vulkan.amlogic.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}

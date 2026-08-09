@@ -1,0 +1,7 @@
+## from adt3-user 13 TTT1.230205.001 9565391 release-keys
+
+# g12a
+# Mali-G31 blob, also used by SM1. Extract with:
+#   ./extract-files.py -s g12a <g12a/sm1 dump>
+# Installed into its own sub directory instead of straight into vendor/lib/egl:
+vendor/lib/egl/libGLES_mali.so:vendor/lib/egl/g12a/libGLES_mali.so;MODULE=libGLES_mali_g12a

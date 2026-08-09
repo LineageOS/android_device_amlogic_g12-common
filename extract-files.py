@@ -56,6 +56,26 @@ module = ExtractUtilsModule(
     namespace_imports=namespace_imports,
 )
 
+def soc_guard(*socs: str):
+    condition = f'ifneq ($(filter {" ".join(socs)},$(TARGET_AMLOGIC_SOC)),)'
+
+    def begin_fn(ctx, *args, **kwargs):
+        ctx.product_mk_out.write(f'\n{condition}\n')
+
+    def end_fn(ctx, *args, **kwargs):
+        ctx.product_mk_out.write('\nendif\n')
+
+    return begin_fn, end_fn
+
+
+module.add_proprietary_file(
+    'proprietary-files-g12a.txt'
+).add_pre_post_makefile_generation_fn(*soc_guard('g12a', 'sm1'))
+
+module.add_proprietary_file(
+    'proprietary-files-g12b.txt'
+).add_pre_post_makefile_generation_fn(*soc_guard('g12b'))
+
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
     utils.run()

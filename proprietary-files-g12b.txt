@@ -1,0 +1,6 @@
+## from from libGLES_mali_default_8a_32-s-r32p1.so https://github.com/codewalkerster/linux_amlogic_meson_mali
+
+# g12b
+# Mali-G52 blob. Extract with:
+#   ./extract-files.py -s g12b <g12b dump>
+vendor/lib/egl/libGLES_mali.so:vendor/lib/egl/g12b/libGLES_mali.so;MODULE=libGLES_mali_g12b

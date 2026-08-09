@@ -60,6 +60,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mesondisplay.cfg
 
+# The Mali blob installs per-SoC under vendor/lib/egl/$(TARGET_AMLOGIC_SOC),
+# these point the paths everything else looks up at it. See Android.bp.
+PRODUCT_PACKAGES += \
+    libGLES_mali_symlink \
+    vulkan.amlogic_symlink
+
 ## HDMI CEC
 ifeq ($(PRODUCT_IS_ATV),true)
 PRODUCT_PACKAGES += \
@@ -121,6 +127,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 ## Platform
 TARGET_AMLOGIC_SOC ?= g12a
+
+$(call soong_config_set,amlogic,target_amlogic_soc,$(TARGET_AMLOGIC_SOC))
 
 ## Power
 PRODUCT_PACKAGES += \
