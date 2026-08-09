@@ -4,3 +4,28 @@
 //
 
 soong_namespace {}
+
+// The Mali blob is SoC specific: G12A/SM1 need the Mali-G31 one, G12B the
+// Mali-G52 one. Both cannot be a soong module installing to
+// vendor/lib/egl/libGLES_mali.so, so each installs into its own sub directory
+// (see extract-files.py) and this symlink provides the path the EGL loader
+// actually looks up. It is picked at analysis time from the soong config
+// variable g12.mk fills in from TARGET_AMLOGIC_SOC.
+install_symlink {
+    name: "libGLES_mali_symlink",
+    soc_specific: true,
+    installed_location: "lib/egl/libGLES_mali.so",
+    symlink_target: select(soong_config_variable("amlogic", "target_amlogic_soc"), {
+        "g12b": "/vendor/lib/egl/g12b/libGLES_mali.so",
+        default: "/vendor/lib/egl/g12a/libGLES_mali.so",
+    }),
+}
+
+// Used to come out of the SYMLINK= argument on the proprietary-files.txt entry
+// for the blob, which no longer has a single entry to hang off.
+install_symlink {
+    name: "vulkan.amlogic_symlink",
+    soc_specific: true,
+    installed_location: "lib/hw/vulkan.amlogic.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}
