@@ -56,6 +56,41 @@ module = ExtractUtilsModule(
     namespace_imports=namespace_imports,
 )
 
+# libGLES_mali.so is SoC specific: G12A/SM1 ship a Mali-G31 blob, G12B a
+# Mali-G52 one. Keep a copy of each in its own vendor sub directory and let
+# TARGET_AMLOGIC_SOC pick the matching one at build time. Both are copy rules
+# rather than soong modules: soong emits install rules for every module it
+# parses, regardless of PRODUCT_PACKAGES, so two modules sharing an install
+# path collide in every build.
+# Extract them one at a time, from the matching dump:
+#   ./extract-files.py -s g12a <g12a or sm1 dump>
+#   ./extract-files.py -s g12b <g12b dump>
+# Passing -s keeps the vendor directory from being wiped, so the other
+# variant's blob survives.
+
+
+def soc_guard(*socs: str):
+    condition = f'ifneq ($(filter {" ".join(socs)},$(TARGET_AMLOGIC_SOC)),)'
+
+    def begin_fn(ctx, *args, **kwargs):
+        ctx.product_mk_out.write(f'\n{condition}\n')
+
+    def end_fn(ctx, *args, **kwargs):
+        ctx.product_mk_out.write('\nendif\n')
+
+    return begin_fn, end_fn
+
+
+module.add_proprietary_file(
+    'proprietary-files-g12a.txt',
+    vendor_rel_sub_path='g12a',
+).add_pre_post_makefile_generation_fn(*soc_guard('g12a', 'sm1'))
+
+module.add_proprietary_file(
+    'proprietary-files-g12b.txt',
+    vendor_rel_sub_path='g12b',
+).add_pre_post_makefile_generation_fn(*soc_guard('g12b'))
+
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
     utils.run()

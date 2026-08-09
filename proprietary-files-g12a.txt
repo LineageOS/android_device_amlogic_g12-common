@@ -1,0 +1,7 @@
+# g12a
+# Mali-G31 blob, also used by SM1. Extract with:
+#   ./extract-files.py -s g12a <g12a/sm1 dump>
+# MAKE_COPY_RULE_ONLY: a soong module would install to the same path as the
+# g12b one and soong emits install rules for every module it parses, so the two
+# would always collide. A copy rule is guarded by TARGET_AMLOGIC_SOC instead.
+vendor/lib/egl/libGLES_mali.so;MAKE_COPY_RULE_ONLY

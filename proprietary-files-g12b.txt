@@ -1,0 +1,5 @@
+# g12b
+# Mali-G52 blob. Extract with:
+#   ./extract-files.py -s g12b <g12b dump>
+# See proprietary-files-g12a.txt for why this is a copy rule and not a module.
+vendor/lib/egl/libGLES_mali.so;MAKE_COPY_RULE_ONLY

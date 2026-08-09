@@ -4,3 +4,13 @@
 //
 
 soong_namespace {}
+
+// libGLES_mali.so is shipped per-SoC through PRODUCT_COPY_FILES rather than as
+// a soong module, so the vulkan symlink can no longer be generated from
+// proprietary-files.txt. See extract-files.py.
+install_symlink {
+    name: "vulkan.amlogic_symlink",
+    soc_specific: true,
+    installed_location: "lib/hw/vulkan.amlogic.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}

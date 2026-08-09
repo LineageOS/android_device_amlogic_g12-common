@@ -60,6 +60,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg \
     $(LOCAL_PATH)/configs/mesondisplay.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mesondisplay.cfg
 
+# libGLES_mali.so is copied in per-SoC via PRODUCT_COPY_FILES, so neither the
+# vulkan symlink nor its shared library dependencies can be derived from it.
+# libdmabufheap is the only one no other blob pulls in.
+PRODUCT_PACKAGES += \
+    libdmabufheap.vendor \
+    vulkan.amlogic_symlink
+
 ## HDMI CEC
 ifeq ($(PRODUCT_IS_ATV),true)
 PRODUCT_PACKAGES += \
@@ -120,6 +127,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 ## Platform
+# Device makefiles must set this *before* inheriting g12.mk: the vendor
+# makefile picks the g12a or the g12b libGLES_mali.so off this value.
 TARGET_AMLOGIC_SOC ?= g12a
 
 ## Power
