@@ -16,6 +16,24 @@
       "message": "Just make it device specific",
       "revId": "ef286c3c712729017c2f5607189a0bf7307ef962",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c461c21_5b0796b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-09T07:45:54Z",
+      "side": 1,
+      "message": "tis would mean adding g12a gles lib into every g12a device. Some of them doesnt use proprietary-files.txt at all, like radxa0 fo example, and submited kvim3 and kvim3l",
+      "parentUuid": "035c1916_2a2fc604",
+      "revId": "ef286c3c712729017c2f5607189a0bf7307ef962",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
