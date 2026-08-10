@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1e16f3d_6333662c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T02:03:29Z",
+      "side": 1,
+      "message": "and... why did we drop the symlink?",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "66c02953_85962fdc",
         "filename": "proprietary-files-g12a.txt",
         "patchSetId": 2
