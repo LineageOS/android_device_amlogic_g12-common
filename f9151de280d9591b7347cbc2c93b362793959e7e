@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1f81e204_6b8aed26",
+        "filename": "extract-files.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-10T14:34:50Z",
+      "side": 1,
+      "message": "I think that this can be simplified. Can you try this:\n\nmodule.add_proprietary_file(\u0027proprietary-files-g12a.txt\u0027).add_copy_files_guard(\n    \u0027TARGET_AMLOGIC_SOC\u0027, \u0027g12a sm1\u0027, invert\u003dTrue\n)\n\nmodule.add_proprietary_file(\u0027proprietary-files-g12b.txt\u0027).add_copy_files_guard(\n    \u0027TARGET_AMLOGIC_SOC\u0027, \u0027g12b\u0027, invert\u003dTrue\n)",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "38269ebc_9d19d1ef",
         "filename": "extract-files.py",
         "patchSetId": 2
