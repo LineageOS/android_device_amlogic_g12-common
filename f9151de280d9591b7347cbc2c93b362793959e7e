@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66c02953_85962fdc",
+        "filename": "proprietary-files-g12a.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T00:04:38Z",
+      "side": 1,
+      "message": "kang source header from proprietary-files.txt",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "057a2786_bac1c50c",
+        "filename": "proprietary-files-g12a.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T00:04:38Z",
+      "side": 1,
+      "message": "delete last two lines of this comment, not needed",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "906b3ca9_bb49bb29",
+        "filename": "proprietary-files-g12b.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T00:04:38Z",
+      "side": 1,
+      "message": "kang source header from proprietary-files.txt and update to whatever you actually sourced this from",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f76a15f0_6c9c6085",
+        "filename": "proprietary-files-g12b.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T00:04:38Z",
+      "side": 1,
+      "message": "delete last line of this comment, not needed",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
