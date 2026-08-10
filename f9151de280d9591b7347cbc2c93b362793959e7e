@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "38269ebc_9d19d1ef",
+        "filename": "extract-files.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-10T02:04:08Z",
+      "side": 1,
+      "message": "I don\u0027t think we need claude comments in a lot of the things they make it into.",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "66c02953_85962fdc",
         "filename": "proprietary-files-g12a.txt",
         "patchSetId": 2
