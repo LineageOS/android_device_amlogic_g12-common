@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4c88e79d_ba94c421",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-11T09:56:30Z",
+      "side": 1,
+      "message": "Very likely to be possible, but I would also rename the Mali blob instead of putting it inside a dir.",
+      "parentUuid": "f6d982eb_fda5941c",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1f81e204_6b8aed26",
         "filename": "extract-files.py",
         "patchSetId": 2
