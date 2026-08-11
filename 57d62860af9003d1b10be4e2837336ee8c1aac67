@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aa4a069_b777eb0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-11T05:03:45Z",
+      "side": 1,
+      "message": "alsoooo because these are all dynamic, any reason we don\u0027t want to just mirror ne-common\u0027s partition set?",
+      "revId": "57d62860af9003d1b10be4e2837336ee8c1aac67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a44f4e81_47b36f8d",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-11T05:03:45Z",
+      "side": 1,
+      "message": "unrelated",
+      "revId": "57d62860af9003d1b10be4e2837336ee8c1aac67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
