@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ef31de66_16d15c7f",
+        "filename": "extract-files.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-11T09:56:29Z",
+      "side": 1,
+      "message": "Maybe use gpu variables? Like G31 and G52, this would place file needed for gpu, not soc, which can share gpu.",
+      "parentUuid": "e9be8776_e8801755",
+      "revId": "f9151de280d9591b7347cbc2c93b362793959e7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "38269ebc_9d19d1ef",
         "filename": "extract-files.py",
         "patchSetId": 2
