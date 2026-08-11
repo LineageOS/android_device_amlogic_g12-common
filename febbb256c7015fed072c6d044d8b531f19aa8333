@@ -34,6 +34,24 @@
       "parentUuid": "f8e44ded_a8c33e67",
       "revId": "febbb256c7015fed072c6d044d8b531f19aa8333",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "433054f7_d9dfddd3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-11T18:08:53Z",
+      "side": 1,
+      "message": "ah if in-place upgrade works 0 issues.",
+      "parentUuid": "e32fbd71_e9c7763f",
+      "revId": "febbb256c7015fed072c6d044d8b531f19aa8333",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
