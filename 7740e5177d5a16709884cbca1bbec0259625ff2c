@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "164d2518_e5b7689b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-15T12:01:51Z",
+      "side": 1,
+      "message": "I never managed to upgrade 22.2 to 23.2 on g12, both modifying fstab like wade or not",
+      "revId": "7740e5177d5a16709884cbca1bbec0259625ff2c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
