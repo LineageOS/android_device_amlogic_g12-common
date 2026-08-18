@@ -33,6 +33,24 @@
       "message": "Can re-land it if figured out.",
       "revId": "80a876db0c113b50ce097c5f0c34cfe81352f49f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5086df9_523a0554",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-18T11:25:32Z",
+      "side": 1,
+      "message": "Didn\u0027t you say you\u0027d leave it for 23.2? Why was it fast-forwarded tho?",
+      "parentUuid": "c5bd21b8_efff4eef",
+      "revId": "80a876db0c113b50ce097c5f0c34cfe81352f49f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
