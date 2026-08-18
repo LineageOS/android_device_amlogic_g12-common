@@ -90,7 +90,7 @@ on boot
     mkdir /data/vendor/remotecfg 775 root shell
 
 on fs
-    mount_all --early
+    mount_all
 
     restorecon_recursive /mnt/vendor/param
 
