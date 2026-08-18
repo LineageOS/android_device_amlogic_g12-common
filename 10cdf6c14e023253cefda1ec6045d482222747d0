@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4258df8e_e74f6970",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-08-18T14:17:07Z",
+      "side": 1,
+      "message": "Why not just use cgroups_30.json from libprocessgroup? No need to import a local copy",
+      "revId": "10cdf6c14e023253cefda1ec6045d482222747d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
