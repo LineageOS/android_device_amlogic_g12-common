@@ -44,7 +44,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     ('vendor/etc/init/fs.rc'): blob_fixup()
         .regex_replace('    mkdir /data/media 0770 media_rw media_rw encryption=None\n', '')
-        .regex_replace('    setprop ro.crypto.fuse_sdcard true\n', ''),
+        .regex_replace('    setprop ro.crypto.fuse_sdcard true\n', '')
+        .regex_replace(
+            r'    mount_all /vendor/etc/fstab\.amlogic --early\n',
+            '    mount_all /vendor/etc/fstab.amlogic\n',
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
