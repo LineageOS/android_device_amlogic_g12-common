@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "885a4328_ae67c89d",
+        "filename": "init-files/init.amlogic.board.rc",
+        "patchSetId": 13
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-18T11:02:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4027cdb_47a4f73e",
+      "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dfa8d10a_1a3bcef3",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-08-11T17:48:50Z",
       "side": 1,
       "message": "random newlines",
+      "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "181eef54_133f9a2f",
+        "filename": "init-files/init.amlogic.media.rc",
+        "patchSetId": 13
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-18T11:02:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfa8d10a_1a3bcef3",
       "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -52,6 +88,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d51249f_259ecff2",
+        "filename": "init-files/init.amlogic.wifi.rc",
+        "patchSetId": 13
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-18T11:02:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f1e3709_453acf6d",
+      "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "865f181f_c0e0a6f4",
@@ -65,6 +119,24 @@
       "writtenOn": "2026-08-11T17:48:50Z",
       "side": 1,
       "message": "spaces not tabs",
+      "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47f91d4f_34cdccc1",
+        "filename": "init-files/init.amlogic.wifi.rc",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-18T11:02:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "865f181f_c0e0a6f4",
       "revId": "6e06cfaa6fa23e2fa02f7d54de17eecb73c94b6e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }

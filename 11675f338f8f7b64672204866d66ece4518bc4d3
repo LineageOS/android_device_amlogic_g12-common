@@ -22,6 +22,30 @@
       },
       "revId": "11675f338f8f7b64672204866d66ece4518bc4d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fcd059c_a5ef0e3e",
+        "filename": "init-files/init.amlogic.usb.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-08-18T11:02:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6b34685c_d034a44f",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 0
+      },
+      "revId": "11675f338f8f7b64672204866d66ece4518bc4d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
