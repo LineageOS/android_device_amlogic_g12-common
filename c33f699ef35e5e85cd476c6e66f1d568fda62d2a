@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfbc8258_50cbb80b",
+        "filename": "vendor.prop",
+        "patchSetId": 13
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-21T20:58:42Z",
+      "side": 1,
+      "message": "I don\u0027t think we want this.",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 18
+      },
+      "revId": "c33f699ef35e5e85cd476c6e66f1d568fda62d2a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
