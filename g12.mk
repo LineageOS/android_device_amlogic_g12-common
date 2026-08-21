@@ -144,6 +144,17 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
+## VINTF
+DEVICE_MANIFEST_FILE += device/amlogic/g12-common/manifest.xml
+
+ifneq ($(BOARD_HAVE_BLUETOOTH),false)
+DEVICE_MANIFEST_FILE += device/amlogic/g12-common/manifest_bt.xml
+endif
+
+ifeq ($(PRODUCT_IS_ATV),true)
+DEVICE_MANIFEST_FILE += device/amlogic/g12-common/manifest_tv.xml
+endif
+
 ## Inherit from the main common tree product makefile
 $(call inherit-product, device/amlogic/common/amlogic.mk)
 
