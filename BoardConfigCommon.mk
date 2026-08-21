@@ -19,6 +19,10 @@ ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_bt.xml
 endif
 
+ifeq ($(PRODUCT_IS_ATV),true)
+DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest_tv.xml
+endif
+
 ## Kernel
 BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true use_uvm=1
 ifeq ($(TARGET_BOOTDEVICE),usb)
