@@ -151,6 +151,26 @@ service resmanload /vendor/bin/resmanload
     disabled
     oneshot
 
+service vendor.spk_mute /vendor/bin/tinymix "SPK mute" 1
+    class late_start
+    user audioserver
+    group audio
+    oneshot
+    disabled
+
+service vendor.spk_unmute /vendor/bin/tinymix "SPK mute" 0
+    class late_start
+    user audioserver
+    group audio
+    oneshot
+    disabled
+
+on property:init.svc.vendor.audio-hal=running && property:persist.debug.audio.use_internal_speaker=""
+    start vendor.spk_mute
+
+on property:init.svc.vendor.audio-hal=running && property:persist.debug.audio.use_internal_speaker=true
+    start vendor.spk_unmute
+
 on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
