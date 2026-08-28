@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "135022d7_c6058697",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-28T16:22:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3aa4a069_b777eb0d",
+      "revId": "57d62860af9003d1b10be4e2837336ee8c1aac67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a44f4e81_47b36f8d",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-08-11T05:03:45Z",
       "side": 1,
       "message": "unrelated",
+      "revId": "57d62860af9003d1b10be4e2837336ee8c1aac67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20a1f41e_c9e24840",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-28T16:22:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a44f4e81_47b36f8d",
       "revId": "57d62860af9003d1b10be4e2837336ee8c1aac67",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
