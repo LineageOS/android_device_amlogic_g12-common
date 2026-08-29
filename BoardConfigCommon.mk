@@ -59,9 +59,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 ## Recovery
 TARGET_RECOVERY_DEVICE_DIRS += vendor/amlogic/g12-common/proprietary
 ifneq ($(strip $(TARGET_BOOTDEVICE)),)
-  TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic
+  TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.$(TARGET_BOOTDEVICE).amlogic
 else
-  TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init-files/fstab.amlogic
+  TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.amlogic
 endif
 
 ## Releasetools
