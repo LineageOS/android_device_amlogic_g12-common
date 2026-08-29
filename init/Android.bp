@@ -1,0 +1,72 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.amlogic",
+    src: select((
+        soong_config_variable("amlogic_fstab", "bootdevice"),
+        soong_config_variable("amlogic_fstab", "with_tee"),
+    ), {
+        ("sdcard", "false"): "fstab_no_avb.sdcard.amlogic",
+        ("usb", "false"): "fstab_no_avb.usb.amlogic",
+        (default, "false"): "fstab_no_avb.amlogic",
+
+        ("sdcard", default): "fstab.sdcard.amlogic",
+        ("usb", default): "fstab.usb.amlogic",
+        (default, default): "fstab.amlogic",
+    }),
+    filename: "fstab.amlogic",
+    soc_specific: true,
+    ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.rc",
+    src: "init.amlogic.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.board.rc",
+    src: "init.amlogic.board.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.media.rc",
+    src: "init.amlogic.media.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.system.rc",
+    src: "init.amlogic.system.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.usb.rc",
+    src: "init.amlogic.usb.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.amlogic.wifi.rc",
+    src: "init.amlogic.wifi.rc",
+    sub_dir: "init/hw",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.amlogic.rc",
+    src: "init.recovery.amlogic.rc",
+    sub_dir: "init",
+    recovery: true,
+}

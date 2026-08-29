@@ -67,42 +67,20 @@ PRODUCT_PACKAGES += \
     android.hardware.tv.cec@1.0-service
 endif
 
-## Init-Files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init-files/init.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.board.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.media.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.system.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.usb.rc \
-    $(LOCAL_PATH)/init-files/init.amlogic.wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.amlogic.wifi.rc \
-    $(LOCAL_PATH)/init-files/init.recovery.amlogic.rc:recovery/root/init.recovery.amlogic.rc
+## Init
+$(call soong_config_set,amlogic_fstab,bootdevice,$(TARGET_BOOTDEVICE))
+$(call soong_config_set,amlogic_fstab,with_tee,$(TARGET_HAS_TEE))
 
-# Support both AVB/Non-AVB variants of multiple boot mediums (default to eMMC)
-ifneq ($(TARGET_HAS_TEE),false)
-  ifneq ($(strip $(TARGET_BOOTDEVICE)),)
-  PRODUCT_COPY_FILES += \
-      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
-  else
-  PRODUCT_COPY_FILES += \
-      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
-  endif
-else
-  ifneq ($(strip $(TARGET_BOOTDEVICE)),)
-  PRODUCT_COPY_FILES += \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.$(TARGET_BOOTDEVICE).amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
-  else
-  PRODUCT_COPY_FILES += \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.amlogic \
-      $(LOCAL_PATH)/init-files/fstab_no_avb.amlogic:$(TARGET_COPY_OUT_RAMDISK)/fstab.amlogic
-  endif
-endif
+PRODUCT_PACKAGES += \
+    fstab.amlogic \
+    fstab.amlogic.ramdisk \
+    init.amlogic.rc \
+    init.amlogic.board.rc \
+    init.amlogic.media.rc \
+    init.amlogic.system.rc \
+    init.amlogic.usb.rc \
+    init.amlogic.wifi.rc \
+    init.recovery.amlogic.rc
 
 ## Media firmware
 PRODUCT_COPY_FILES += \
