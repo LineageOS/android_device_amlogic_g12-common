@@ -96,7 +96,6 @@ vendor/lib/libicuuc_vendor.so
 ## Init-files
 vendor/etc/init/bluetooth.rc
 vendor/etc/init/dvb.rc
-vendor/etc/init/fs.rc
 vendor/etc/init/irblaster1.rc
 vendor/etc/init/power.rc
 vendor/etc/init/sysfs_permissions.rc
