@@ -90,7 +90,7 @@ on boot
     mkdir /data/vendor/remotecfg 775 root shell
 
 on fs
-    mount_all /vendor/etc/fstab.amlogic --early
+    mount_all --early
 
     restorecon_recursive /mnt/vendor/param
 
@@ -100,10 +100,10 @@ on fs
 
 on late-fs
     # Mount RW partitions which need run fsck
-    mount_all /vendor/etc/fstab.amlogic --late
+    mount_all --late
 
     # Enable ZRAM
-    swapon_all /vendor/etc/fstab.amlogic
+    swapon_all
 
 on post-fs-data
     mkdir /data/vendor/wifi 0770 wifi wifi
