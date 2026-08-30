@@ -3,8 +3,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-prebuilt_etc {
-    name: "fstab.amlogic",
+prebuilt_defaults {
+    name: "fstab.amlogic.defaults",
     src: select((
         soong_config_variable("amlogic_fstab", "bootdevice"),
         soong_config_variable("amlogic_fstab", "with_tee"),
@@ -18,8 +18,20 @@ prebuilt_etc {
         (default, default): "fstab.amlogic",
     }),
     filename: "fstab.amlogic",
+}
+
+prebuilt_etc {
+    name: "fstab.amlogic",
+    defaults: ["fstab.amlogic.defaults"],
     soc_specific: true,
     ramdisk_available: true,
+}
+
+prebuilt_first_stage_ramdisk {
+    name: "fstab.amlogic.first_stage_ramdisk",
+    defaults: ["fstab.amlogic.defaults"],
+    ramdisk: true,
+    install_in_root: true,
 }
 
 prebuilt_etc {

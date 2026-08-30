@@ -74,6 +74,7 @@ $(call soong_config_set,amlogic_fstab,with_tee,$(TARGET_HAS_TEE))
 
 PRODUCT_PACKAGES += \
     fstab.amlogic \
+    fstab.amlogic.first_stage_ramdisk \
     fstab.amlogic.ramdisk \
     init.amlogic.rc \
     init.amlogic.board.rc \
