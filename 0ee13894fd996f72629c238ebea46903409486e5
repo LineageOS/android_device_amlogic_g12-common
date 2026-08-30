@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c05da84c_8df1b88b",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 33
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-08-30T07:51:01Z",
+      "side": 1,
+      "message": "Now it matches jarvis 14 as well.",
+      "range": {
+        "startLine": 60,
+        "startChar": 25,
+        "endLine": 60,
+        "endChar": 35
+      },
+      "revId": "0ee13894fd996f72629c238ebea46903409486e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
