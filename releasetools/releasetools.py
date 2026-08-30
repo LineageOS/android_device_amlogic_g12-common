@@ -41,4 +41,8 @@ def OTA_InstallEnd(info):
     WriteImage(info, "RADIO/", "logo.img", "/dev/block/by-name/logo")
   if 'RADIO/bootloader.img' in info.input_zip.namelist():
     WriteImage(info, "RADIO/", "bootloader.img", "/dev/block/by-name/bootloader")
+  for image in ("bootloader-console.img", "bootloader-recovery.img", "misc.img"):
+    path = "RADIO/" + image
+    if path in info.input_zip.namelist():
+      AddImage(info, "RADIO/", image)
   return
