@@ -5,7 +5,6 @@
 #
 
 import common
-import re
 
 
 def FullOTA_InstallEnd(info):
