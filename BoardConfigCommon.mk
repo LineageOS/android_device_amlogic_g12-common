@@ -26,6 +26,7 @@ TARGET_KERNEL_SOURCE := kernel/amlogic/linux-4.9
 
 ifeq ($(WITH_CONSOLE),true)
   BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend ignore_loglevel
+  BOARD_KERNEL_CMDLINE += earlycon=aml-uart,0xff803000
 endif
 
 ## Kernel modules
