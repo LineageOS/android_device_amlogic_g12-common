@@ -24,7 +24,7 @@ endif
 
 ifeq ($(WITH_CONSOLE),true)
   BOARD_KERNEL_CMDLINE += console=ttyS0,115200 no_console_suspend ignore_loglevel
-  BOARD_KERNEL_CMDLINE += earlycon=aml-uart,0xff803000
+  BOARD_KERNEL_CMDLINE += earlycon=aml_uart,0xff803000
 endif
 
 TARGET_KERNEL_VERSION ?= 5.15
