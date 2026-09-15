@@ -8,10 +8,6 @@ COMMON_PATH := device/amlogic/g12-common
 ## Architecture
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
-## BUILD_BROKEN_*
-# Needed for prebuilt kernel modules
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 ## Kernel
 BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true use_uvm=1
 ifeq ($(TARGET_BOOTDEVICE),usb)
