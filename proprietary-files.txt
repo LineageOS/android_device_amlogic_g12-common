@@ -74,6 +74,9 @@ vendor/etc/init/android.hardware.media.c2@1.2-service.rc
 vendor/etc/vintf/manifest/android.hardware.media.c2@1.2-service.xml
 
 ## Codec2 Libraries
+vendor/lib/lib_avc_vpcodec.so
+vendor/lib/libamffmpeg.vendor.so
+vendor/lib/libamffmpegcodec.so
 vendor/lib/libcodec2_aml_audio_decoder.so
 vendor/lib/libcodec2_aml_soft_video_decoder.so
 vendor/lib/libcodec2_aml_video_decoder.so
@@ -81,6 +84,7 @@ vendor/lib/libcodec2_aml_video_encoder.so
 vendor/lib/libge2d-2.0.so
 vendor/lib/libvendor_c2common.so
 vendor/lib/libvendor_c2componentstore.so
+vendor/lib/libvp_hevc_codec_new.so
 
 ## DRM
 vendor/apex/com.google.android.widevine.nonupdatable.apex
