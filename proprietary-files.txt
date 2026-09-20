@@ -47,7 +47,6 @@ vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc
 vendor/lib/hw/camera.amlogic.so
 
 ## Common
-vendor/bin/ddrtest.sh
 vendor/etc/permissions/android.software.cant_save_state.xml
 vendor/etc/lowmemorykiller.txt
 vendor/etc/lowmemorykiller_2G.txt
