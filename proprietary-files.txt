@@ -49,11 +49,6 @@ vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc
 ## Camera
 vendor/lib/hw/camera.amlogic.so
 
-## Common
-vendor/etc/lowmemorykiller.txt
-vendor/etc/lowmemorykiller_2G.txt
-vendor/etc/lowmemorykiller_512M.txt
-
 ## Composer
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service.droidlogic
 vendor/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc
