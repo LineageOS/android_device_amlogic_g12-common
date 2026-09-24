@@ -27,6 +27,9 @@ endif
 
 TARGET_KERNEL_VERSION ?= 5.15
 
+## Kernel modules
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/system_dlkm.modules.load))
+
 ## Partitions
 SSI_PARTITIONS := product system system_ext
 TREBLE_PARTITIONS := odm system_dlkm vendor vendor_dlkm
