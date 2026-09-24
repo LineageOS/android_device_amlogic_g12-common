@@ -1,1 +1,5 @@
 zram.ko
+asix.ko
+ax88179_178a.ko
+cdc_ncm.ko
+r8153_ecm.ko
