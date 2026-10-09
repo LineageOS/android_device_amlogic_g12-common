@@ -89,6 +89,10 @@ on boot
     # Allow custom remote configs to be used via persist.vendor.amlogic.remotecfg.path
     mkdir /data/vendor/remotecfg 775 root shell
 
+    # The 5.15 IR driver names its node amremote0, remotecfg opens /dev/amremote
+    symlink /dev/amremote0 /dev/amremote
+    restorecon /dev/amremote
+
 on fs
     mount_all
 
