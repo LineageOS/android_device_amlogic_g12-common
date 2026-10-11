@@ -57,19 +57,16 @@ on early-boot
 
 
     insmod /vendor/lib/modules/encoder_common.ko
-    insmod /vendor/lib/modules/amlogic-encoder.ko
-    insmod /vendor/lib/modules/amlogic-jpegenc.ko
-    insmod /vendor/lib/modules/amlogic-vpu.ko
-    insmod /vendor/lib/modules/amlogic-multienc.ko
-    insmod /vendor/lib/modules/amlogic-vc8000.ko
-    insmod /vendor/lib/modules/amlogic-memalloc.ko
+    insmod /vendor/lib/modules/encoder.ko
+    insmod /vendor/lib/modules/jpegenc.ko
+    insmod /vendor/lib/modules/vpu.ko
+    insmod /vendor/lib/modules/amvenc_multi.ko
     insmod /vendor/lib/modules/amlogic_fbc_lib.ko
     insmod /vendor/lib/modules/amvdec_mavs.ko
     insmod /vendor/lib/modules/amvdec_mavs_v4l.ko
     insmod /vendor/lib/modules/amvdec_av1.ko
     insmod /vendor/lib/modules/amvdec_av1_v4l.ko
     insmod /vendor/lib/modules/amvdec_av1_t5d_v4l.ko
-    insmod /vendor/lib/modules/media_proxy.ko
     insmod /vendor/lib/modules/video_framerate_adapter.ko
 
     chmod 666 /sys/class/amstream/vcodec_feature
