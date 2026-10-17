@@ -2,6 +2,8 @@
 ## are from onn/jarvis/SNA:14/URO4.260304.011.B1/15051976:user/release-keys.
 
 ## Audio
+odm/lib/libHwAudio_dcvdec.so
+odm/lib/libHwAudio_dtshd.so
 vendor/bin/hw/android.hardware.audio.service-droidlogic
 vendor/etc/init/android.hardware.audio.service-droidlogic.rc
 vendor/lib/hw/audio.primary.amlogic.so
