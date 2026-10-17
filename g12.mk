@@ -130,10 +130,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr
 
 ## VINTF
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
 
 ifneq ($(BOARD_HAVE_BLUETOOTH),false)
-DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest_bt.xml
+DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/vintf/manifest_bt.xml
 endif
 
 ## Inherit from the main common tree product makefile
