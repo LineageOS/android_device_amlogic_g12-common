@@ -142,6 +142,7 @@ vendor/etc/init/modules_load.rc
 vendor_dlkm/lib/modules/amlogic_fbc_lib.ko
 
 ## Media
+vendor/lib/lib_avc_vpcodec.so
 vendor/lib/libmediahal_dmabufmanage.so
 vendor/lib/libmediahal_hardware_demux.so
 vendor/lib/libmediahal_mediametrics.so
