@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6d1472_357112cc",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-29T16:44:00Z",
+      "side": 1,
+      "message": "this was previously device specifc",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1d8a5b9_1dcff709",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-29T16:44:00Z",
+      "side": 1,
+      "message": "not in Jarvis - did you pull from wade",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cffdbf22_d0133548",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-29T16:44:00Z",
+      "side": 1,
+      "message": "I assume you mean \"ohm source tar\"",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c736866_31df721a",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-29T16:44:00Z",
+      "side": 1,
+      "message": "again historically device specific... why here?",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
