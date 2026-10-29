@@ -16,6 +16,24 @@
       "message": "why? libgles in devices deps on this.",
       "revId": "ea989a838e9915341c8df4585869f614e1246723",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed76766d_9aed351e",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-29T18:29:00Z",
+      "side": 0,
+      "message": "Not jarvis blob, which we will use.",
+      "parentUuid": "813048a5_a3c9ffbf",
+      "revId": "ea989a838e9915341c8df4585869f614e1246723",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
