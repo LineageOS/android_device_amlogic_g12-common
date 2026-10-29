@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "813048a5_a3c9ffbf",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-29T16:59:01Z",
+      "side": 0,
+      "message": "why? libgles in devices deps on this.",
+      "revId": "ea989a838e9915341c8df4585869f614e1246723",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
