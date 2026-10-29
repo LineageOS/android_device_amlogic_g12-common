@@ -92,10 +92,13 @@ vendor/etc/init/dumpstate-default.droidlogic.rc
 vendor/etc/vintf/manifest/dumpstate-default.droidlogic.xml
 
 # Fimware
-vendor/lib/firmware/video/h264_enc.bin
 vendor/lib/firmware/regulatory.db
 vendor/lib/firmware/regulatory.db.p7s
-# Firmware video - from onn source
+
+# Firmware video - from wade
+vendor/lib/firmware/video/h264_enc.bin|a8b5dc36034ad1c0a83d97bfe08811d38421882f
+
+# Firmware video - from ohm source
 vendor/lib/firmware/video/video_ucode.bin|0cd8a7899dab6b2b5fbedbfe63a3432e7083838d
 
 ## Graphics
