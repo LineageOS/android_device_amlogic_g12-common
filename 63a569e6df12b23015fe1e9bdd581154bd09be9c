@@ -16,6 +16,24 @@
       "message": "I still don\u0027t understand this. Without this the power HAL is doing nothing. I\u0027d advise to investigate the root cause.",
       "revId": "63a569e6df12b23015fe1e9bdd581154bd09be9c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "589290eb_71936695",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T08:37:10Z",
+      "side": 1,
+      "message": "Also, I didn\u0027t need to revert this during radxa0 bringup.",
+      "parentUuid": "ac39123c_fb59cf1f",
+      "revId": "63a569e6df12b23015fe1e9bdd581154bd09be9c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
