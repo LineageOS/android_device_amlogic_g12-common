@@ -121,6 +121,24 @@
       "parentUuid": "85fda517_37d8e2b3",
       "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a99e237_c8bb6f4d",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-10-30T13:55:10Z",
+      "side": 1,
+      "message": "libteec.so is same for all dvices, at least for same gen. Shipped as binary in hardkernel amlogic bsp.",
+      "parentUuid": "7358b05f_c25ce8f4",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
