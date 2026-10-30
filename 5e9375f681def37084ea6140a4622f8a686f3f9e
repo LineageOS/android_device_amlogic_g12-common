@@ -139,6 +139,24 @@
       "parentUuid": "7358b05f_c25ce8f4",
       "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff7501d8_51eb0748",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 39
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T13:59:49Z",
+      "side": 1,
+      "message": "Sure, but it\u0027s useless for no-TEE devices like devkits, which we support here under the TARGET_HAS_TEE flag.",
+      "parentUuid": "2a99e237_c8bb6f4d",
+      "revId": "5e9375f681def37084ea6140a4622f8a686f3f9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
