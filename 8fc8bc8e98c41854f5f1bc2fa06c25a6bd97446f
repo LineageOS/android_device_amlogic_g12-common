@@ -16,6 +16,23 @@
       "message": "Revert the revert instead.",
       "revId": "8fc8bc8e98c41854f5f1bc2fa06c25a6bd97446f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a6989a2_560e40a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-30T10:45:57Z",
+      "side": 1,
+      "message": "For the record: Ie055fcc2718b84e546c413eff8702a88c7934336",
+      "revId": "8fc8bc8e98c41854f5f1bc2fa06c25a6bd97446f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
