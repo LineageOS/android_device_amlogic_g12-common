@@ -91,7 +91,7 @@ vendor.hwc.di_channel_number=2
 
 ## HDMI
 ro.vendor.platform.earlysuspend=false
-ro.vendor.platform.has.realoutputmode=true
+ro.vendor.platform.has.realoutputmode=false
 ro.vendor.platform.need.display.hdmicec=true
 vendor.tv.dtv.fake_pid=0x2fff
 
