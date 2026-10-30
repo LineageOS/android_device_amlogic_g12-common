@@ -34,6 +34,24 @@
       "parentUuid": "ac39123c_fb59cf1f",
       "revId": "63a569e6df12b23015fe1e9bdd581154bd09be9c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0dd26ef_a9806ae8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17162
+      },
+      "writtenOn": "2026-10-30T09:10:04Z",
+      "side": 1,
+      "message": "works fine for kvim3, kvim3l and x96x9 too. Without it device running too slow.",
+      "parentUuid": "589290eb_71936695",
+      "revId": "63a569e6df12b23015fe1e9bdd581154bd09be9c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
