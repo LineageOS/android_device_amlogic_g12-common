@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efe72a42_6df35eb4",
+        "filename": "init/init.recovery.amlogic.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-31T22:29:31Z",
+      "side": 1,
+      "message": "this is defs wrong patch, should update or assess if modules.load.recovery does what\u0027s needed.",
+      "revId": "7cccf6321c527699f077b2a54557c5608d2289f9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
