@@ -33,6 +33,24 @@
       "message": "opening",
       "revId": "db077cc993d1e7327781e4e2e3a81ab612068574",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a01283d_0fdc1450",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-31T00:48:59Z",
+      "side": 1,
+      "message": "Our old one was a hybrid of Deadpool and Sabrina because we needed the type C configuration.\n\nG12 is either or. This one works on both.\n\nI\u0027ll diff to wades tho",
+      "parentUuid": "022e9d39_a9904857",
+      "revId": "db077cc993d1e7327781e4e2e3a81ab612068574",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
