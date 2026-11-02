@@ -22,6 +22,30 @@
       },
       "revId": "942fc2ee1ad73fe86bac49e3ff0c9fb337fe992c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78f1f008_b64047f1",
+        "filename": "init-files/init.amlogic.board.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-02T23:44:53Z",
+      "side": 1,
+      "message": "it exists in the end build - should be converted yeah",
+      "parentUuid": "b9154dc6_c0dc92b1",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 50
+      },
+      "revId": "942fc2ee1ad73fe86bac49e3ff0c9fb337fe992c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
