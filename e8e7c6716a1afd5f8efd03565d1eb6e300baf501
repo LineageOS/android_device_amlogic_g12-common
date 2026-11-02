@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75c644d2_67464b65",
+        "filename": "init/init.amlogic.rc",
+        "patchSetId": 52
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-02T23:42:28Z",
+      "side": 1,
+      "message": "not needed, was removed in prior cleanup",
+      "revId": "e8e7c6716a1afd5f8efd03565d1eb6e300baf501",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
