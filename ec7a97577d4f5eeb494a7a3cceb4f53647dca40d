@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6e1bbab_562a2258",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-02T23:48:44Z",
+      "side": 1,
+      "message": "worth noting, build system uses kernel fcm 8 per warning.\n\n7 for HALs",
+      "revId": "ec7a97577d4f5eeb494a7a3cceb4f53647dca40d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
