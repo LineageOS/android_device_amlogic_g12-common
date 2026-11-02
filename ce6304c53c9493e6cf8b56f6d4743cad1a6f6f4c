@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "562b2a44_2725fafb",
+        "filename": "configs/power/powerhint.json",
+        "patchSetId": 50
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-02T23:46:28Z",
+      "side": 1,
+      "message": "neither before nor after node exists\n\n```\ndeadpool / # cat /sys/class/meson_pm/early_suspend_trigger\ncat: /sys/class/meson_pm/early_suspend_trigger: No such file or directory\ndeadpool / # ls /sys/power/early_suspend_trigger\nls: /sys/power/early_suspend_trigger: No such file or directory\ndeadpool / #\n```",
+      "revId": "ce6304c53c9493e6cf8b56f6d4743cad1a6f6f4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
