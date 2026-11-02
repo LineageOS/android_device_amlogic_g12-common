@@ -16,6 +16,23 @@
       "message": "not needed, was removed in prior cleanup",
       "revId": "e8e7c6716a1afd5f8efd03565d1eb6e300baf501",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c23c34ce_03291539",
+        "filename": "init/init.amlogic.rc",
+        "patchSetId": 52
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-02T23:54:09Z",
+      "side": 1,
+      "message": "so, we don\u0027t mark anything as late? Not that I see? and we remove --early later on in the chain, which effectively no-ops this if I\u0027m not mistaken.",
+      "revId": "e8e7c6716a1afd5f8efd03565d1eb6e300baf501",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
