@@ -16,6 +16,24 @@
       "message": "requires latemount to match sabrina\u0027s and wade\u0027s 14 fstab",
       "revId": "3080e17ef9abc69ca355370e2ec216f4dbf2c95a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "447a359c_221dc1e8",
+        "filename": "init/fstab.amlogic",
+        "patchSetId": 33
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-03T09:20:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e68f86e_701c5d98",
+      "revId": "3080e17ef9abc69ca355370e2ec216f4dbf2c95a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
