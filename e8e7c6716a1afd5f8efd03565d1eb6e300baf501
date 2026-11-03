@@ -33,6 +33,24 @@
       "message": "so, we don\u0027t mark anything as late? Not that I see? and we remove --early later on in the chain, which effectively no-ops this if I\u0027m not mistaken.",
       "revId": "e8e7c6716a1afd5f8efd03565d1eb6e300baf501",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c4a67af_df23e298",
+        "filename": "init/init.amlogic.rc",
+        "patchSetId": 52
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-03T09:04:41Z",
+      "side": 1,
+      "message": "What is wrong here is https://review.lineageos.org/c/LineageOS/android_device_amlogic_g12-common/+/495809/, which is incomplete. sabrina\u0027s and wade\u0027s fstab latemounts userdata, and so should we to match stock scripts. If we later decide to change, that\u0027d be our own commit on top.",
+      "parentUuid": "c23c34ce_03291539",
+      "revId": "e8e7c6716a1afd5f8efd03565d1eb6e300baf501",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
