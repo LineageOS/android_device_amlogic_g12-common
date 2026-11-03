@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7b48dc3_1830b44a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-03T12:21:16Z",
+      "side": 1,
+      "message": "Tentative fix for 4K display issues on g12. For reference, the proper fix is https://review.lineageos.org/c/LineageOS/android_kernel_amlogic_common_drivers/+/511801.",
+      "revId": "ae65cec782fa825579371e65c1ed7d2889c60fc2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
