@@ -121,7 +121,6 @@ vendor/etc/init/sysfs_permissions.rc
 ## Kernel modules
 vendor/bin/modules_load
 vendor/etc/init/modules_load.rc
-vendor_dlkm/lib/modules/amlogic_fbc_lib.ko
 
 ## Media
 vendor/bin/hw/android.hardware.media.c2@1.2-service
