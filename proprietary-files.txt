@@ -64,10 +64,6 @@ vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
 vendor/lib/vendor.amlogic.hardware.errormonitor@1.0.so
 
-## Droidlogic
-vendor/etc/permissions/droidlogic.software.core.xml
-vendor/framework/droidlogic.software.core.jar
-
 ## Dumpstate
 vendor/bin/hw/android.hardware.dumpstate-service.droidlogic
 vendor/etc/init/dumpstate-default.droidlogic.rc
