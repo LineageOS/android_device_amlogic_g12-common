@@ -9,7 +9,7 @@ COMMON_PATH := device/amlogic/g12-common
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 ## Kernel
-BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true use_uvm=1
+BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true
 ifeq ($(TARGET_BOOTDEVICE),usb)
   BOARD_KERNEL_CMDLINE += androidboot.boot_devices=ff500000.dwc3
 else ifeq ($(TARGET_BOOTDEVICE),sdcard)
