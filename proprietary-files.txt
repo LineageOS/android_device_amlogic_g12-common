@@ -7,12 +7,12 @@ vendor/etc/permissions/android.software.cant_save_state.xml
 ## Audio
 odm/lib/libHwAudio_dcvdec.so
 odm/lib/libHwAudio_dtshd.so
+vendor/lib/libamlaiaudio.so
 vendor/bin/hw/android.hardware.audio.service-droidlogic
 vendor/etc/init/android.hardware.audio.service-droidlogic.rc
 vendor/lib/hw/audio.primary.amlogic.so
 vendor/lib/libAmlAudioOutPort.so
 vendor/lib/libamaudioutils.so
-vendor/lib/libamaudioutils_boot.so
 vendor/lib/libamladecs.so
 vendor/lib/libamlaudiohal.7.0.so
 vendor/lib/libamlaudiohal@7.0.so
@@ -28,15 +28,6 @@ vendor/lib/libmad.so
 vendor/lib/libms12api_v24.so
 vendor/lib/libnano.so
 vendor/lib/libsonic_ext.so
-
-## Audio Effects
-vendor/lib/soundfx/libbalance.so
-vendor/lib/soundfx/libdpe.so
-vendor/lib/soundfx/libhpeqwrapper.so
-vendor/lib/soundfx/libms12v2dapwrapper.so
-vendor/lib/soundfx/libtreblebasswrapper.so
-vendor/lib/soundfx/libvirtualsurround.so
-vendor/lib/soundfx/libvirtualx.so
 
 ## Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-droidlogic
@@ -56,13 +47,11 @@ vendor/etc/vintf/manifest/android.hardware.graphics.composer@3.2-service.droidlo
 vendor/lib/hw/hwcomposer.amlogic.so
 vendor/lib/android.hardware.graphics.composer@2.1-resources-aidl.so
 vendor/lib/android.hardware.graphics.composer@2.2-resources-aidl.so
-vendor/lib/liberrormonitorclient.so
 vendor/lib/libge2d-2.0.so
 vendor/lib/libmeson_display_service.so
 vendor/lib/libmeson_mode_policy.so
 vendor/lib/libvideotunnel.so
 vendor/lib/vendor.amlogic.display.meson_display_ipc@1.0.so
-vendor/lib/vendor.amlogic.hardware.errormonitor@1.0.so
 
 ## Dumpstate
 vendor/bin/hw/android.hardware.dumpstate-service.droidlogic
@@ -78,8 +67,8 @@ recovery/system/etc/vintf/manifest/android.hardware.fastboot-service.amlogic.xml
 vendor/lib/firmware/regulatory.db
 vendor/lib/firmware/regulatory.db.p7s
 
-## Firmware video - from Dynalink/sti6130d350/sti6130d350:14/UKG3.240613.001/20250327:user/release-keys
-vendor/lib/firmware/video/h264_enc.bin|a8b5dc36034ad1c0a83d97bfe08811d38421882f
+## Firmware video
+vendor/lib/firmware/video/h264_enc.bin
 
 ## Firmware video - from ohm source
 vendor/lib/firmware/video/video_ucode.bin|0cd8a7899dab6b2b5fbedbfe63a3432e7083838d
@@ -140,7 +129,6 @@ vendor/lib/libcodec2_aml_video_decoder.so
 vendor/lib/libcodec2_aml_video_encoder.so
 vendor/lib/libmediahal_dmabufmanage.so
 vendor/lib/libmediahal_hardware_demux.so
-vendor/lib/libmediahal_mediametrics.so
 vendor/lib/libmediahal_mediasync.so
 vendor/lib/libmediahal_passthrough.so
 vendor/lib/libmediahal_resman.so
