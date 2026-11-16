@@ -4,39 +4,30 @@
 ## ATV permissions
 vendor/etc/permissions/android.software.cant_save_state.xml
 
-## Audio
-odm/lib/libHwAudio_dcvdec.so
-odm/lib/libHwAudio_dtshd.so
-vendor/bin/hw/android.hardware.audio.service-droidlogic
-vendor/etc/init/android.hardware.audio.service-droidlogic.rc
-vendor/lib/hw/audio.primary.amlogic.so
-vendor/lib/libAmlAudioOutPort.so
-vendor/lib/libamaudioutils.so
-vendor/lib/libamaudioutils_boot.so
-vendor/lib/libamladecs.so
-vendor/lib/libamlaudiohal.7.0.so
-vendor/lib/libamlaudiohal@7.0.so
-vendor/lib/libamlaudiohal_deathhandler@7.0.so
-vendor/lib/libamlmediautils@7.0.so
-vendor/lib/libamlparser.so
-vendor/lib/libamlresampler.so
-vendor/lib/libamlspeed.so
-vendor/lib/libamltinyalsa.so
-vendor/lib/libdroidaudiospdif.so
-vendor/lib/libfaad.so
-vendor/lib/libmad.so
-vendor/lib/libms12api_v24.so
-vendor/lib/libnano.so
-vendor/lib/libsonic_ext.so
-
-## Audio Effects
-vendor/lib/soundfx/libbalance.so
-vendor/lib/soundfx/libdpe.so
-vendor/lib/soundfx/libhpeqwrapper.so
-vendor/lib/soundfx/libms12v2dapwrapper.so
-vendor/lib/soundfx/libtreblebasswrapper.so
-vendor/lib/soundfx/libvirtualsurround.so
-vendor/lib/soundfx/libvirtualx.so
+## Audio - from Dynalink/sti6130d350/sti6130d350:14/UKG3.240613.001/20250327:user/release-keys
+odm/lib/libHwAudio_dcvdec.so|8f50a9d541c9f55e808d8dcd85542922f6e8d9b4
+odm/lib/libHwAudio_dtshd.so|6ecfeb4e184ced70eee86869b6c870d7f4dbe7f6
+vendor/bin/hw/android.hardware.audio.service-droidlogic|715f3bf09f3ccc077047b0c1332bd50a3975c719
+vendor/etc/init/android.hardware.audio.service-droidlogic.rc|c8ff4cb1969c0428846b0836a86d2c31def35775
+vendor/lib/hw/audio.primary.amlogic.so|bcf794727441d25fb3718e7d44302d06de013b3c|2d30fe3db5450a70b80e370a29d196decf458cb9
+vendor/lib/libAmlAudioOutPort.so|1899f7df65c72d29d9b3c16409684f539327e8a4
+vendor/lib/libamaudioutils.so|669ad47c3bc1868fcf737fff864ac65fa3c2cb7b
+vendor/lib/libamladecs.so|d31c8e189a49c8ed4db486eeeaeb3aefa08c01fe
+vendor/lib/libamlaiaudio.so|eabf0d921baaf804adfb9dd3ed7da8bd7ea9a4e7
+vendor/lib/libamlaudiohal.7.0.so|423d6d89f5f505f26a4673e90f8e3f07ed5152a3
+vendor/lib/libamlaudiohal@7.0.so|11615f723c653837cc93eacd7b624e6928c45f9a|faf1fb9d09aee20dbd37e8c1d6ac02e4f797b204
+vendor/lib/libamlaudiohal_deathhandler@7.0.so|2143e58274ddaeb4b044d09b5962d1d58895548d
+vendor/lib/libamlmediautils@7.0.so|6f05c80ea9a4f5b54a2e91c4cd6a0f0d5ecd1817
+vendor/lib/libamlparser.so|7eea8a1633736a9f37ff75adc1310a1a4774ef07
+vendor/lib/libamlresampler.so|f6f3893c78e78b9d83f2a611faa7758a3c1b9d5f
+vendor/lib/libamlspeed.so|4a5c75d23353f508fc2dffb23c51572e50d9584d
+vendor/lib/libamltinyalsa.so|be318531b910fb284647ca055530a99dc9448b62
+vendor/lib/libdroidaudiospdif.so|9196459198560197fa15522441c2cd7512c77fd5
+vendor/lib/libfaad.so|18e1f4e364fcd93348994849dd7465987057f931
+vendor/lib/libmad.so|2dd059c3f6ac6da5b29dc7cc5f5b30876b0d30ed
+vendor/lib/libms12api_v24.so|87ee574f1c5aac98dd89ca287cc364cf6babcd23
+vendor/lib/libnano.so|24783c3f65371c848dfa75d3719774bb2e1b8d07
+vendor/lib/libsonic_ext.so|f6d34677dd53b2f03800987b67487026d70bb68d
 
 ## Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-droidlogic
