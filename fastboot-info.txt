@@ -1,0 +1,20 @@
+version 1
+flash boot
+flash dtbo
+flash dtb
+flash logo
+flash bootloader
+flash recovery
+flash --apply-vbmeta vbmeta
+reboot fastboot
+update-super
+flash product
+flash system
+flash system_ext
+flash odm
+flash system_dlkm
+flash vendor
+flash vendor_dlkm
+if-wipe erase cache
+if-wipe erase data
+if-wipe erase metadata
