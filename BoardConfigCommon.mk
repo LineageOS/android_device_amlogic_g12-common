@@ -8,9 +8,6 @@ COMMON_PATH := device/amlogic/g12-common
 ## Architecture
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
-## Fastboot
-TARGET_BOARD_FASTBOOT_INFO_FILE ?= $(COMMON_PATH)/fastboot-info.txt
-
 ## Kernel
 BOARD_KERNEL_CMDLINE := androidboot.dynamic_partitions=true
 ifeq ($(TARGET_BOOTDEVICE),usb)
