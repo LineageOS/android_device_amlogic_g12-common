@@ -74,10 +74,6 @@ recovery/system/bin/hw/android.hardware.fastboot-service.amlogic_recovery
 recovery/system/etc/init/android.hardware.fastboot-service.amlogic_recovery.rc
 recovery/system/etc/vintf/manifest/android.hardware.fastboot-service.amlogic.xml
 
-## Fimware
-vendor/lib/firmware/regulatory.db
-vendor/lib/firmware/regulatory.db.p7s
-
 ## Firmware video - from Dynalink/sti6130d350/sti6130d350:14/UKG3.240613.001/20250327:user/release-keys
 vendor/lib/firmware/video/h264_enc.bin|a8b5dc36034ad1c0a83d97bfe08811d38421882f
 

@@ -132,6 +132,11 @@ ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/vintf/manifest_bt.xml
 endif
 
+## Wi-Fi
+PRODUCT_COPY_FILES += \
+    external/wireless-regdb/regulatory.db:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db \
+    external/wireless-regdb/regulatory.db.p7s:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db.p7s
+
 ## Inherit from the main common tree product makefile
 $(call inherit-product, device/amlogic/common/amlogic.mk)
 
