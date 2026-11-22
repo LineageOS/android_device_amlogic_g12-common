@@ -90,16 +90,6 @@ PRODUCT_PACKAGES += \
     init.amlogic.wifi.rc \
     init.recovery.amlogic.rc
 
-## Linker
-PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
-    $(LOCAL_PATH)/configs/linker.config.json
-
-## OEM Lock
-ifneq ($(TARGET_HAS_TEE),false)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-endif
-
 ## Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
