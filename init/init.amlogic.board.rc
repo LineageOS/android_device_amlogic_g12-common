@@ -10,7 +10,6 @@ on init
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mali_kbase
 
 on boot
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     # Use the repeat filter for OSD vertical scaling to avoid a 1px line at the bottom
     write /sys/module/aml_drm/parameters/osdscaler_v_filter_mode 9
     write /sys/module/amvdec_mh264/parameters/reorder_dpb_size_margin 9
@@ -27,6 +26,11 @@ on boot
 on property:sys.boot_completed=1
     # end boot time fs tune
     #write /sys/block/mmcblk0/queue/read_ahead_kb 128
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
-    write /dev/cpuset/background/cpus 3
-    write /dev/cpuset/restricted/cpus 3
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1000000
+    # Add restrictions for background apps on four cores CPU
+    write /dev/cpuset/top-app/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-3
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-1
+    write /dev/cpuset/restricted/cpus 0-1
