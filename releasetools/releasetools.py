@@ -37,6 +37,25 @@ def WriteDtbImage(info, folder, basename):
     )
 
 
+def WriteBootloaderImage(info, folder, basename):
+    AddImage(info, folder, basename)
+    PrintInfo(info, "/dev/block/by-name/bootloader")
+    info.script.AppendExtra(
+        'package_extract_file("%s", "/tmp/bootloader.img") || abort("Failed to extract bootloader.img.");'
+        % basename)
+    info.script.AppendExtra(
+        'run_program("/system/bin/dd", "if=/tmp/bootloader.img", "of=/dev/block/by-name/bootloader", "bs=512", "seek=1", "conv=notrunc,fsync") == "0" || abort("Failed to update bootloader.");'
+    )
+    for part in ("mmcblk0boot0", "mmcblk0boot1"):
+        info.script.AppendExtra(
+            'ifelse(run_program("/system/bin/test", "-b", "/dev/block/%s") == "0", ('
+            '\n  write_value("0", "/sys/block/%s/force_ro") || abort("Failed to unlock %s.");'
+            '\n  run_program("/system/bin/dd", "if=/tmp/bootloader.img", "of=/dev/block/%s", "bs=512", "seek=1", "conv=notrunc,fsync") == "0" || abort("Failed to update %s.");'
+            '\n  write_value("1", "/sys/block/%s/force_ro");'
+            '\n));' % (part, part, part, part, part, part))
+    info.script.AppendExtra('delete("/tmp/bootloader.img");')
+
+
 def WriteImage(info, folder, basename, dest):
     AddImage(info, folder, basename)
     PrintInfo(info, dest)
@@ -52,8 +71,7 @@ def OTA_InstallEnd(info):
     if 'RADIO/logo.img' in info.input_zip.namelist():
         WriteImage(info, "RADIO/", "logo.img", "/dev/block/by-name/logo")
     if 'RADIO/bootloader.img' in info.input_zip.namelist():
-        WriteImage(info, "RADIO/", "bootloader.img",
-                   "/dev/block/by-name/bootloader")
+        WriteBootloaderImage(info, "RADIO/", "bootloader.img")
     if 'RADIO/misc.img' in info.input_zip.namelist():
         AddImage(info, "RADIO/", "misc.img")
     return
