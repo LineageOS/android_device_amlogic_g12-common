@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f175155_b539f57e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-23T22:31:38Z",
+      "side": 1,
+      "message": "Hold this one for a bit. I wonder if we can have different values per RAM size.",
+      "revId": "5386c109580c6d06c6ab7772f61b6ad87cc0abf5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
