@@ -1,5 +1,14 @@
 <mixer>
-  <!-- dummy xml conf, do nothing here -->
+  <ctl name="Audio hdmi-out mute" value="0" />
+
+  <path name="hdmi">
+    <ctl name="Audio hdmi-out mute" value="0" />
+  </path>
+
+  <path name="hdmi_off">
+    <ctl name="Audio hdmi-out mute" value="1" />
+  </path>
+
   <path name="speaker">
   </path>
 
