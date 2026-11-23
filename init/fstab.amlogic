@@ -20,7 +20,7 @@ vendor_dlkm           /vendor_dlkm        erofs     ro                          
 
 ## Virtual devices
 /dev/block/loop       auto                loop      defaults                                                         voldmanaged=loop:auto
-/dev/block/zram0      none                swap      defaults                                                         wait,zramsize=25%,zram_backingdev_size=100M
+/dev/block/zram0      none                swap      defaults                                                         wait,zramsize=50%
 
 ## Removable devices
 /devices/*.sd*/*/block/mmcblk*                                 auto             auto      defaults                   voldmanaged=sdcard1:auto,encryptable=userdata
