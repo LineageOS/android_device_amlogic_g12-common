@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f7da1a3_8dfe34d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-23T22:30:47Z",
+      "side": 1,
+      "message": "How do you know that this is valid for all g12 targets?",
+      "revId": "06cd232cb3b902624c8f80497fa3c16b2c350d98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
