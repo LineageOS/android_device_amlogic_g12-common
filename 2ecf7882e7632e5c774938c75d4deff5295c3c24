@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9dd10f93_29251d5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2026-11-23T19:48:09Z",
+      "side": 1,
+      "message": "Fixes double audio output (on HDMI + BT) when plugging in BT headset.",
+      "revId": "2ecf7882e7632e5c774938c75d4deff5295c3c24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
