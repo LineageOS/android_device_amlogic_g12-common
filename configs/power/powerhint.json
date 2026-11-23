@@ -29,6 +29,18 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
+    },
+    {
+      "Name": "TATopAppUclampMin",
+      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+      "Values": [
+        "100",
+        "80",
+        "50",
+        "0"
+      ],
+      "DefaultIndex": 3,
+      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -49,6 +61,24 @@
       "Node": "CPUCmd",
       "Duration": 0,
       "Value": "preheat"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TATopAppUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TATopAppUclampMin",
+      "Duration": 5000,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "TATopAppUclampMin",
+      "Duration": 0,
+      "Value": "80"
     }
   ]
 }
