@@ -16,6 +16,24 @@
       "message": "Hold this one for a bit. I wonder if we can have different values per RAM size.",
       "revId": "5386c109580c6d06c6ab7772f61b6ad87cc0abf5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16d1f491_a56850e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:22:00Z",
+      "side": 1,
+      "message": "this, I\u0027d hate to libinit for that tho, could maybe do via init script?\n\nor at minimum like I said in DM, use one value for NE (expect 4+ GB), one for G12 (2-4 GB), one for GX (1-2 GB) and de-commonize",
+      "parentUuid": "7f175155_b539f57e",
+      "revId": "5386c109580c6d06c6ab7772f61b6ad87cc0abf5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
