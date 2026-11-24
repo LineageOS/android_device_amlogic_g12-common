@@ -16,6 +16,24 @@
       "message": "Moto is using 75% on some of their mid range devices",
       "revId": "09ca355a4b48d94e97119c8e4855af6d76e4f0a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "761dbfc5_655ee896",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:22:48Z",
+      "side": 1,
+      "message": "yeah, we are also emmc size limited unlike them tho - we have some 8 GB eMMC\u0027s.",
+      "parentUuid": "2ddc2b34_bca08685",
+      "revId": "09ca355a4b48d94e97119c8e4855af6d76e4f0a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
