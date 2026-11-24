@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "080e4f1a_b71cb58a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:20:19Z",
+      "side": 1,
+      "message": "Change-Wide:\n* Comments are LLM\u0027d up, please be concise - non obvious logic only",
+      "revId": "d724560c2495736701df926626a1d125584b920c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e02195b_5d5be787",
+        "filename": "compat/drm/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:20:19Z",
+      "side": 1,
+      "message": "IMO entire file not needed with how much it commented.",
+      "revId": "d724560c2495736701df926626a1d125584b920c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52c33c07_e29bf9ba",
+        "filename": "compat/drm/liboemcrypto_shim.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:20:19Z",
+      "side": 1,
+      "message": "spdx no year",
+      "revId": "d724560c2495736701df926626a1d125584b920c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08b2ec5e_1f1585f7",
+        "filename": "compat/drm/liboemcrypto_shim.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:20:19Z",
+      "side": 1,
+      "message": "Uncertain if will work, but worth assessing, could make this a log cleaner\n\n```suggestion\n#define OECC_NUMBERED_EXPORTS(X)                \\\n    X(01) X(02) X(03) X(04) X(05) X(06) X(07)   \\\n    X(08) X(09) X(10) X(12) X(13) X(14) X(17)   \\\n    X(18) X(19) X(21) X(22) X(23) X(24) X(25)   \\\n    X(26) X(27) X(29) X(30) X(31) X(32) X(33)   \\\n    X(34) X(36) X(37) X(38) X(39) X(41) X(42)   \\\n    X(43) X(44) X(45) X(46) X(49) X(50) X(51)   \\\n    X(52) X(53) X(54) X(55) X(57) X(61) X(62)   \\\n    X(63) X(64) X(65) X(66) X(67) X(68) X(69)   \\\n    X(70) X(71) X(78) X(81) X(83) X(84) X(85)   \\\n    X(86) X(88) X(89) X(90) X(91) X(92)\n\n#define OECC_FORWARD_NUMBERED(n) DEFINE_OECC_FORWARD(_oecc##n)\nOECC_NUMBERED_EXPORTS(OECC_FORWARD_NUMBERED)\n#undef OECC_FORWARD_NUMBERED\n#undef OECC_NUMBERED_EXPORTS\n\nDEFINE_OECC_FORWARD(OEMCrypto_DecryptCENCExtendSupport)\nDEFINE_OECC_FORWARD(OEMCrypto_DecryptShareMemorySize)\nDEFINE_OECC_FORWARD(OEMCrypto_DeleteUsageTable)\n```",
+      "range": {
+        "startLine": 266,
+        "startChar": 0,
+        "endLine": 337,
+        "endChar": 47
+      },
+      "revId": "d724560c2495736701df926626a1d125584b920c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59062e33_1120065d",
+        "filename": "compat/drm/libsecmem_shim.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-24T03:20:19Z",
+      "side": 1,
+      "message": "spdx no year",
+      "revId": "d724560c2495736701df926626a1d125584b920c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
