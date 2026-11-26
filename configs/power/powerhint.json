@@ -51,6 +51,12 @@
       "Value": "0"
     },
     {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPUCmd",
+      "Duration": 300,
+      "Value": "preheat"
+    },
+    {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUScalingGovernor",
       "Duration": 0,
@@ -58,9 +64,9 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUCmd",
-      "Duration": 0,
-      "Value": "preheat"
+      "Node": "CPUScalingGovernor",
+      "Duration": 3000,
+      "Value": "performance"
     },
     {
       "PowerHint": "INTERACTION",

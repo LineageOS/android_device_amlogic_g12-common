@@ -113,8 +113,6 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="c2.amlogic.rm30.decoder.sw" type="video/rm30" />
         <MediaCodec name="c2.amlogic.rm40.decoder.sw" type="video/rm40" />
         <MediaCodec name="c2.amlogic.wmv3.decoder.sw" type="video/wmv3" />
-        <MediaCodec name="c2.amlogic.wmv2.decoder.sw" type="video/wmv2" />
-        <MediaCodec name="c2.amlogic.wmv1.decoder.sw" type="video/wmv1" />
         <MediaCodec name="c2.amlogic.avs.decoder" type="video/avs" >
             <Limit name="size" min="96x96" max="1920x1088" />
             <Limit name="alignment" value="2x2" />

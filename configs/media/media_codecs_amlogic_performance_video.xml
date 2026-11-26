@@ -110,12 +110,6 @@
             <Limit name="measured-frame-rate-1920x1080" range="50-51" />
             <Limit name="performance-point-1920x1080" range="60-60" />
         </MediaCodec>
-        <MediaCodec name="c2.amlogic.wmv1.decoder.sw" type="video/wmv1" update="true">
-            <Limit name="performance-point-1920x1080" range="60-60" />
-        </MediaCodec>
-        <MediaCodec name="c2.amlogic.wmv2.decoder.sw" type="video/wmv2" update="true">
-            <Limit name="performance-point-1920x1080" range="60-60" />
-        </MediaCodec>
         <MediaCodec name="c2.amlogic.wmv3.decoder.sw" type="video/wmv3" update="true">
             <Limit name="performance-point-1920x1080" range="60-60" />
         </MediaCodec>
