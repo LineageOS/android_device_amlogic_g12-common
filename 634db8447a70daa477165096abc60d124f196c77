@@ -16,6 +16,23 @@
       "message": "Tested on M5; IR remote works smoothly",
       "revId": "634db8447a70daa477165096abc60d124f196c77",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa32029c_10101e84",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-26T17:39:09Z",
+      "side": 1,
+      "message": "Same revert needed also on ne-common tree.",
+      "revId": "634db8447a70daa477165096abc60d124f196c77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
