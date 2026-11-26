@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e1e0ad1_ef614c11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34376
+      },
+      "writtenOn": "2026-11-26T16:44:57Z",
+      "side": 1,
+      "message": "Tested on M5; IR remote works smoothly",
+      "revId": "634db8447a70daa477165096abc60d124f196c77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
